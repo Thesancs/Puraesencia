@@ -24,15 +24,15 @@ import {
 import CtaButton from "@/components/landing-bano/CtaButton";
 
 const newBenefits = [
-    "Dominar la *formulación natural* de sales de baño que venden.",
-    "Crear tu propia *línea de productos* desde cero.",
-    "Acceder a más de *30 fórmulas exclusivas* y probadas.",
-    "Aprender a calcular costos y fijar precios rentables.",
-    "Diseñar empaques atractivos que conecten con tus clientes.",
-    "Vender efectivamente en redes sociales sin ser un experto.",
-    "Conocer los secretos para fidelizar a tus clientes.",
-    "Obtener una lista de proveedores confiables.",
-    "Convertir tu pasión en un negocio próspero desde casa.",
+    "Al terminar el curso, sabrás mucho más que hacer sales de baño. Vas a dominar la formulación natural con propósito — mezclas que conectan con el cuerpo, la mente y las emociones, y hacen que tus clientas se enamoren y compren más.",
+    "Vas a lanzar tu primera línea de productos sin sentirte perdida, con un paso a paso claro para crear desde cero, sin rodeos.",
+    "Tendrás acceso a una lista actualizada de proveedores por país, con buenos precios y buena calidad, para que no pierdas tiempo buscando dónde comprar.",
+    "Vas a crear productos que tus clientas quieran volver a comprar, gracias a 30 fórmulas exclusivas que se pueden personalizar para ofrecer experiencias únicas.",
+    "Tus mezclas no solo huelen rico: ofrecen beneficios reales desde el primer uso — alivian dolor, estrés, insomnio, ansiedad, piel seca y mucho más.",
+    "Vas a reducir errores y desperdicios en la producción, gracias a técnicas prácticas que te ahorran materia prima y aumentan tus ganancias.",
+    "No necesitas máquinas caras para destacar. Te voy a mostrar cómo presentar tus productos de forma profesional para vender desde ferias hasta Instagram.",
+    "Vas a aprender cómo diferenciarte y dejar de competir por precio. Tus productos no serán *mezclas más*: serán soluciones reales que generan valor.",
+    "Y lo mejor: no necesitas experiencia, ni cursos largos, ni inversión en equipos. Solo ganas de aprender y aplicar."
 ];
 
 const courseContent = [
@@ -215,3 +215,5 @@ export default function LandingBanoPage() {
   );
 }
 
+
+    
