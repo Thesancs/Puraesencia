@@ -76,18 +76,18 @@ const faqs = [
 ];
 
 const metodoIncluye = [
-    "30 fórmulas listas para usar, cada una diseñada con un objetivo terapéutico claro: relajación, descanso, alivio, enfoque, energía y más.",
-    "Guías paso a paso sobre ingredientes, proporciones, combinaciones y beneficios — explicado de forma sencilla y directa.",
-    "Manual práctico de empaque y presentación, para que tu producto destaque y se vea profesional desde el primer día.",
-    "Estrategias para fidelizar clientas, usando muestras, experiencia sensorial y storytelling que conecta de verdad.",
-    "Y lo mejor: sin máquinas caras, sin experiencia previa y sin perder tiempo en cursos eternos."
+    "<b>30 fórmulas listas para usar</b>, cada una diseñada con un <b>objetivo terapéutico claro</b>: relajación, descanso, alivio, enfoque, energía y más.",
+    "<b>Guías paso a paso</b> sobre <b>ingredientes, proporciones, combinaciones y beneficios</b> — explicado de forma <b>sencilla y directa</b>.",
+    "<b>Manual práctico de empaque y presentación</b>, para que tu producto <b>destaque</b> y se vea <b>profesional desde el primer día</b>.",
+    "<b>Estrategias para fidelizar clientas</b>, usando <b>muestras, experiencia sensorial y storytelling que conecta de verdad</b>.",
+    "Y lo mejor: <b>sin máquinas caras, sin experiencia previa y sin perder tiempo en cursos eternos</b>."
 ];
 
 const comoAplicar = [
-    { icon: FlaskConical, text: "Propiedades reales de los ingredientes" },
-    { icon: Leaf, text: "Formulación consciente y con propósito" },
-    { icon: Package, text: "Presentación atractiva que vende sola" },
-    { icon: Brain, text: "Venta con enfoque emocional" }
+    { icon: FlaskConical, text: "<b>Propiedades reales de los ingredientes</b>" },
+    { icon: Leaf, text: "<b>Formulación consciente y con propósito</b>" },
+    { icon: Package, text: "<b>Presentación atractiva que vende sola</b>" },
+    { icon: Brain, text: "<b>Venta con enfoque emocional</b>" }
 ];
 
 
@@ -200,16 +200,16 @@ export default function LandingBanoPage() {
                     <Rocket className="w-8 h-8 mr-3 text-primary shrink-0" />
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">¿POR QUÉ “PURA ESENCIA™” ES DIFERENTE?</h2>
                 </div>
-                <p className="text-lg text-gray-700 text-center">
-                    Ya no basta con hacer “una sal que huele rico”.
+                <p className="text-lg text-gray-700">
+                    Ya no basta con hacer <b>"una sal que huele rico"</b>.
                 </p>
                 <p className="text-lg text-gray-700">
-                    El mercado está lleno de productos lindos... pero vacíos. Cosas que se ven bien, pero no hacen nada real. Por eso nació el método PURA ESENCIA™, un sistema creado para que tú desarrolles una línea de sales terapéuticas auténticas, que tus clientas amen, recuerden… y quieran volver a comprar.
+                    El mercado está lleno de <b>productos lindos... pero vacíos</b>. Cosas que se ven bien, pero <b>no hacen nada real</b>. Por eso nació el método <b>PURA ESENCIA™</b>, un sistema creado para que tú desarrolles una <b>línea de sales terapéuticas auténticas</b>, que tus clientas <b>amen</b>, <b>recuerden</b>… y <b>quieran volver a comprar</b>.
                 </p>
                 <div className="flex items-center">
                     <ArrowRight className="w-6 h-6 mr-3 text-primary shrink-0" />
                     <p className="text-lg font-semibold text-gray-900">
-                        Aquí no se trata de copiar recetas de internet. Se trata de crear con intención.
+                        Aquí no se trata de <b>copiar recetas de internet</b>. Se trata de <b>crear con intención</b>.
                     </p>
                 </div>
                 <p className="text-lg font-bold text-gray-800">El método incluye:</p>
@@ -217,7 +217,7 @@ export default function LandingBanoPage() {
                     {metodoIncluye.map((item, index) => (
                         <div key={index} className="flex items-start p-2">
                             <Check className="w-6 h-6 mr-3 text-green-500 shrink-0" />
-                            <p className="text-lg text-gray-700">{item}</p>
+                            <p className="text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: item }}></p>
                         </div>
                     ))}
                 </div>
@@ -226,7 +226,7 @@ export default function LandingBanoPage() {
                     {comoAplicar.map((item, index) => (
                         <div key={index} className="flex items-start p-2">
                             <item.icon className="w-6 h-6 mr-3 text-green-500 shrink-0" />
-                            <p className="text-lg text-gray-700">{item.text}</p>
+                            <p className="text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: item.text }}></p>
                         </div>
                     ))}
                 </div>
@@ -238,9 +238,9 @@ export default function LandingBanoPage() {
                         <div className="ml-3">
                             <p className="text-lg font-bold text-red-800">Y SI ERES EMPRENDEDORA DE VERDAD...</p>
                             <p className="mt-2 text-lg text-red-700">
-                                Sabes que no basta con hacer algo bonito.<br/>
-                                Tu producto tiene que funcionar, emocionar y dejar huella.<br/>
-                                Eso es lo que vas a lograr con PURA ESENCIA™.
+                            Sabes que <b>no basta con hacer algo bonito</b>.<br/>
+                            <b>Tu producto tiene que funcionar, emocionar y dejar huella.</b><br/>
+                            <b>Eso es lo que vas a lograr con PURA ESENCIA™.</b>
                             </p>
                         </div>
                     </div>
