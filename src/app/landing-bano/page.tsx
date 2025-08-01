@@ -3,7 +3,7 @@ import {
   BadgeCheck,
   ChevronDown,
   DollarSign,
-  HeartHand,
+  HeartHandshake,
   Home,
   Lock,
   Quote,
@@ -29,7 +29,7 @@ const benefits = [
     text: "Bajo costo inicial para empezar",
   },
   {
-    icon: <HeartHand className="h-10 w-10 text-primary" />,
+    icon: <HeartHandshake className="h-10 w-10 text-primary" />,
     text: "Crea productos que sanan y relajan",
   },
   {
