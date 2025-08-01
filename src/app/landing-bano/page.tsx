@@ -87,8 +87,8 @@ export default function LandingBanoPage() {
         {/* Hero Section */}
         <section className="relative flex items-center justify-center min-h-screen px-4 text-center">
             <div className="max-w-3xl mx-auto space-y-6">
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl font-headline">
-                Transforma tu Pasión en Ganancias: Crea y Vende Sales de Baño Terapéuticas desde Casa
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl font-headline">
+                Empieza desde cero y arma tu propia línea de sales de baño terapéuticas que nadie más tiene, usando el método “PURA ESENCIA™” para vender el triple sin complicarte.
                 </h1>
                 <p className="max-w-2xl mx-auto text-lg leading-8 text-gray-600">
                 Descubre el método exacto para lanzar tu propio negocio de bienestar, incluso si empiezas desde cero. Ayuda a otras mujeres a encontrar su momento de paz y crea la vida que siempre soñaste.
