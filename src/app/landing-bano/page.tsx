@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   AlertTriangle,
   Award,
@@ -91,8 +92,16 @@ export default function LandingBanoPage() {
                 Empieza desde cero y arma tu propia línea de sales de baño terapéuticas que nadie más tiene, usando el método “PURA ESENCIA™” para vender el triple sin complicarte.
                 </h1>
                 <p className="max-w-2xl mx-auto text-lg leading-8 text-gray-600">
-                Descubre el método exacto para lanzar tu propio negocio de bienestar, incluso si empiezas desde cero. Ayuda a otras mujeres a encontrar su momento de paz y crea la vida que siempre soñaste.
-                </p>
+                Te enseño cómo hacer mezclas que realmente ayudan, cómo ahorrar en ingredientes sin perder calidad y cómo hacer que cada sal que preparas sea tan buena que tus clientas van a querer repetir la compra sin pensarlo.                </p>
+                <div className="relative mx-auto w-full max-w-xl aspect-[4/3] mt-6">
+                    <Image 
+                        src="https://placehold.co/600x400.png"
+                        alt="Sales de baño terapéuticas"
+                        fill
+                        className="object-cover rounded-lg shadow-lg"
+                        data-ai-hint="bath salts"
+                    />
+                </div>
                 <CtaButton />
             </div>
         </section>
