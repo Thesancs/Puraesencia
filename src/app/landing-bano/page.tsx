@@ -114,7 +114,7 @@ export default function LandingBanoPage() {
         <section className="px-4 py-16 sm:py-24">
             <div className="relative mx-auto w-full max-w-3xl aspect-video">
                 <Image 
-                    src="https://placehold.co/1280x720.png"
+                    src="/images/foto 2 pagina.webp"
                     alt="Placeholder para video o imagen de producto"
                     fill
                     className="object-cover rounded-lg shadow-lg"
