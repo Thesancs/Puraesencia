@@ -98,7 +98,7 @@ export default function LandingBanoPage() {
                         src="https://placehold.co/600x400.png"
                         alt="Sales de baño terapéuticas"
                         fill
-                        className="object-cover rounded-lg shadow-lg"
+                        className="object-cover rounded-lg shadow-lg border-4 border-amber-800/50"
                         data-ai-hint="bath salts"
                     />
                 </div>
