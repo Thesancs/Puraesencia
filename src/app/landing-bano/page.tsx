@@ -85,9 +85,9 @@ export default function LandingBanoPage() {
       </div>
       <main className="isolate">
         {/* Hero Section */}
-        <section className="relative flex justify-center px-4 pt-24 text-center sm:pt-32 lg:min-h-screen lg:items-center lg:pt-0">
+        <section className="relative flex justify-center px-4 pt-12 text-center sm:pt-32 lg:min-h-screen lg:items-center lg:pt-0">
             <div className="max-w-3xl mx-auto space-y-6">
-                <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl font-headline">
+                <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl md:text-4xl font-headline">
                 Empieza desde cero y arma tu propia línea de sales de baño terapéuticas que nadie más tiene, usando el método “PURA ESENCIA™” para vender el triple sin complicarte.
                 </h1>
                 <p className="max-w-2xl mx-auto text-lg leading-8 text-gray-600">
