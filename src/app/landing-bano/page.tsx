@@ -13,6 +13,13 @@ import {
   Quote,
   Sparkles,
   Users,
+  Rocket,
+  ArrowRight,
+  FlaskConical,
+  Leaf,
+  Package,
+  Brain,
+  ShieldAlert
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -68,6 +75,21 @@ const faqs = [
     { q: "¿Tendré soporte?", a: "¡Claro que sí! Tendrás acceso a nuestra comunidad privada de alumnas, donde podrás hacer preguntas y conectar con compañeras y conmigo." },
 ];
 
+const metodoIncluye = [
+    "30 fórmulas listas para usar, cada una diseñada con un objetivo terapéutico claro: relajación, descanso, alivio, enfoque, energía y más.",
+    "Guías paso a paso sobre ingredientes, proporciones, combinaciones y beneficios — explicado de forma sencilla y directa.",
+    "Manual práctico de empaque y presentación, para que tu producto destaque y se vea profesional desde el primer día.",
+    "Estrategias para fidelizar clientas, usando muestras, experiencia sensorial y storytelling que conecta de verdad.",
+    "Y lo mejor: sin máquinas caras, sin experiencia previa y sin perder tiempo en cursos eternos."
+];
+
+const comoAplicar = [
+    { icon: FlaskConical, text: "Propiedades reales de los ingredientes" },
+    { icon: Leaf, text: "Formulación consciente y con propósito" },
+    { icon: Package, text: "Presentación atractiva que vende sola" },
+    { icon: Brain, text: "Venta con enfoque emocional" }
+];
+
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -111,7 +133,7 @@ export default function LandingBanoPage() {
               {newBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start p-2">
                   <Check className="w-6 h-6 mr-3 text-green-500 shrink-0" />
-                  <p className="text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: benefit.replace(/\*(.*?)\*/g, '<span class="font-semibold text-gray-900">$1</span>') }} />
+                  <p className="text-lg text-gray-700">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -170,9 +192,64 @@ export default function LandingBanoPage() {
                 </p>
             </div>
         </section>
+
+        {/* Why Pura Esencia Section */}
+        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
+            <div className="max-w-3xl mx-auto text-left space-y-6">
+                <div className="flex items-center justify-center text-center">
+                    <Rocket className="w-8 h-8 mr-3 text-primary shrink-0" />
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">¿POR QUÉ “PURA ESENCIA™” ES DIFERENTE?</h2>
+                </div>
+                <p className="text-lg text-gray-700 text-center">
+                    Ya no basta con hacer “una sal que huele rico”.
+                </p>
+                <p className="text-lg text-gray-700">
+                    El mercado está lleno de productos lindos... pero vacíos. Cosas que se ven bien, pero no hacen nada real. Por eso nació el método PURA ESENCIA™, un sistema creado para que tú desarrolles una línea de sales terapéuticas auténticas, que tus clientas amen, recuerden… y quieran volver a comprar.
+                </p>
+                <div className="flex items-center">
+                    <ArrowRight className="w-6 h-6 mr-3 text-primary shrink-0" />
+                    <p className="text-lg font-semibold text-gray-900">
+                        Aquí no se trata de copiar recetas de internet. Se trata de crear con intención.
+                    </p>
+                </div>
+                <p className="text-lg font-bold text-gray-800">El método incluye:</p>
+                <div className="space-y-4">
+                    {metodoIncluye.map((item, index) => (
+                        <div key={index} className="flex items-start p-2">
+                            <Check className="w-6 h-6 mr-3 text-green-500 shrink-0" />
+                            <p className="text-lg text-gray-700">{item}</p>
+                        </div>
+                    ))}
+                </div>
+                <p className="text-lg font-bold text-gray-800">Además, te enseño cómo aplicar:</p>
+                <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+                    {comoAplicar.map((item, index) => (
+                        <div key={index} className="flex items-start p-2">
+                            <item.icon className="w-6 h-6 mr-3 text-green-500 shrink-0" />
+                            <p className="text-lg text-gray-700">{item.text}</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="p-4 mt-6 bg-red-100 border-l-4 border-red-500">
+                     <div className="flex">
+                        <div className="shrink-0">
+                            <ShieldAlert className="w-6 h-6 text-red-700"/>
+                        </div>
+                        <div className="ml-3">
+                            <p className="text-lg font-bold text-red-800">Y SI ERES EMPRENDEDORA DE VERDAD...</p>
+                            <p className="mt-2 text-lg text-red-700">
+                                Sabes que no basta con hacer algo bonito.<br/>
+                                Tu producto tiene que funcionar, emocionar y dejar huella.<br/>
+                                Eso es lo que vas a lograr con PURA ESENCIA™.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         {/* Course Content Section */}
-        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
+        <section className="px-4 py-16 sm:py-24">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">Contenido del Curso</h2>
@@ -194,7 +271,7 @@ export default function LandingBanoPage() {
         </section>
 
         {/* Bonus Section */}
-        <section className="px-4 py-16 sm:py-24">
+        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">Recibirás También Estos Bonos de Regalo</h2>
