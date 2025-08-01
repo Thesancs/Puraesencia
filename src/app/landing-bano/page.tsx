@@ -35,6 +35,13 @@ const newBenefits = [
     "Y lo mejor: no necesitas experiencia, ni cursos largos, ni inversión en equipos. Solo ganas de aprender y aplicar."
 ];
 
+const problemas = [
+    "Dolores musculares y articulares",
+    "Ansiedad, insomnio y estrés",
+    "Agotamiento mental",
+    "Piel seca, deshidratada y sin vida"
+];
+
 const courseContent = [
   { emoji: "🌿", title: "Módulo 1: La Alquimia de las Sales" },
   { emoji: "💰", title: "Módulo 2: Tu Marca Magnética" },
@@ -125,11 +132,42 @@ export default function LandingBanoPage() {
 
         {/* Personal Story Section */}
         <section className="px-4 py-16 sm:py-24">
-            <div className="max-w-3xl mx-auto text-center">
-                <Quote className="w-16 h-16 mx-auto text-primary" />
-                <blockquote className="mt-6 text-xl italic leading-8 text-gray-700">
-                "Yo también estuve ahí, buscando una salida. Atrapada en una rutina que no me llenaba, soñaba con crear algo mío, algo con alma. Descubrí en las sales de baño más que un producto: encontré una misión. Hoy, quiero compartirte el camino que me permitió construir un negocio próspero desde mi cocina. Si yo pude, tú también puedes."
-                </blockquote>
+            <div className="max-w-3xl mx-auto text-left space-y-6">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline text-center">
+                ✨ MÉTODO PURA ESENCIA™
+                </h2>
+                <p className="text-lg text-gray-700 text-center">
+                    Crea, con ingredientes naturales, tu propia línea de sales terapéuticas que fideliza clientes, genera ventas constantes y posiciona tu marca como una referencia en bienestar.
+                </p>
+                <p className="text-lg text-gray-700">
+                    Todo empezó en una etapa que no le deseo a nadie.
+                </p>
+                <p className="text-lg text-gray-700">
+                    Estaba agotada, sin dinero, estresada con todo, y mi cabeza no paraba ni un segundo. La rutina me asfixiaba y solo quería una salida. Algo que pudiera hacer desde casa, con sentido, que me ayudara a recuperar mi paz… y mis ingresos.
+                </p>
+                <p className="text-lg text-gray-700">
+                    Un día, navegando entre recetas naturales, encontré una fórmula casera de sales de baño. La hice sin esperar mucho. La probé. Se la regalé a unas personas cercanas. Y entonces pasó algo inesperado: a todos les encantó.
+                </p>
+                <p className="text-lg text-gray-700">
+                    Empezaron a pedirme más. Querían otros aromas, otros efectos, más frascos. Querían comprar.
+                </p>
+                <p className="text-lg text-gray-700">
+                    Ahí entendí que tenía algo grande entre manos. Me lancé de lleno. Estudié Aromaterapia, aprendí formulación artesanal y comencé a crear mezclas reales, pensadas para aliviar problemas que yo misma sufría — y que veía a muchas personas a mi alrededor enfrentar:
+                </p>
+                <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+                    {problemas.map((problema, index) => (
+                        <div key={index} className="flex items-start p-2">
+                            <Check className="w-6 h-6 mr-3 text-green-500 shrink-0" />
+                            <p className="text-lg text-gray-700">{problema}</p>
+                        </div>
+                    ))}
+                </div>
+                <p className="text-lg text-gray-700">
+                    No estaba creando solo un producto. Estaba creando alivio. Conexión. Bienestar real.
+                </p>
+                <p className="text-lg text-gray-700">
+                    Y hoy, con el método PURA ESENCIA™, quiero enseñarte cómo transformar una idea sencilla en una línea de productos naturales que enamoran, venden y posicionan tu marca con propósito.
+                </p>
             </div>
         </section>
         
