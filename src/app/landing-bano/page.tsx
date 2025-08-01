@@ -90,6 +90,39 @@ const comoAplicar = [
     { icon: Brain, text: "<b>Venta con enfoque emocional</b>" }
 ];
 
+const galleryItems = [
+    {
+        title: "Recetas para el Alivio del Dolor Muscular y Articular",
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "bath salts jars"
+    },
+    {
+        title: "Recetas para Reducción del Estrés y la Ansiedad",
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "lavender chamomile bath salts"
+    },
+    {
+        title: "Recetas para Dormir y Combatir el Insomnio",
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "woman mixing ingredients"
+    },
+    {
+        title: "Recetas para Hidratación y Cuidado de la Piel",
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "skincare flatlay"
+    },
+    {
+        title: "Recetas para Mejora de la Concentración y Claridad Mental",
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "natural remedy bottles"
+    },
+    {
+        title: "Recetas para Recuperación Post-Entrenamiento",
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "woman foot bath"
+    }
+];
+
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -247,9 +280,34 @@ export default function LandingBanoPage() {
                 </div>
             </div>
         </section>
+
+        {/* Gallery Section */}
+        <section className="px-4 py-16 sm:py-24">
+            <div className="max-w-5xl mx-auto text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline text-amber-800">
+                    ¡AQUÍ TE LO ENSEÑAMOS TODO!
+                </h2>
+                <div className="grid grid-cols-1 gap-12 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+                    {galleryItems.map((item, index) => (
+                        <div key={index} className="flex flex-col items-center space-y-4">
+                            <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
+                            <div className="relative w-48 h-48 overflow-hidden rounded-full shadow-lg">
+                                <Image
+                                    src={item.imageUrl}
+                                    alt={item.title}
+                                    fill
+                                    className="object-cover"
+                                    data-ai-hint={item.aiHint}
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
         
         {/* Course Content Section */}
-        <section className="px-4 py-16 sm:py-24">
+        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">Contenido del Curso</h2>
@@ -271,7 +329,7 @@ export default function LandingBanoPage() {
         </section>
 
         {/* Bonus Section */}
-        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
+        <section className="px-4 py-16 sm:py-24">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">Recibirás También Estos Bonos de Regalo</h2>
