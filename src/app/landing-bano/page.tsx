@@ -133,7 +133,7 @@ export default function LandingBanoPage() {
         {/* Personal Story Section */}
         <section className="px-4 py-16 sm:py-24">
             <div className="max-w-3xl mx-auto text-left space-y-6">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline text-center">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-center text-amber-800" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
                 MÉTODO PURA ESENCIA™
                 </h2>
                 <p className="text-lg text-gray-700 text-center">
@@ -264,3 +264,5 @@ export default function LandingBanoPage() {
     </div>
   );
 }
+
+    
