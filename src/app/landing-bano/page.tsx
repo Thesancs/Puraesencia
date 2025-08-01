@@ -95,7 +95,7 @@ export default function LandingBanoPage() {
                 Te enseño cómo hacer mezclas que realmente ayudan, cómo ahorrar en ingredientes sin perder calidad y cómo hacer que cada sal que preparas sea tan buena que tus clientas van a querer repetir la compra sin pensarlo.                </p>
                 <div className="relative mx-auto w-full max-w-xl aspect-[4/3] mt-6">
                     <Image 
-                        src="https://storage.googleapis.com/monogram-assets/images/bueno-bano-de-oro/e2f2d4e2-a764-4e2a-a23f-561587e9154a.jpeg"
+                        src="/images/foto 1 pagina.webp"
                         alt="Mujer creando sales de baño terapéuticas en su cocina"
                         fill
                         className="object-cover rounded-lg shadow-lg border-4 border-amber-800/50"
