@@ -1,8 +1,10 @@
+
 import Image from "next/image";
 import {
   AlertTriangle,
   Award,
   BadgeCheck,
+  Check,
   ChevronDown,
   DollarSign,
   HeartHandshake,
@@ -21,31 +23,16 @@ import {
 } from "@/components/ui/accordion";
 import CtaButton from "@/components/landing-bano/CtaButton";
 
-const benefits = [
-  {
-    icon: <Home className="h-10 w-10 text-primary" />,
-    text: "Genera ingresos desde tu hogar",
-  },
-  {
-    icon: <DollarSign className="h-10 w-10 text-primary" />,
-    text: "Bajo costo inicial para empezar",
-  },
-  {
-    icon: <HeartHandshake className="h-10 w-10 text-primary" />,
-    text: "Crea productos que sanan y relajan",
-  },
-  {
-    icon: <Sparkles className="h-10 w-10 text-primary" />,
-    text: "Conviértete en tu propia jefa",
-  },
-  {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    text: "Únete a una comunidad de emprendedoras",
-  },
-  {
-    icon: <Award className="h-10 w-10 text-primary" />,
-    text: "Flexibilidad de tiempo para tu familia",
-  },
+const newBenefits = [
+    "Dominar la *formulación natural* de sales de baño que venden.",
+    "Crear tu propia *línea de productos* desde cero.",
+    "Acceder a más de *30 fórmulas exclusivas* y probadas.",
+    "Aprender a calcular costos y fijar precios rentables.",
+    "Diseñar empaques atractivos que conecten con tus clientes.",
+    "Vender efectivamente en redes sociales sin ser un experto.",
+    "Conocer los secretos para fidelizar a tus clientes.",
+    "Obtener una lista de proveedores confiables.",
+    "Convertir tu pasión en un negocio próspero desde casa.",
 ];
 
 const courseContent = [
@@ -86,7 +73,7 @@ export default function LandingBanoPage() {
       </div>
       <main className="isolate">
         {/* Hero Section */}
-        <section className="relative flex justify-center px-4 pt-12 text-center sm:pt-32 lg:min-h-screen lg:items-center lg:pt-0">
+        <section className="relative flex justify-center px-4 pt-12 text-center sm:pt-32 lg:items-center">
             <div className="max-w-3xl mx-auto space-y-6">
                 <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl md:text-4xl font-headline">
                 Empieza desde cero y arma tu propia línea de sales de baño terapéuticas que nadie más tiene, usando el método “PURA ESENCIA™” para vender el triple sin complicarte.
@@ -102,7 +89,6 @@ export default function LandingBanoPage() {
                         data-ai-hint="bath salts entrepreneur"
                     />
                 </div>
-                <CtaButton />
             </div>
         </section>
 
@@ -111,14 +97,14 @@ export default function LandingBanoPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">
-                Todo lo que Lograrás
+              LO QUE LOGRARÁS CON EL KIT DE EBOOKS DEL MÉTODO ‘PURA ESENCIA™’
               </h2>
             </div>
-            <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex flex-col items-center p-6 text-center bg-white rounded-2xl shadow-sm">
-                  {benefit.icon}
-                  <p className="mt-4 text-lg font-semibold">{benefit.text}</p>
+            <div className="grid grid-cols-1 gap-x-8 gap-y-4 mt-12 md:grid-cols-2">
+              {newBenefits.map((benefit, index) => (
+                <div key={index} className="flex items-start p-2">
+                  <Check className="w-6 h-6 mr-3 text-green-500 shrink-0" />
+                  <p className="text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: benefit.replace(/\*(.*?)\*/g, '<span class="font-semibold text-gray-900">$1</span>') }} />
                 </div>
               ))}
             </div>
@@ -228,3 +214,4 @@ export default function LandingBanoPage() {
     </div>
   );
 }
+
