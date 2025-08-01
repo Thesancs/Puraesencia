@@ -136,7 +136,7 @@ export default function LandingBanoPage() {
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-center text-amber-800" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
                 MÉTODO PURA ESENCIA™
                 </h2>
-                <p className="text-lg text-amber-800 text-center font-bold" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
+                <p className="text-lg text-center font-bold">
                     Crea, con ingredientes naturales, tu propia línea de sales terapéuticas que fideliza clientes, genera ventas constantes y posiciona tu marca como una referencia en bienestar.
                 </p>
                 <p className="text-lg text-gray-700">
