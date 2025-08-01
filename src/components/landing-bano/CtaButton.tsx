@@ -42,7 +42,7 @@ export default function CtaButton() {
         return "Error - Intenta de Nuevo";
       case "idle":
       default:
-        return "Quiero Acceder Ahora";
+        return "QUIERO ACCEDER AHORA";
     }
   };
 
