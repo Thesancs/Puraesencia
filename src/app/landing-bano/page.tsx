@@ -444,9 +444,9 @@ export default function LandingBanoPage() {
                     </div>
                     <p className="text-lg font-bold uppercase sm:text-xl">Disponible para todo el mundo</p>
                     <div className="relative flex flex-col items-center justify-center pt-8">
-                        <ShieldCheck className="absolute w-32 h-32 text-green-500 sm:w-40 sm:h-40" />
-                        <Check className="absolute w-16 h-16 text-white sm:w-20 sm:h-20" />
-                        <p className="absolute z-10 px-3 py-1 text-lg font-bold text-white bg-green-600 rounded-lg sm:px-4 sm:py-2 -bottom-4 sm:text-2xl">COMPRA 100% SEGURA</p>
+                        <ShieldCheck className="absolute w-32 h-32 text-green-500 opacity-20 sm:w-40 sm:h-40" />
+                        <Check className="absolute w-16 h-16 text-green-600 sm:w-20 sm:h-20" />
+                         <p className="z-10 mt-2 text-lg font-bold text-green-700 sm:text-2xl">COMPRA 100% SEGURA</p>
                     </div>
 
                     <p className="max-w-md pt-8 mx-auto text-sm font-semibold sm:text-base">
@@ -523,7 +523,7 @@ export default function LandingBanoPage() {
             <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl font-headline">
               ESTO ES LO QUE OBTIENES AL INSCRIBIRTE
             </h2>
-            <div className="grid grid-cols-1 gap-10 mt-12">
+            <div className="grid grid-cols-1 gap-10 mt-12 md:grid-cols-2">
               <div className="space-y-4">
                 {loQueObtienes.map((item, index) => (
                   <div key={index} className="flex items-start">
@@ -548,7 +548,7 @@ export default function LandingBanoPage() {
         </section>
 
         <section 
-            className="relative px-4 py-16 bg-center bg-cover"
+            className="relative px-4 py-16 bg-center bg-cover sm:py-24"
             style={{
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
             }}
@@ -586,9 +586,9 @@ export default function LandingBanoPage() {
                     </div>
                     <p className="text-lg font-bold uppercase sm:text-xl">Disponible para todo el mundo</p>
                     <div className="relative flex flex-col items-center justify-center pt-8">
-                         <ShieldCheck className="absolute w-32 h-32 text-green-500 sm:w-40 sm:h-40" />
-                         <Check className="absolute w-16 h-16 text-white sm:w-20 sm:h-20" />
-                         <p className="absolute z-10 px-3 py-1 text-lg font-bold text-white bg-green-600 rounded-lg sm:px-4 sm:py-2 -bottom-4 sm:text-2xl">COMPRA 100% SEGURA</p>
+                         <ShieldCheck className="absolute w-32 h-32 text-green-500 opacity-20 sm:w-40 sm:h-40" />
+                         <Check className="absolute w-16 h-16 text-green-600 sm:w-20 sm:h-20" />
+                         <p className="z-10 mt-2 text-lg font-bold text-green-700 sm:text-2xl">COMPRA 100% SEGURA</p>
                     </div>
 
                     <p className="max-w-md pt-8 mx-auto text-sm font-semibold sm:text-base">
