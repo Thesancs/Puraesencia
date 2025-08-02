@@ -26,7 +26,7 @@ export function PreLaunchOfferSection() {
                         src="/images/banner 1.png"
                         alt="Oferta especial del curso"
                         fill
-                        className="object-cover rounded-lg shadow-lg"
+                        className="object-cover rounded-lg"
                         data-ai-hint="course offer"
                     />
                 </div>
