@@ -6,12 +6,17 @@ export function PricingSection() {
     console.log('[PricingSection] rendered');
     return (
         <section 
-            className="relative px-4 py-16 bg-center bg-cover sm:py-24"
-            style={{
-                backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
-            }}
+            className="relative px-4 py-16 bg-[#F0F8F0] sm:py-24"
         >
-            <div className="max-w-2xl mx-auto text-center">
+             <div 
+                className="absolute top-0 left-0 w-full overflow-hidden leading-none"
+                style={{ lineHeight: 0 }}
+             >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[150px] sm:h-[200px]">
+                    <path fill="#ffffff" fillOpacity="1" d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                </svg>
+            </div>
+            <div className="max-w-2xl mx-auto text-center relative z-10">
                 <p className="text-xs font-semibold text-gray-700 uppercase sm:text-sm">
                     ¡ACCEDE HOY MISMO! CON EL PRECIO DE PRE LANZAMIENTO DESDE CUALQUIER PARTE DEL MUNDO, PAGANDO EN DOLARES O SU EQUIVALENTE EN TU MONEDA LOCAL
                 </p>
@@ -56,6 +61,14 @@ export function PricingSection() {
                         AL FINALIZAR TU COMPRA, RECIBIRÁS DE FORMA AUTOMÁTICA TODOS LOS ACCESOS A LA PLATAFORMA EDUCATIVA MEDIANTE CORREO ELECTRÓNICO
                     </p>
                 </div>
+            </div>
+             <div 
+                className="absolute bottom-0 left-0 w-full overflow-hidden"
+                style={{ lineHeight: 0, transform: 'rotate(180deg)' }}
+             >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[150px] sm:h-[200px]">
+                     <path fill="#ffffff" fillOpacity="1" d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                </svg>
             </div>
         </section>
     );
