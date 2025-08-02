@@ -93,7 +93,7 @@ const comoAplicar = [
 const galleryItems = [
     {
         title: "Recetas para el Alivio del Dolor Muscular y Articular",
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "/images/fotogrid (1).webp",
         aiHint: "bath salts jars"
     },
     {
