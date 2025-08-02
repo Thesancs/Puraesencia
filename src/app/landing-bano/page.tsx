@@ -20,7 +20,8 @@ import {
   Package,
   Brain,
   ShieldAlert,
-  ShieldCheck
+  ShieldCheck,
+  Gift,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -443,6 +444,22 @@ export default function LandingBanoPage() {
                         </div>
                     ))}
                 </div>
+            </div>
+        </section>
+
+        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+                <h2 className="flex items-center justify-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">
+                    <Gift className="w-8 h-8 mr-3 text-primary shrink-0" />
+                    TODO LO QUE RECIBIRÁS POR SOLO $9.90 DÓLARES
+                </h2>
+                <p className="text-lg text-gray-700">
+                    Imagina tener tu propia línea de sales de baño terapéuticas, sin cometer errores ni perder material.
+                    Eso es exactamente lo que te llevarás con el curso completo paso a paso.
+                </p>
+                <p className="text-lg font-semibold text-primary">
+                    Aumenta tus ventas con el método “PURA ESENCIA™”.
+                </p>
             </div>
         </section>
 
