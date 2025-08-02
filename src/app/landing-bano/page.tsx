@@ -198,7 +198,7 @@ export default function LandingBanoPage() {
     <div className="bg-white text-[#2C2C2C] font-body">
       <div className="bg-green-600 text-white p-2 text-center text-sm font-bold flex items-center justify-center">
         <AlertTriangle className="h-4 w-4 mr-2" />
-        <span>ATENCIÓN: DESCUENTO RELÁMPAGO + 6 BONOS GRATIS PARA LAS PRIMERAS INSCRITAS</span>
+        <span className="text-xs sm:text-sm">ATENCIÓN: DESCUENTO RELÁMPAGO + 6 BONOS GRATIS PARA LAS PRIMERAS INSCRITAS</span>
       </div>
       <main className="isolate">
         {/* Hero Section */}
@@ -622,6 +622,33 @@ export default function LandingBanoPage() {
             </div>
         </section>
 
+        {/* Guarantee Section */}
+        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
+            <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-2xl font-bold tracking-tight text-gray-900 uppercase sm:text-3xl font-headline">
+                    TU COMPRA ES 100% SEGURA
+                </h2>
+                <h3 className="mt-4 text-xl font-semibold text-gray-800 sm:text-2xl">
+                    Garantía Incondicional de Satisfacción:
+                </h3>
+                <p className="max-w-2xl mx-auto mt-4 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
+                    Queremos que compres con total tranquilidad y confianza sabiendo que este curso es real, sin trucos ni promesas vacías, solo conocimientos genuinos y soporte real para tu negocio de Aromaterapia Organica y Ecologica.
+                </p>
+                 <p className="max-w-2xl mx-auto mt-2 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
+                    Por eso te ofrecemos una Garantía Completa de Satisfacción de 7 días. Si no estás completamente satisfecha por cualquier motivo, te reembolsaremos el 100% de tu inversión.
+                </p>
+                <div className="relative w-full max-w-xs mx-auto mt-6 aspect-square">
+                    <Image
+                        src="https://placehold.co/400x400.png"
+                        alt="Sello de garantía de 7 días"
+                        fill
+                        className="object-contain"
+                        data-ai-hint="satisfaction guarantee seal"
+                    />
+                </div>
+            </div>
+        </section>
+
 
         {/* FAQ Section */}
         <section className="px-4 py-16 sm:py-24">
@@ -645,5 +672,3 @@ export default function LandingBanoPage() {
     </div>
   );
 }
-
-    
