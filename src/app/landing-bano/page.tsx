@@ -522,30 +522,54 @@ export default function LandingBanoPage() {
           </div>
         </section>
 
-        {/* Guarantee & Access Section */}
-        <section className="px-4 py-16 sm:py-24 bg-gray-900 text-white">
-            <div className="max-w-5xl mx-auto">
-                <div className="text-center">
-                    <BadgeCheck className="w-16 h-16 mx-auto text-accent" />
-                    <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl font-headline">Tu Inversión es 100% Segura</h2>
-                    <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-300">Tu tranquilidad es nuestra prioridad. Empieza sin riesgos.</p>
+        <section className="px-4 py-8 sm:py-12 bg-[#F0F8F0]">
+            <div className="max-w-2xl mx-auto text-center">
+                <p className="text-sm font-semibold text-gray-700 uppercase">
+                    ¡ACCEDE HOY MISMO! CON EL PRECIO DE PRE LANZAMIENTO DESDE CUALQUIER PARTE DEL MUNDO, PAGANDO EN DOLARES O SU EQUIVALENTE EN TU MONEDA LOCAL
+                </p>
+                <p className="mt-6 text-lg font-bold">PRECIO REGULAR</p>
+                <p className="text-5xl font-bold text-gray-500 line-through">$49.90</p>
+                <p className="mt-4 text-2xl font-bold text-red-600">PRECIO RELÁMPAGO POR PRE LANZAMIENTO</p>
+                <p className="mt-2 text-8xl font-bold text-green-600">$9.90</p>
+                <p className="text-3xl font-semibold text-green-600">DÓLARES</p>
+                <p className="mt-4 text-xl font-bold text-red-600">UNICO PAGO</p>
+                <p className="text-xl font-bold text-red-600">SOLO PARA LAS PRIMERAS INSCRITAS</p>
+                <div className="flex justify-center mt-4">
+                    <ChevronDown className="w-12 h-12 text-blue-400 animate-bounce" />
                 </div>
-                <div className="grid grid-cols-1 gap-8 mt-12 text-center md:grid-cols-3">
-                    <div className="space-y-2">
-                        <h3 className="font-bold">Acceso Inmediato y Para Siempre</h3>
-                        <p className="text-gray-400">Compra ahora y empieza a aprender en minutos. El curso es tuyo para siempre.</p>
-                    </div>
-                    <div className="space-y-2">
-                        <h3 className="font-bold">Pago 100% Seguro</h3>
-                        <p className="text-gray-400">Usamos la mejor tecnología para proteger tu pago. Aceptamos Tarjeta y Pix.</p>
-                    </div>
-                    <div className="space-y-2">
-                        <h3 className="font-bold">7 Días de Garantía Total</h3>
-                        <p className="text-gray-400">Si no es lo que esperabas, te devolvemos tu dinero. Sin preguntas.</p>
-                    </div>
-                </div>
-                <div className="mt-12 text-center">
+                <div className="mt-6">
                     <CtaButton />
+                </div>
+                <div className="mt-8 space-y-6">
+                    <p className="font-bold text-red-600 uppercase">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
+                    <p className="font-semibold text-green-700 uppercase">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
+                    <div className="flex flex-wrap items-center justify-center gap-4">
+                        <div className="flex items-center gap-2 p-2 bg-white rounded-md shadow">
+                            <ShieldCheck className="w-8 h-8 text-red-600" />
+                            <span className="font-bold text-red-600">COMPRA 100% SEGURA</span>
+                        </div>
+                        <span className="font-bold">VISA</span>
+                        <span className="font-bold">MasterCard</span>
+                        <span className="font-bold">AMERICAN EXPRESS</span>
+                        <span className="font-bold">PayPal</span>
+                        <span className="font-bold">DISCOVER</span>
+                    </div>
+                    <p className="text-xl font-bold uppercase">Disponible para todo el mundo</p>
+                    <div className="relative flex flex-col items-center justify-center pt-8">
+                        <div className="relative flex items-center justify-center w-40 h-40">
+                            <ShieldCheck className="absolute w-full h-full text-green-500" />
+                            <Check className="absolute w-20 h-20 text-white" />
+                        </div>
+                        <p className="absolute text-2xl font-bold text-white bg-green-600 px-4 py-2 rounded-lg -bottom-4 z-10">COMPRA 100% SEGURA</p>
+                    </div>
+
+                    <p className="max-w-md mx-auto font-semibold pt-8">
+                        REALIZA TU COMPRA CON TOTAL CONFIANZA, RAPIDEZ, SEGURIDAD Y SIN COMPLICACIONES CON NUESTRA PLATAFORMA DE PAGO PROTEGIDA MEDIANTE ENCRIPTACIÓN SSL Y RESPALDADA POR VISA. MASTERCARD, AMERICAN EXPRESS Y PAYPAL
+                    </p>
+                     <p className="font-bold uppercase text-red-600">IMPORTANTE:</p>
+                    <p className="max-w-md mx-auto font-semibold">
+                        AL FINALIZAR TU COMPRA, RECIBIRÁS DE FORMA AUTOMÁTICA TODOS LOS ACCESOS A LA PLATAFORMA EDUCATIVA MEDIANTE CORREO ELECTRÓNICO
+                    </p>
                 </div>
             </div>
         </section>
