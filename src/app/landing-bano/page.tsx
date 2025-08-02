@@ -393,20 +393,8 @@ export default function LandingBanoPage() {
             </div>
         </section>
 
-        <section className="flex justify-center px-4 py-16 sm:py-24">
-            <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl aspect-square">
-                <Image 
-                    src="https://placehold.co/800x800.png"
-                    alt="Placeholder para imagen de producto"
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                    data-ai-hint="product mockup"
-                />
-            </div>
-        </section>
-        
         <section 
-            className="relative px-4 py-16 bg-center bg-cover"
+            className="relative px-4 py-16 bg-center bg-cover sm:py-24"
             style={{
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
             }}
@@ -490,63 +478,6 @@ export default function LandingBanoPage() {
             </div>
         </section>
 
-        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
-            <div className="max-w-3xl mx-auto space-y-4 text-center sm:space-y-6">
-                <h2 className="flex items-center justify-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">
-                    <Gift className="w-8 h-8 mr-3 text-primary shrink-0" />
-                    TODO LO QUE RECIBIRÁS POR SOLO $9.90 DÓLARES
-                </h2>
-                <p className="text-base text-gray-700 sm:text-lg">
-                    Imagina tener tu propia línea de sales de baño terapéuticas, sin cometer errores ni perder material.
-                    Eso es exactamente lo que te llevarás con el curso completo paso a paso.
-                </p>
-                <p className="text-base font-semibold text-primary sm:text-lg">
-                    Aumenta tus ventas con el método “PURA ESENCIA™”.
-                </p>
-            </div>
-        </section>
-
-        <section className="flex justify-center px-4 py-16 sm:py-24">
-            <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl aspect-square">
-                <Image 
-                    src="https://placehold.co/800x800.png"
-                    alt="Placeholder para imagen de producto"
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                    data-ai-hint="product mockup"
-                />
-            </div>
-        </section>
-
-        <section className="px-4 py-16 sm:py-24">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl font-headline">
-              ESTO ES LO QUE OBTIENES AL INSCRIBIRTE
-            </h2>
-            <div className="grid grid-cols-1 gap-10 mt-12 md:grid-cols-2">
-              <div className="space-y-4">
-                {loQueObtienes.map((item, index) => (
-                  <div key={index} className="flex items-start">
-                    <Check className="w-6 h-6 mt-1 mr-3 text-green-500 shrink-0" />
-                    <p className="text-base text-gray-700 sm:text-lg">{item}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold tracking-tight text-center text-gray-900 font-headline">
-                  🎁 Y además te llevas estos BONOS GRATIS:
-                </h3>
-                {bonosGratis.map((item, index) => (
-                  <div key={index} className="flex items-start">
-                    <Sparkles className="w-6 h-6 mt-1 mr-3 text-yellow-500 shrink-0" />
-                    <p className="text-base text-gray-700 sm:text-lg">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section 
             className="relative px-4 py-16 bg-center bg-cover sm:py-24"
             style={{
@@ -609,10 +540,13 @@ export default function LandingBanoPage() {
                     Cada vez más Emprendedores lo están Logrando
                 </h2>
                 <div className="flex items-center justify-center mt-12">
-                     <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-                        <CarouselContent>
+                     <Carousel 
+                        opts={{ loop: true, align: "start" }}
+                        className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+                     >
+                        <CarouselContent className="-ml-2 sm:-ml-4">
                             {testimonials.map((testimonial, index) => (
-                            <CarouselItem key={index}>
+                            <CarouselItem key={index} className="pl-2 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 sm:pl-4">
                                 <div className="p-1">
                                 <Card>
                                     <CardContent className="flex aspect-[2/3] items-center justify-center p-6">
@@ -630,8 +564,8 @@ export default function LandingBanoPage() {
                             </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
+                        <CarouselPrevious className="hidden sm:inline-flex" />
+                        <CarouselNext className="hidden sm:inline-flex" />
                     </Carousel>
                 </div>
             </div>
