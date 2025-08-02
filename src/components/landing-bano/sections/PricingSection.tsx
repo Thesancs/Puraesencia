@@ -12,7 +12,7 @@ export function PricingSection() {
                 className="absolute top-0 left-0 w-full overflow-hidden leading-none"
                 style={{ lineHeight: 0 }}
              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[150px] sm:h-[200px]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[150px] sm:h-[250px]">
                     <path fill="#ffffff" fillOpacity="1" d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
                 </svg>
             </div>
@@ -66,7 +66,7 @@ export function PricingSection() {
                 className="absolute bottom-0 left-0 w-full overflow-hidden"
                 style={{ lineHeight: 0, transform: 'rotate(180deg)' }}
              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[150px] sm:h-[200px]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[150px] sm:h-[250px]">
                      <path fill="#ffffff" fillOpacity="1" d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
                 </svg>
             </div>
