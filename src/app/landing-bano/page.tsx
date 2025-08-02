@@ -591,8 +591,8 @@ export default function LandingBanoPage() {
                             </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="sm:inline-flex" />
-                        <CarouselNext className="sm:inline-flex" />
+                        <CarouselPrevious className="hidden sm:inline-flex" />
+                        <CarouselNext className="hidden sm:inline-flex" />
                     </Carousel>
                 </div>
             </div>
@@ -612,7 +612,7 @@ export default function LandingBanoPage() {
                 </p>
                 <div className="relative w-full max-w-xl mx-auto mt-6 aspect-video">
                     <Image
-                        src="/images/Certificado.webp"
+                        src="/images/certificado.png"
                         alt="Certificado de finalización del curso"
                         fill
                         className="object-contain rounded-lg shadow-lg border-4 border-green-600/50"
