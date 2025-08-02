@@ -35,7 +35,7 @@ const bonuses = [
         title: "BONO 6: Guía para Crear tu Primer Kit de Regalo Artesanal", 
         description: "Aprende a combinar, presentar y vender tus sales como regalos irresistibles para fechas especiales. Incluye estrategias para kits temáticos, empaques atractivos y precios que aumentan tu ticket promedio. Ideal para Día de la Madre, Navidad, ferias o lanzamientos.", 
         callout: "HOY GRATIS",
-        imageUrl: "https://placehold.co/300x200.png"
+        imageUrl: "/images/empaques que enamoran.png"
     }
 ];
 
