@@ -612,7 +612,7 @@ export default function LandingBanoPage() {
                 </p>
                 <div className="relative w-full max-w-xl mx-auto mt-6 aspect-video">
                     <Image
-                        src="https://placehold.co/600x400.png"
+                        src="/images/Certificado.webp"
                         alt="Certificado de finalización del curso"
                         fill
                         className="object-contain rounded-lg shadow-lg"
