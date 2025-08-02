@@ -28,8 +28,8 @@ export default function LandingBanoPage() {
         <PersonalStorySection />
         <WhyPuraEsenciaSection />
         <GallerySection />
-        <PreLaunchOfferSection />
         <PricingSection />
+        <PreLaunchOfferSection />
         <BonusSection />
         <RecapSection />
         <WhatYouGetSection />
