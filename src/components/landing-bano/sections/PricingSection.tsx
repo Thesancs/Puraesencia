@@ -46,13 +46,12 @@ export function PricingSection() {
                             data-ai-hint="payment methods"
                         />
                     </div>
-                    <p className="text-lg font-bold uppercase sm:text-xl">Disponible para todo el mundo</p>
-                    <div className="relative flex flex-col items-center justify-center pt-8">
+                     <div className="relative flex flex-col items-center justify-center pt-8">
                          <ShieldCheck className="absolute w-32 h-32 text-green-500 opacity-20 sm:w-40 sm:h-40" />
                          <Check className="absolute w-16 h-16 text-green-600 sm:w-20 sm:h-20" />
                          <p className="z-10 mt-2 text-lg font-bold text-green-700 sm:text-2xl">COMPRA 100% SEGURA</p>
                     </div>
-
+                    <p className="text-lg font-bold uppercase sm:text-xl">Disponible para todo el mundo</p>
                     <p className="max-w-md pt-8 mx-auto text-sm font-semibold sm:text-base">
                         REALIZA TU COMPRA CON TOTAL CONFIANZA, RAPIDEZ, SEGURIDAD Y SIN COMPLICACIONES CON NUESTRA PLATAFORMA DE PAGO PROTEGIDA MEDIANTE ENCRIPTACIÓN SSL Y RESPALDADA POR VISA. MASTERCARD, AMERICAN EXPRESS Y PAYPAL
                     </p>
