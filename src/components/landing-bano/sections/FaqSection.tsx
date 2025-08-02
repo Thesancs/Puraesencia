@@ -6,12 +6,34 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-    { q: "¿Necesito experiencia previa?", a: "No, en absoluto. El curso está diseñado para llevarte desde cero hasta crear tu primera colección de sales de baño. Te guiaremos en cada paso." },
-    { q: "¿Cuánto dinero necesito para empezar?", a: "La belleza de este negocio es su bajo costo inicial. Te mostraremos cómo empezar con una inversión mínima, utilizando ingredientes fáciles de encontrar." },
-    { q: "¿En cuánto tiempo veré resultados?", a: "Puedes crear tu primer producto en un fin de semana y empezar a vender inmediatamente. Tu dedicación marcará la velocidad de tu crecimiento." },
-    { q: "¿El curso es online?", a: "Sí, el curso es 100% online y con acceso de por vida. Aprende a tu propio ritmo, desde cualquier lugar del mundo y en cualquier momento." },
-    { q: "¿Qué pasa si no me gusta?", a: "Tu satisfacción es nuestra prioridad. Tienes una garantía de 7 días. Si sientes que no es para ti, te devolvemos el 100% de tu dinero, sin preguntas." },
-    { q: "¿Tendré soporte?", a: "¡Claro que sí! Tendrás acceso a nuestra comunidad privada de alumnas, donde podrás hacer preguntas y conectar con compañeras y conmigo." },
+    { 
+      q: "¿CUANTO TIEMPO ME TOMARÁ COMPLETAR EL CURSO?", 
+      a: "El tiempo para completar el curso puede variar según tu ritmo de aprendizaje, pero está diseñado para ser flexible. Puedes avanzar a tu propio ritmo y revisar el contenido según sea necesario." 
+    },
+    { 
+      q: "¿NECESITO EXPERIENCIA PREVIA PARA TOMAR ESTE CURSO?", 
+      a: "No se requiere experiencia previa. El curso está estructurado para principiantes y aquellos con alguna experiencia. Las Ebooks están diseñados para ser accesibles y fáciles de seguir, sin importar tu nivel inicial." 
+    },
+    { 
+      q: "¿COMO PUEDO ACCEDER AL CONTENIDO DEL CURSO DESPUÉS DE LA COMPRA?", 
+      a: "Una vez realizada la compra recibirás de Inmediato un correo electrónico con el acceso al contenido del curso a través de una plataforma en línea. Puedes acceder desde cualquier dispositivo con conexión a internet." 
+    },
+    { 
+      q: "¿QUÉ MATERIALES NECESITO PARA TOMAR EL CURSO?", 
+      a: "Dentro del curso te especificamos que materiales necesitarás, te entregamos material de apoyo y te mostraremos dónde conseguirlos." 
+    },
+    { 
+      q: "¿CUÁNTO TIEMPO TENDRÉ ACCESO AL CURSO UNA VEZ LO COMPRE?", 
+      a: "Tendrás acceso ilimitado al curso una vez comprado. Puedes revisar el contenido tantas veces como desees, incluso después de completar todas las lecciones." 
+    },
+    { 
+      q: "¿CUÁLES SON LOS MÉTODOS DE PAGO?", 
+      a: "CUALQUIER TARJETA DE DEBITO O CREDITO: Si tu tarjeta es de débito, deberás seleccionar la opción “Tarjeta de crédito”.\nPAYPAL" 
+    },
+    {
+      q: "¿EL PAGO ES SEGURO?",
+      a: "Si, el pago es realizado a través de Hotmart, la plataforma de infoproductos digitales más importante del Mundo y está protegida mediante encriptación SSL , siendo uno de los procesadores de pago más importantes del mundo que opera en más de 160 países"
+    }
 ];
 
 export function FaqSection() {
@@ -26,7 +48,7 @@ export function FaqSection() {
                     {faqs.map((faq, index) => (
                     <AccordionItem value={`item-${index}`} key={index} className="p-4 border border-green-500 rounded-lg shadow-sm">
                         <AccordionTrigger className="text-base font-semibold text-left sm:text-lg hover:no-underline">{faq.q}</AccordionTrigger>
-                        <AccordionContent className="text-sm text-gray-700 sm:text-base">
+                        <AccordionContent className="text-sm text-gray-700 sm:text-base whitespace-pre-line">
                         {faq.a}
                         </AccordionContent>
                     </AccordionItem>
