@@ -415,29 +415,24 @@ export default function LandingBanoPage() {
                     <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">Acceso inmediato a estas herramientas para acelerar tu éxito.</p>
                 </div>
                 <div className="grid grid-cols-1 gap-12 mt-12 md:grid-cols-2">
-                    <div className="space-y-8">
-                        {bonuses.map((bonus, index) => (
-                            <div key={index} className="flex items-start p-4 bg-white border border-gray-200 rounded-2xl shadow-sm">
-                                <span className="text-3xl mr-4">🎁</span>
-                                <div className="flex-1">
-                                    <p className="font-bold text-lg text-primary">{bonus.title}</p>
-                                    <p className="mt-2 text-gray-700">{bonus.description}</p>
-                                    <p className="mt-3 font-bold text-red-600">{bonus.callout}</p>
-                                </div>
+                    {bonuses.map((bonus, index) => (
+                        <div key={index} className="flex flex-col items-center p-4 bg-white border border-gray-200 rounded-2xl shadow-sm">
+                            <div className="relative w-full max-w-xs h-48 mb-4">
+                                <Image
+                                    src={`https://placehold.co/300x200.png`}
+                                    alt={`Mockup para ${bonus.title}`}
+                                    fill
+                                    className="object-contain rounded-lg"
+                                    data-ai-hint="ebook cover"
+                                />
                             </div>
-                        ))}
-                    </div>
-                    <div className="flex items-center justify-center">
-                         <div className="relative w-full max-w-sm aspect-[3/4]">
-                            <Image
-                                src="https://placehold.co/400x500.png"
-                                alt="Ebook Mockup"
-                                fill
-                                className="object-cover rounded-lg shadow-2xl"
-                                data-ai-hint="ebook cover"
-                            />
+                            <div className="flex-1 text-center">
+                                <p className="font-bold text-lg text-primary">{bonus.title}</p>
+                                <p className="mt-2 text-gray-700">{bonus.description}</p>
+                                <p className="mt-3 font-bold text-red-600">{bonus.callout}</p>
+                            </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
