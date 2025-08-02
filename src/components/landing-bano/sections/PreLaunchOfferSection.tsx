@@ -13,12 +13,12 @@ export function PreLaunchOfferSection() {
                     VOY A CELEBRAR EL PRE LANZAMIENTO DE MI CURSO CONTIGO
                 </h3>
                 <p className="text-base text-gray-700 sm:text-lg">
-                    Por eso podrás acceder al Curso Completo para Crear Sales de Baño Terapéuticas Únicas con el Método «PURA ESENCIA™” a un Super Precio de Pre Lanzamiento.
+                    <b>Por eso podrás acceder al Curso Completo para Crear Sales de Baño Terapéuticas Únicas con el Método «PURA ESENCIA™” a un Super Precio de Pre Lanzamiento.</b>
                 </p>
                 <div className="inline-block p-4 font-bold text-green-800 bg-green-100 border-l-4 border-green-500 rounded-lg">
                     <div className="flex items-center gap-2">
                         <AlertTriangle className="w-6 h-6 text-green-700" />
-                        <span className="text-sm sm:text-base">¡Pero apúrate porque este Increíle Precio es solo para las Primeras Inscritas y los cupos son Limitados!</span>
+                        <span className="text-sm sm:text-base"><b>¡Pero apúrate porque este Increíble Precio es solo para las Primeras Inscritas y los cupos son Limitados!</b></span>
                     </div>
                 </div>
                 <div className="relative w-full max-w-xl mx-auto mt-8 aspect-square">

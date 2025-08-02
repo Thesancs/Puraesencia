@@ -35,7 +35,7 @@ export function WhyPuraEsenciaSection() {
                 <div className="flex items-center">
                     <ArrowRight className="w-6 h-6 mr-3 text-primary shrink-0" />
                     <p className="text-base font-semibold text-gray-900 sm:text-lg">
-                        <b>Aquí no se trata de copiar recetas de internet</b>. Se trata de <b>crear con intención</b>.
+                        Aquí no se trata de <b>copiar recetas de internet</b>. Se trata de <b>crear con intención</b>.
                     </p>
                 </div>
                 <p className="text-base font-bold text-gray-800 sm:text-lg"><b>El método incluye:</b></p>
@@ -62,9 +62,9 @@ export function WhyPuraEsenciaSection() {
                             <ShieldAlert className="w-6 h-6 text-green-700"/>
                         </div>
                         <div className="ml-3">
-                            <p className="text-base font-bold text-green-800 sm:text-lg"><b>Y SI ERES EMPRENDEDORA DE VERDAD...</b></p>
+                            <p className="text-base font-bold text-green-800 sm:text-lg">Y SI ERES EMPRENDEDORA DE VERDAD...</p>
                             <p className="mt-2 text-base text-green-700 sm:text-lg">
-                            <b>No basta con hacer algo bonito</b>.<br/>
+                            Sabes que <b>no basta con hacer algo bonito</b>.<br/>
                             <b>Tu producto tiene que funcionar, emocionar y dejar huella.</b><br/>
                             <b>Eso es lo que vas a lograr con PURA ESENCIA™.</b>
                             </p>
