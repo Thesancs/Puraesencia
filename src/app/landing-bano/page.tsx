@@ -563,7 +563,7 @@ export default function LandingBanoPage() {
         {/* Testimonials Section */}
         <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl font-headline">
+                <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl font-headline">
                     Cada vez más Emprendedores lo están Logrando
                 </h2>
                 <div className="flex items-center justify-center mt-12">
@@ -594,6 +594,30 @@ export default function LandingBanoPage() {
                         <CarouselPrevious className="hidden sm:inline-flex" />
                         <CarouselNext className="hidden sm:inline-flex" />
                     </Carousel>
+                </div>
+            </div>
+        </section>
+
+        {/* Certificate Section */}
+        <section className="px-4 py-16 sm:py-24">
+            <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">
+                    Valida tus Conocimientos y Habilidades
+                </h2>
+                <p className="max-w-2xl mx-auto mt-4 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
+                    Una vez que concluyas el curso completo podrás descargar tu certificado personalizado con tu nombre, sin ningún costo extra.
+                </p>
+                <p className="max-w-2xl mx-auto mt-2 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
+                    El certificado te convierte en una Profesional en Aromaterapia Organica y Ecologica, lo cual te otorga credibilidad y confianza en tu trabajo.
+                </p>
+                <div className="relative w-full max-w-xl mx-auto mt-6 aspect-video">
+                    <Image
+                        src="https://placehold.co/600x400.png"
+                        alt="Certificado de finalización del curso"
+                        fill
+                        className="object-contain rounded-lg shadow-lg"
+                        data-ai-hint="course certificate"
+                    />
                 </div>
             </div>
         </section>
