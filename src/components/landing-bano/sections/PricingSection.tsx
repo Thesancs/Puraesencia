@@ -38,7 +38,7 @@ export function PricingSection() {
                     <p className="text-sm font-semibold text-green-700 uppercase sm:text-base">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
                     <div className="flex items-center justify-center mt-4">
                         <Image
-                            src="https://placehold.co/768x153.png"
+                            src="/images/compra segura.png"
                             alt="Métodos de pago aceptados"
                             width={768}
                             height={153}
