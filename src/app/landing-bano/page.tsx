@@ -147,7 +147,7 @@ export default function LandingBanoPage() {
                         src="/images/foto 1 pagina.webp"
                         alt="Mujer creando sales de baño terapéuticas en su cocina"
                         fill
-                        className="object-cover rounded-lg shadow-lg border-4 border-amber-800/50"
+                        className="object-cover rounded-lg shadow-lg border-4 border-green-600/50"
                         data-ai-hint="bath salts entrepreneur"
                     />
                 </div>
@@ -188,7 +188,7 @@ export default function LandingBanoPage() {
         {/* Personal Story Section */}
         <section className="px-4 py-16 sm:py-24">
             <div className="max-w-3xl mx-auto text-left space-y-6">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-center text-amber-800" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-center text-green-800" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
                 MÉTODO PURA ESENCIA™
                 </h2>
                 <p className="text-lg text-center font-bold">
@@ -284,7 +284,7 @@ export default function LandingBanoPage() {
         {/* Gallery Section */}
         <section className="px-4 py-16 sm:py-24">
             <div className="max-w-5xl mx-auto text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline text-amber-800">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline text-green-800">
                     ¡AQUÍ TE LO ENSEÑAMOS TODO!
                 </h2>
                 <div className="grid grid-cols-1 gap-12 mt-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -403,3 +403,5 @@ export default function LandingBanoPage() {
     </div>
   );
 }
+
+    
