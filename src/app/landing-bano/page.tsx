@@ -306,25 +306,17 @@ export default function LandingBanoPage() {
             </div>
         </section>
         
-        {/* Course Content Section */}
+        {/* Pre-launch Price Section */}
         <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
-            <div className="max-w-5xl mx-auto">
-                <div className="text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">Contenido del Curso</h2>
-                    <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">Un viaje paso a paso para convertirte en una experta.</p>
-                </div>
-                <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-3">
-                    {courseContent.map((item, index) => (
-                        <div key={index} className="p-6 bg-white rounded-2xl shadow-sm">
-                            <p className="text-3xl">{item.emoji}</p>
-                            <p className="mt-4 text-lg font-semibold">{item.title}</p>
-                        </div>
-                    ))}
-                     <div className="p-6 bg-white rounded-2xl shadow-sm md:col-span-2">
-                        <p className="text-3xl">🚀</p>
-                        <p className="mt-4 text-lg font-semibold">¡Y mucho más contenido práctico y directo al grano!</p>
-                    </div>
-                </div>
+            <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">¿Cuánto Vale Para Ti Todo Esto?</h2>
+                <p className="mt-6 text-xl font-bold text-primary">VOY A CELEBRAR EL PRE LANZAMIENTO DE MI CURSO CONTIGO</p>
+                <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">
+                    Por eso podrás acceder al Curso Completo para Crear Sales de Baño Terapéuticas Únicas con el Método «Esencia Activa™” a un Super Precio de Pre Lanzamiento.
+                </p>
+                <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-800 font-semibold">
+                    Pero Apurate porque este Increible Precio es solo para las ¡Primeras Inscritas y los cupos son Limitados!
+                </p>
             </div>
         </section>
 
