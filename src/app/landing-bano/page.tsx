@@ -26,9 +26,9 @@ export default function LandingBanoPage() {
         <HeroSection />
         <BenefitsSection />
         <VideoSection />
-        <WhatYouGetSection />
         <PersonalStorySection />
         <WhyPuraEsenciaSection />
+        <WhatYouGetSection />
         <GallerySection />
         <PricingSection />
         <BonusSection />
