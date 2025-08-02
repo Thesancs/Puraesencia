@@ -207,9 +207,9 @@ export default function LandingBanoPage() {
                 <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl font-headline">
                 Empieza desde cero y arma tu propia línea de sales de baño terapéuticas que nadie más tiene, usando el método “PURA ESENCIA™” para vender el triple sin complicarte.
                 </h1>
-                <p className="max-w-2xl mx-auto text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
+                <p className="max-w-2xl mx-auto text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
                 Te enseño cómo hacer mezclas que realmente ayudan, cómo ahorrar en ingredientes sin perder calidad y cómo hacer que cada sal que preparas sea tan buena que tus clientas van a querer repetir la compra sin pensarlo.                </p>
-                <div className="relative mx-auto w-full max-w-xl aspect-[4/3] mt-6">
+                <div className="relative w-full max-w-xl mx-auto mt-6 aspect-[4/3]">
                     <Image 
                         src="/images/foto 1 pagina.webp"
                         alt="Mujer creando sales de baño terapéuticas en su cocina"
@@ -233,7 +233,7 @@ export default function LandingBanoPage() {
               {newBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start p-2">
                   <Check className="w-6 h-6 mr-3 text-green-500 shrink-0" />
-                  <p className="text-base sm:text-lg text-gray-700">{benefit}</p>
+                  <p className="text-base text-gray-700 sm:text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -241,7 +241,7 @@ export default function LandingBanoPage() {
         </section>
 
         <section className="px-4 py-16 sm:py-24">
-            <div className="relative mx-auto w-full max-w-3xl aspect-video">
+            <div className="relative w-full max-w-3xl mx-auto aspect-video">
                 <Image 
                     src="/images/foto 2 pagina.webp"
                     alt="Placeholder para video o imagen de producto"
@@ -254,14 +254,14 @@ export default function LandingBanoPage() {
 
         {/* Personal Story Section */}
         <section className="px-4 py-16 sm:py-24">
-            <div className="max-w-3xl mx-auto text-left space-y-4 sm:space-y-6">
-                <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl font-headline text-center">
+            <div className="max-w-3xl mx-auto space-y-4 text-left sm:space-y-6">
+                <h2 className="text-3xl font-bold tracking-tight text-center text-green-800 sm:text-4xl font-headline">
                 MÉTODO PURA ESENCIA™
                 </h2>
-                <p className="text-lg text-center font-bold">
+                <p className="text-lg font-bold text-center">
                     Crea, con ingredientes naturales, tu propia línea de sales terapéuticas que fideliza clientes, genera ventas constantes y posiciona tu marca como una referencia en bienestar.
                 </p>
-                <div className="text-base sm:text-lg text-gray-700 space-y-4">
+                <div className="space-y-4 text-base text-gray-700 sm:text-lg">
                     <p>
                         Todo empezó en una etapa que no le deseo a nadie.
                     </p>
@@ -282,11 +282,11 @@ export default function LandingBanoPage() {
                     {problemas.map((problema, index) => (
                         <div key={index} className="flex items-start p-2">
                             <Check className="w-6 h-6 mr-3 text-green-500 shrink-0" />
-                            <p className="text-base sm:text-lg text-gray-700">{problema}</p>
+                            <p className="text-base text-gray-700 sm:text-lg">{problema}</p>
                         </div>
                     ))}
                 </div>
-                <div className="text-base sm:text-lg text-gray-700 space-y-4 pt-4">
+                <div className="pt-4 space-y-4 text-base text-gray-700 sm:text-lg">
                     <p>
                         No estaba creando solo un producto. Estaba creando alivio. Conexión. Bienestar real.
                     </p>
@@ -299,12 +299,12 @@ export default function LandingBanoPage() {
 
         {/* Why Pura Esencia Section */}
         <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
-            <div className="max-w-3xl mx-auto text-left space-y-4 sm:space-y-6">
+            <div className="max-w-3xl mx-auto space-y-4 text-left sm:space-y-6">
                 <div className="flex items-center justify-center text-center">
                     <Rocket className="w-8 h-8 mr-3 text-primary shrink-0" />
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">¿POR QUÉ “PURA ESENCIA™” ES DIFERENTE?</h2>
                 </div>
-                <div className="text-base sm:text-lg text-gray-700 space-y-4">
+                <div className="space-y-4 text-base text-gray-700 sm:text-lg">
                     <p>
                         Ya no basta con hacer <b>"una sal que huele rico"</b>.
                     </p>
@@ -314,25 +314,25 @@ export default function LandingBanoPage() {
                 </div>
                 <div className="flex items-center">
                     <ArrowRight className="w-6 h-6 mr-3 text-primary shrink-0" />
-                    <p className="text-base sm:text-lg font-semibold text-gray-900">
+                    <p className="text-base font-semibold text-gray-900 sm:text-lg">
                         <b>Aquí no se trata de copiar recetas de internet</b>. Se trata de <b>crear con intención</b>.
                     </p>
                 </div>
-                <p className="text-base sm:text-lg font-bold text-gray-800"><b>El método incluye:</b></p>
+                <p className="text-base font-bold text-gray-800 sm:text-lg"><b>El método incluye:</b></p>
                 <div className="space-y-2 sm:space-y-4">
                     {metodoIncluye.map((item, index) => (
                         <div key={index} className="flex items-start p-2">
                             <Check className="w-6 h-6 mr-3 text-green-500 shrink-0" />
-                            <p className="text-base sm:text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: item }}></p>
+                            <p className="text-base text-gray-700 sm:text-lg" dangerouslySetInnerHTML={{ __html: item }}></p>
                         </div>
                     ))}
                 </div>
-                <p className="text-base sm:text-lg font-bold text-gray-800 pt-4">Además, te enseño cómo aplicar:</p>
+                <p className="pt-4 text-base font-bold text-gray-800 sm:text-lg">Además, te enseño cómo aplicar:</p>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
                     {comoAplicar.map((item, index) => (
                         <div key={index} className="flex items-start p-2">
                             <item.icon className="w-6 h-6 mr-3 text-green-500 shrink-0" />
-                            <p className="text-base sm:text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: item.text }}></p>
+                            <p className="text-base text-gray-700 sm:text-lg" dangerouslySetInnerHTML={{ __html: item.text }}></p>
                         </div>
                     ))}
                 </div>
@@ -342,8 +342,8 @@ export default function LandingBanoPage() {
                             <ShieldAlert className="w-6 h-6 text-green-700"/>
                         </div>
                         <div className="ml-3">
-                            <p className="text-base sm:text-lg font-bold text-green-800"><b>Y SI ERES EMPRENDEDORA DE VERDAD...</b></p>
-                            <p className="mt-2 text-base sm:text-lg text-green-700">
+                            <p className="text-base font-bold text-green-800 sm:text-lg"><b>Y SI ERES EMPRENDEDORA DE VERDAD...</b></p>
+                            <p className="mt-2 text-base text-green-700 sm:text-lg">
                             <b>No basta con hacer algo bonito</b>.<br/>
                             <b>Tu producto tiene que funcionar, emocionar y dejar huella.</b><br/>
                             <b>Eso es lo que vas a lograr con PURA ESENCIA™.</b>
@@ -384,10 +384,10 @@ export default function LandingBanoPage() {
             <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl font-headline">¿Cuánto Vale Para Ti Todo Esto?</h2>
                 <p className="mt-6 text-xl font-bold text-primary">VOY A CELEBRAR EL PRE LANZAMIENTO DE MI CURSO CONTIGO</p>
-                <p className="max-w-2xl mx-auto mt-4 text-base sm:text-lg text-gray-600">
+                <p className="max-w-2xl mx-auto mt-4 text-base text-gray-600 sm:text-lg">
                     Por eso podrás acceder al Curso Completo para Crear Sales de Baño Terapéuticas Únicas con el Método «Esencia Activa™” a un Super Precio de Pre Lanzamiento.
                 </p>
-                <p className="max-w-2xl mx-auto mt-4 text-base sm:text-lg text-gray-800 font-semibold">
+                <p className="max-w-2xl mx-auto mt-4 text-base font-semibold text-gray-800 sm:text-lg">
                     Pero Apurate porque este Increible Precio es solo para las ¡Primeras Inscritas y los cupos son Limitados!
                 </p>
             </div>
@@ -406,22 +406,22 @@ export default function LandingBanoPage() {
         </section>
         
         <section 
-            className="relative px-4 py-16 bg-cover bg-center"
+            className="relative px-4 py-16 bg-center bg-cover"
             style={{
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
             }}
             >
             <div className="max-w-2xl mx-auto text-center">
-                <p className="text-xs sm:text-sm font-semibold text-gray-700 uppercase">
+                <p className="text-xs font-semibold text-gray-700 uppercase sm:text-sm">
                     ¡ACCEDE HOY MISMO! CON EL PRECIO DE PRE LANZAMIENTO DESDE CUALQUIER PARTE DEL MUNDO, PAGANDO EN DOLARES O SU EQUIVALENTE EN TU MONEDA LOCAL
                 </p>
-                <p className="mt-6 text-base sm:text-lg font-bold">PRECIO REGULAR</p>
-                <p className="text-4xl sm:text-5xl font-bold text-gray-500 line-through">$49.90</p>
-                <p className="mt-4 text-xl sm:text-2xl font-bold text-red-600">PRECIO RELÁMPAGO POR PRE LANZAMIENTO</p>
-                <p className="mt-2 text-7xl sm:text-8xl font-bold text-green-600">$9.90</p>
-                <p className="text-2xl sm:text-3xl font-semibold text-green-600">DÓLARES</p>
-                <p className="mt-4 text-lg sm:text-xl font-bold text-red-600">UNICO PAGO</p>
-                <p className="text-lg sm:text-xl font-bold text-red-600">SOLO PARA LAS PRIMERAS INSCRITAS</p>
+                <p className="mt-6 text-base font-bold sm:text-lg">PRECIO REGULAR</p>
+                <p className="text-4xl font-bold text-gray-500 line-through sm:text-5xl">$49.90</p>
+                <p className="mt-4 text-xl font-bold text-red-600 sm:text-2xl">PRECIO RELÁMPAGO POR PRE LANZAMIENTO</p>
+                <p className="mt-2 text-7xl font-bold text-green-600 sm:text-8xl">$9.90</p>
+                <p className="text-2xl font-semibold text-green-600 sm:text-3xl">DÓLARES</p>
+                <p className="mt-4 text-lg font-bold text-red-600 sm:text-xl">UNICO PAGO</p>
+                <p className="text-lg font-bold text-red-600 sm:text-xl">SOLO PARA LAS PRIMERAS INSCRITAS</p>
                 <div className="flex justify-center mt-4">
                     <ChevronDown className="w-12 h-12 text-blue-400 animate-bounce" />
                 </div>
@@ -429,33 +429,31 @@ export default function LandingBanoPage() {
                     <CtaButton />
                 </div>
                 <div className="mt-8 space-y-6">
-                    <p className="font-bold text-red-600 uppercase text-xs sm:text-sm">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
-                    <p className="font-semibold text-green-700 uppercase text-sm sm:text-base">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
+                    <p className="text-xs font-bold text-red-600 uppercase sm:text-sm">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
+                    <p className="text-sm font-semibold text-green-700 uppercase sm:text-base">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
                     <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
                         <div className="flex items-center gap-2 p-2 bg-white rounded-md shadow">
-                            <ShieldCheck className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
-                            <span className="font-bold text-red-600 text-sm sm:text-base">COMPRA 100% SEGURA</span>
+                            <ShieldCheck className="w-6 h-6 text-red-600 sm:w-8 sm:h-8" />
+                            <span className="text-sm font-bold text-red-600 sm:text-base">COMPRA 100% SEGURA</span>
                         </div>
-                        <span className="font-bold text-xs sm:text-sm">VISA</span>
-                        <span className="font-bold text-xs sm:text-sm">MasterCard</span>
-                        <span className="font-bold text-xs sm:text-sm">AMERICAN EXPRESS</span>
-                        <span className="font-bold text-xs sm:text-sm">PayPal</span>
-                        <span className="font-bold text-xs sm:text-sm">DISCOVER</span>
+                        <span className="text-xs font-bold sm:text-sm">VISA</span>
+                        <span className="text-xs font-bold sm:text-sm">MasterCard</span>
+                        <span className="text-xs font-bold sm:text-sm">AMERICAN EXPRESS</span>
+                        <span className="text-xs font-bold sm:text-sm">PayPal</span>
+                        <span className="text-xs font-bold sm:text-sm">DISCOVER</span>
                     </div>
-                    <p className="text-lg sm:text-xl font-bold uppercase">Disponible para todo el mundo</p>
+                    <p className="text-lg font-bold uppercase sm:text-xl">Disponible para todo el mundo</p>
                     <div className="relative flex flex-col items-center justify-center pt-8">
-                        <div className="relative flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40">
-                            <ShieldCheck className="absolute w-full h-full text-green-500" />
-                            <Check className="absolute w-16 h-16 sm:w-20 sm:h-20 text-white" />
-                        </div>
-                        <p className="absolute text-lg sm:text-2xl font-bold text-white bg-green-600 px-3 py-1 sm:px-4 sm:py-2 rounded-lg -bottom-4 z-10">COMPRA 100% SEGURA</p>
+                        <ShieldCheck className="absolute w-32 h-32 text-green-500 sm:w-40 sm:h-40" />
+                        <Check className="absolute w-16 h-16 text-white sm:w-20 sm:h-20" />
+                        <p className="absolute z-10 px-3 py-1 text-lg font-bold text-white bg-green-600 rounded-lg sm:px-4 sm:py-2 -bottom-4 sm:text-2xl">COMPRA 100% SEGURA</p>
                     </div>
 
-                    <p className="max-w-md mx-auto font-semibold pt-8 text-sm sm:text-base">
+                    <p className="max-w-md pt-8 mx-auto text-sm font-semibold sm:text-base">
                         REALIZA TU COMPRA CON TOTAL CONFIANZA, RAPIDEZ, SEGURIDAD Y SIN COMPLICACIONES CON NUESTRA PLATAFORMA DE PAGO PROTEGIDA MEDIANTE ENCRIPTACIÓN SSL Y RESPALDADA POR VISA. MASTERCARD, AMERICAN EXPRESS Y PAYPAL
                     </p>
-                     <p className="font-bold uppercase text-red-600 pt-4">IMPORTANTE:</p>
-                    <p className="max-w-md mx-auto font-semibold text-sm sm:text-base">
+                     <p className="pt-4 font-bold text-red-600 uppercase">IMPORTANTE:</p>
+                    <p className="max-w-md mx-auto text-sm font-semibold sm:text-base">
                         AL FINALIZAR TU COMPRA, RECIBIRÁS DE FORMA AUTOMÁTICA TODOS LOS ACCESOS A LA PLATAFORMA EDUCATIVA MEDIANTE CORREO ELECTRÓNICO
                     </p>
                 </div>
@@ -467,12 +465,12 @@ export default function LandingBanoPage() {
             <div className="max-w-5xl mx-auto">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl font-headline">ADEMÁS SI ERES DE LAS PRIMERAS PERSONAS EN INSCRIBIRSE AL CURSO RECIBES ESTOS BONOS ADICIONALES TOTALMENTE GRATIS</h2>
-                    <p className="max-w-2xl mx-auto mt-4 text-base sm:text-lg text-gray-600">Acceso inmediato a estas herramientas para acelerar tu éxito.</p>
+                    <p className="max-w-2xl mx-auto mt-4 text-base text-gray-600 sm:text-lg">Acceso inmediato a estas herramientas para acelerar tu éxito.</p>
                 </div>
                 <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2">
                     {bonuses.map((bonus, index) => (
-                        <div key={index} className="flex flex-col items-center p-4 bg-white border border-gray-200 rounded-2xl shadow-sm">
-                            <div className="relative w-full max-w-xs h-48 mb-4">
+                        <div key={index} className="flex flex-col items-center p-4 bg-white border-4 border-green-600/50 rounded-2xl shadow-sm">
+                            <div className="relative w-full h-48 max-w-xs mb-4">
                                 <Image
                                     src={bonus.imageUrl}
                                     alt={`Mockup para ${bonus.title}`}
@@ -482,8 +480,8 @@ export default function LandingBanoPage() {
                                 />
                             </div>
                             <div className="flex-1 text-center">
-                                <p className="font-bold text-lg text-primary">{bonus.title}</p>
-                                <p className="mt-2 text-sm sm:text-base text-gray-700">{bonus.description}</p>
+                                <p className="text-lg font-bold text-primary">{bonus.title}</p>
+                                <p className="mt-2 text-sm text-gray-700 sm:text-base">{bonus.description}</p>
                                 <p className="mt-3 font-bold text-red-600">{bonus.callout}</p>
                             </div>
                         </div>
@@ -493,16 +491,16 @@ export default function LandingBanoPage() {
         </section>
 
         <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
-            <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
+            <div className="max-w-3xl mx-auto space-y-4 text-center sm:space-y-6">
                 <h2 className="flex items-center justify-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">
                     <Gift className="w-8 h-8 mr-3 text-primary shrink-0" />
                     TODO LO QUE RECIBIRÁS POR SOLO $9.90 DÓLARES
                 </h2>
-                <p className="text-base sm:text-lg text-gray-700">
+                <p className="text-base text-gray-700 sm:text-lg">
                     Imagina tener tu propia línea de sales de baño terapéuticas, sin cometer errores ni perder material.
                     Eso es exactamente lo que te llevarás con el curso completo paso a paso.
                 </p>
-                <p className="text-base sm:text-lg font-semibold text-primary">
+                <p className="text-base font-semibold text-primary sm:text-lg">
                     Aumenta tus ventas con el método “PURA ESENCIA™”.
                 </p>
             </div>
@@ -522,7 +520,7 @@ export default function LandingBanoPage() {
 
         <section className="px-4 py-16 sm:py-24">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl font-headline">
+            <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl font-headline">
               ESTO ES LO QUE OBTIENES AL INSCRIBIRTE
             </h2>
             <div className="grid grid-cols-1 gap-10 mt-12">
@@ -530,18 +528,18 @@ export default function LandingBanoPage() {
                 {loQueObtienes.map((item, index) => (
                   <div key={index} className="flex items-start">
                     <Check className="w-6 h-6 mt-1 mr-3 text-green-500 shrink-0" />
-                    <p className="text-base sm:text-lg text-gray-700">{item}</p>
+                    <p className="text-base text-gray-700 sm:text-lg">{item}</p>
                   </div>
                 ))}
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-center tracking-tight text-gray-900 font-headline">
+                <h3 className="text-2xl font-bold tracking-tight text-center text-gray-900 font-headline">
                   🎁 Y además te llevas estos BONOS GRATIS:
                 </h3>
                 {bonosGratis.map((item, index) => (
                   <div key={index} className="flex items-start">
                     <Sparkles className="w-6 h-6 mt-1 mr-3 text-yellow-500 shrink-0" />
-                    <p className="text-base sm:text-lg text-gray-700">{item}</p>
+                    <p className="text-base text-gray-700 sm:text-lg">{item}</p>
                   </div>
                 ))}
               </div>
@@ -550,22 +548,22 @@ export default function LandingBanoPage() {
         </section>
 
         <section 
-            className="relative px-4 py-16 bg-cover bg-center"
+            className="relative px-4 py-16 bg-center bg-cover"
             style={{
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
             }}
             >
             <div className="max-w-2xl mx-auto text-center">
-                <p className="text-xs sm:text-sm font-semibold text-gray-700 uppercase">
+                <p className="text-xs font-semibold text-gray-700 uppercase sm:text-sm">
                     ¡ACCEDE HOY MISMO! CON EL PRECIO DE PRE LANZAMIENTO DESDE CUALQUIER PARTE DEL MUNDO, PAGANDO EN DOLARES O SU EQUIVALENTE EN TU MONEDA LOCAL
                 </p>
-                <p className="mt-6 text-base sm:text-lg font-bold">PRECIO REGULAR</p>
-                <p className="text-4xl sm:text-5xl font-bold text-gray-500 line-through">$49.90</p>
-                <p className="mt-4 text-xl sm:text-2xl font-bold text-red-600">PRECIO RELÁMPAGO POR PRE LANZAMIENTO</p>
-                <p className="mt-2 text-7xl sm:text-8xl font-bold text-green-600">$9.90</p>
-                <p className="text-2xl sm:text-3xl font-semibold text-green-600">DÓLARES</p>
-                <p className="mt-4 text-lg sm:text-xl font-bold text-red-600">UNICO PAGO</p>
-                <p className="text-lg sm:text-xl font-bold text-red-600">SOLO PARA LAS PRIMERAS INSCRITAS</p>
+                <p className="mt-6 text-base font-bold sm:text-lg">PRECIO REGULAR</p>
+                <p className="text-4xl font-bold text-gray-500 line-through sm:text-5xl">$49.90</p>
+                <p className="mt-4 text-xl font-bold text-red-600 sm:text-2xl">PRECIO RELÁMPAGO POR PRE LANZAMIENTO</p>
+                <p className="mt-2 text-7xl font-bold text-green-600 sm:text-8xl">$9.90</p>
+                <p className="text-2xl font-semibold text-green-600 sm:text-3xl">DÓLARES</p>
+                <p className="mt-4 text-lg font-bold text-red-600 sm:text-xl">UNICO PAGO</p>
+                <p className="text-lg font-bold text-red-600 sm:text-xl">SOLO PARA LAS PRIMERAS INSCRITAS</p>
                 <div className="flex justify-center mt-4">
                     <ChevronDown className="w-12 h-12 text-blue-400 animate-bounce" />
                 </div>
@@ -573,33 +571,31 @@ export default function LandingBanoPage() {
                     <CtaButton />
                 </div>
                 <div className="mt-8 space-y-6">
-                    <p className="font-bold text-red-600 uppercase text-xs sm:text-sm">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
-                    <p className="font-semibold text-green-700 uppercase text-sm sm:text-base">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
+                    <p className="text-xs font-bold text-red-600 uppercase sm:text-sm">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
+                    <p className="text-sm font-semibold text-green-700 uppercase sm:text-base">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
                     <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
                         <div className="flex items-center gap-2 p-2 bg-white rounded-md shadow">
-                            <ShieldCheck className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
-                            <span className="font-bold text-red-600 text-sm sm:text-base">COMPRA 100% SEGURA</span>
+                            <ShieldCheck className="w-6 h-6 text-red-600 sm:w-8 sm:h-8" />
+                            <span className="text-sm font-bold text-red-600 sm:text-base">COMPRA 100% SEGURA</span>
                         </div>
-                        <span className="font-bold text-xs sm:text-sm">VISA</span>
-                        <span className="font-bold text-xs sm:text-sm">MasterCard</span>
-                        <span className="font-bold text-xs sm:text-sm">AMERICAN EXPRESS</span>
-                        <span className="font-bold text-xs sm:text-sm">PayPal</span>
-                        <span className="font-bold text-xs sm:text-sm">DISCOVER</span>
+                        <span className="text-xs font-bold sm:text-sm">VISA</span>
+                        <span className="text-xs font-bold sm:text-sm">MasterCard</span>
+                        <span className="text-xs font-bold sm:text-sm">AMERICAN EXPRESS</span>
+                        <span className="text-xs font-bold sm:text-sm">PayPal</span>
+                        <span className="text-xs font-bold sm:text-sm">DISCOVER</span>
                     </div>
-                    <p className="text-lg sm:text-xl font-bold uppercase">Disponible para todo el mundo</p>
+                    <p className="text-lg font-bold uppercase sm:text-xl">Disponible para todo el mundo</p>
                     <div className="relative flex flex-col items-center justify-center pt-8">
-                        <div className="relative flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40">
-                            <ShieldCheck className="absolute w-full h-full text-green-500" />
-                            <Check className="absolute w-16 h-16 sm:w-20 sm:h-20 text-white" />
-                        </div>
-                        <p className="absolute text-lg sm:text-2xl font-bold text-white bg-green-600 px-3 py-1 sm:px-4 sm:py-2 rounded-lg -bottom-4 z-10">COMPRA 100% SEGURA</p>
+                         <ShieldCheck className="absolute w-32 h-32 text-green-500 sm:w-40 sm:h-40" />
+                         <Check className="absolute w-16 h-16 text-white sm:w-20 sm:h-20" />
+                         <p className="absolute z-10 px-3 py-1 text-lg font-bold text-white bg-green-600 rounded-lg sm:px-4 sm:py-2 -bottom-4 sm:text-2xl">COMPRA 100% SEGURA</p>
                     </div>
 
-                    <p className="max-w-md mx-auto font-semibold pt-8 text-sm sm:text-base">
+                    <p className="max-w-md pt-8 mx-auto text-sm font-semibold sm:text-base">
                         REALIZA TU COMPRA CON TOTAL CONFIANZA, RAPIDEZ, SEGURIDAD Y SIN COMPLICACIONES CON NUESTRA PLATAFORMA DE PAGO PROTEGIDA MEDIANTE ENCRIPTACIÓN SSL Y RESPALDADA POR VISA. MASTERCARD, AMERICAN EXPRESS Y PAYPAL
                     </p>
-                     <p className="font-bold uppercase text-red-600 pt-4">IMPORTANTE:</p>
-                    <p className="max-w-md mx-auto font-semibold text-sm sm:text-base">
+                     <p className="pt-4 font-bold text-red-600 uppercase">IMPORTANTE:</p>
+                    <p className="max-w-md mx-auto text-sm font-semibold sm:text-base">
                         AL FINALIZAR TU COMPRA, RECIBIRÁS DE FORMA AUTOMÁTICA TODOS LOS ACCESOS A LA PLATAFORMA EDUCATIVA MEDIANTE CORREO ELECTRÓNICO
                     </p>
                 </div>
@@ -609,7 +605,7 @@ export default function LandingBanoPage() {
         {/* Testimonials Section */}
         <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl font-headline">
+                <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl font-headline">
                     Cada vez más Emprendedores lo están Logrando
                 </h2>
                 <div className="flex items-center justify-center mt-12">
@@ -625,7 +621,7 @@ export default function LandingBanoPage() {
                                             alt={`Testimonio ${index + 1}`} 
                                             width={400}
                                             height={600}
-                                            className="rounded-lg object-cover"
+                                            className="object-cover rounded-lg"
                                             data-ai-hint={testimonial.aiHint}
                                         />
                                     </CardContent>
@@ -651,8 +647,8 @@ export default function LandingBanoPage() {
                 <Accordion type="single" collapsible className="w-full mt-12">
                     {faqs.map((faq, index) => (
                     <AccordionItem value={`item-${index}`} key={index} className="border-b">
-                        <AccordionTrigger className="text-base sm:text-lg font-semibold text-left hover:no-underline">{faq.q}</AccordionTrigger>
-                        <AccordionContent className="text-sm sm:text-base text-gray-700">
+                        <AccordionTrigger className="text-base font-semibold text-left sm:text-lg hover:no-underline">{faq.q}</AccordionTrigger>
+                        <AccordionContent className="text-sm text-gray-700 sm:text-base">
                         {faq.a}
                         </AccordionContent>
                     </AccordionItem>
