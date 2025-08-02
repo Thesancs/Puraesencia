@@ -591,8 +591,8 @@ export default function LandingBanoPage() {
                             </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="hidden sm:inline-flex" />
-                        <CarouselNext className="hidden sm:inline-flex" />
+                        <CarouselPrevious className="sm:inline-flex" />
+                        <CarouselNext className="sm:inline-flex" />
                     </Carousel>
                 </div>
             </div>
@@ -615,7 +615,7 @@ export default function LandingBanoPage() {
                         src="/images/Certificado.webp"
                         alt="Certificado de finalización del curso"
                         fill
-                        className="object-contain rounded-lg shadow-lg"
+                        className="object-contain rounded-lg shadow-lg border-4 border-green-600/50"
                         data-ai-hint="course certificate"
                     />
                 </div>
@@ -656,9 +656,9 @@ export default function LandingBanoPage() {
                 <div className="text-center">
                      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">Preguntas Frecuentes</h2>
                 </div>
-                <Accordion type="single" collapsible className="w-full mt-12">
+                <Accordion type="single" collapsible className="w-full mt-12 space-y-4">
                     {faqs.map((faq, index) => (
-                    <AccordionItem value={`item-${index}`} key={index} className="border-b">
+                    <AccordionItem value={`item-${index}`} key={index} className="p-4 border rounded-lg shadow-sm">
                         <AccordionTrigger className="text-base font-semibold text-left sm:text-lg hover:no-underline">{faq.q}</AccordionTrigger>
                         <AccordionContent className="text-sm text-gray-700 sm:text-base">
                         {faq.a}
