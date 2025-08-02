@@ -71,7 +71,7 @@ const bonuses = [
         title: "BONO 1: Lista de Proveedores Verificada", 
         description: "Acceso directo a proveedores confiables que ofrecen ingredientes de alta calidad a buen precio. Olvídate de perder tiempo buscando o de arriesgarte con malas compras. Aquí encontrarás todo lo que necesitas: sales minerales puras, aceites esenciales certificados, envases ecológicos y más.", 
         callout: "HOY GRATIS",
-        imageUrl: "https://placehold.co/300x200.png"
+        imageUrl: "/images/provedores certificados.png"
     },
     { 
         title: "BONO 2: Plantillas de Etiquetas Profesionales", 
