@@ -25,6 +25,13 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -172,6 +179,14 @@ const galleryItems = [
         imageUrl: "/images/fotogrid (6).webp",
         aiHint: "woman foot bath"
     }
+];
+
+const testimonials = [
+  { imageUrl: "https://placehold.co/400x600.png", aiHint: "testimonial screenshot" },
+  { imageUrl: "https://placehold.co/400x600.png", aiHint: "customer review" },
+  { imageUrl: "https://placehold.co/400x600.png", aiHint: "social media comment" },
+  { imageUrl: "https://placehold.co/400x600.png", aiHint: "testimonial screenshot" },
+  { imageUrl: "https://placehold.co/400x600.png", aiHint: "customer review" },
 ];
 
 
@@ -384,7 +399,7 @@ export default function LandingBanoPage() {
         </section>
         
         <section 
-            className="relative px-4 py-8 sm:py-12 bg-[#F0F8F0] bg-cover bg-center"
+            className="relative px-4 py-8 sm:py-12 bg-cover bg-center"
             style={{
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
             }}
@@ -528,7 +543,7 @@ export default function LandingBanoPage() {
         </section>
 
         <section 
-            className="relative px-4 py-8 sm:py-12 bg-[#F0F8F0] bg-cover bg-center"
+            className="relative px-4 py-8 sm:py-12 bg-cover bg-center"
             style={{
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
             }}
@@ -584,6 +599,42 @@ export default function LandingBanoPage() {
             </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
+            <div className="max-w-5xl mx-auto">
+                <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl font-headline">
+                    Lo que dicen nuestras alumnas
+                </h2>
+                <div className="flex items-center justify-center mt-12">
+                     <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                        <CarouselContent>
+                            {testimonials.map((testimonial, index) => (
+                            <CarouselItem key={index}>
+                                <div className="p-1">
+                                <Card>
+                                    <CardContent className="flex aspect-[2/3] items-center justify-center p-6">
+                                        <Image 
+                                            src={testimonial.imageUrl} 
+                                            alt={`Testimonio ${index + 1}`} 
+                                            width={400}
+                                            height={600}
+                                            className="rounded-lg object-cover"
+                                            data-ai-hint={testimonial.aiHint}
+                                        />
+                                    </CardContent>
+                                </Card>
+                                </div>
+                            </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
+                </div>
+            </div>
+        </section>
+
+
         {/* FAQ Section */}
         <section className="px-4 py-16 sm:py-24">
             <div className="max-w-3xl mx-auto">
@@ -606,5 +657,3 @@ export default function LandingBanoPage() {
     </div>
   );
 }
-
-    
