@@ -19,7 +19,7 @@ export function GuaranteeSection() {
                 </p>
                 <div className="relative inline-block mt-8">
                     <Image
-                        src="/images/garantia-7-dias-480x564.webp"
+                        src="/images/garantia1.png"
                         alt="Sello de garantía de 7 días"
                         width={300}
                         height={300}
