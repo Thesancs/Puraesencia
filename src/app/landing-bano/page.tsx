@@ -182,11 +182,12 @@ const galleryItems = [
 ];
 
 const testimonials = [
-  { imageUrl: "https://placehold.co/400x600.png", aiHint: "testimonial screenshot" },
-  { imageUrl: "https://placehold.co/400x600.png", aiHint: "customer review" },
-  { imageUrl: "https://placehold.co/400x600.png", aiHint: "social media comment" },
-  { imageUrl: "https://placehold.co/400x600.png", aiHint: "testimonial screenshot" },
-  { imageUrl: "https://placehold.co/400x600.png", aiHint: "customer review" },
+  { imageUrl: "/images/testimonials/depoimento 1.png", aiHint: "testimonial screenshot" },
+  { imageUrl: "/images/testimonials/depoimento 2.png", aiHint: "customer review" },
+  { imageUrl: "/images/testimonials/depoimento 3.png", aiHint: "social media comment" },
+  { imageUrl: "/images/testimonials/depoimento 4.png", aiHint: "testimonial screenshot" },
+  { imageUrl: "/images/testimonials/depoimento 5.png", aiHint: "customer review" },
+  { imageUrl: "/images/testimonials/depoimento 6.png", aiHint: "customer review" },
 ];
 
 
