@@ -19,7 +19,8 @@ import {
   Leaf,
   Package,
   Brain,
-  ShieldAlert
+  ShieldAlert,
+  ShieldCheck
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -309,7 +310,7 @@ export default function LandingBanoPage() {
         {/* Pre-launch Price Section */}
         <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
             <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">¿Cuánto Vale Para Ti Todo Esto?</h2>
+                <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl font-headline">¿Cuánto Vale Para Ti Todo Esto?</h2>
                 <p className="mt-6 text-xl font-bold text-primary">VOY A CELEBRAR EL PRE LANZAMIENTO DE MI CURSO CONTIGO</p>
                 <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">
                     Por eso podrás acceder al Curso Completo para Crear Sales de Baño Terapéuticas Únicas con el Método «Esencia Activa™” a un Super Precio de Pre Lanzamiento.
@@ -349,6 +350,36 @@ export default function LandingBanoPage() {
                 </div>
                 <div className="mt-6">
                     <CtaButton />
+                </div>
+                <div className="mt-8 space-y-6">
+                    <p className="font-bold text-red-600 uppercase">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁTICamente A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
+                    <p className="font-semibold text-green-700 uppercase">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
+                    <div className="flex flex-wrap items-center justify-center gap-4">
+                        <div className="flex items-center gap-2 p-2 bg-white rounded-md shadow">
+                            <ShieldCheck className="w-8 h-8 text-red-600" />
+                            <span className="font-bold text-red-600">COMPRA 100% SEGURA</span>
+                        </div>
+                        <span className="font-bold">VISA</span>
+                        <span className="font-bold">MasterCard</span>
+                        <span className="font-bold">AMERICAN EXPRESS</span>
+                        <span className="font-bold">PayPal</span>
+                        <span className="font-bold">DISCOVER</span>
+                    </div>
+                    <p className="text-xl font-bold uppercase">Disponible para todo el mundo</p>
+                    <div className="flex flex-col items-center">
+                         <div className="relative">
+                            <ShieldCheck className="w-32 h-32 text-green-500" />
+                            <Check className="absolute w-16 h-16 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ transform: 'translate(-50%, -60%)' }} />
+                        </div>
+                        <p className="mt-2 text-2xl font-bold text-white bg-green-600 px-4 py-2 -mt-8">COMPRA 100% SEGURA</p>
+                    </div>
+                    <p className="max-w-md mx-auto font-semibold">
+                        REALIZA TU COMPRA CON TOTAL CONFIANZA, RAPIDEZ, SEGURIDAD Y SIN COMPLICACIONES CON NUESTRA PLATAFORMA DE PAGO PROTEGIDA MEDIANTE ENCRIPTACIÓN SSL Y RESPALDADA POR VISA. MASTERCARD, AMERICAN EXPRESS Y PAYPAL
+                    </p>
+                     <p className="font-bold uppercase text-red-600">IMPORTANTE:</p>
+                    <p className="max-w-md mx-auto font-semibold">
+                        AL FINALIZAR TU COMPRA, RECIBIRÁS DE FORMA AUTOMÁTICA TODOS LOS ACCESOS A LA PLATAFORMA EDUCATIVA MEDIANTE CORREO ELECTRÓNICO
+                    </p>
                 </div>
             </div>
         </section>
