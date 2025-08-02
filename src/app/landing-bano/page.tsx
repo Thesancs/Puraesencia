@@ -189,7 +189,7 @@ export default function LandingBanoPage() {
         {/* Personal Story Section */}
         <section className="px-4 py-16 sm:py-24">
             <div className="max-w-3xl mx-auto text-left space-y-6">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-center text-green-800" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-center text-amber-800" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
                 MÉTODO PURA ESENCIA™
                 </h2>
                 <p className="text-lg text-center font-bold">
@@ -352,7 +352,7 @@ export default function LandingBanoPage() {
                     <CtaButton />
                 </div>
                 <div className="mt-8 space-y-6">
-                    <p className="font-bold text-red-600 uppercase">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁTICamente A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
+                    <p className="font-bold text-red-600 uppercase">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
                     <p className="font-semibold text-green-700 uppercase">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
                     <div className="flex flex-wrap items-center justify-center gap-4">
                         <div className="flex items-center gap-2 p-2 bg-white rounded-md shadow">
@@ -366,12 +366,10 @@ export default function LandingBanoPage() {
                         <span className="font-bold">DISCOVER</span>
                     </div>
                     <p className="text-xl font-bold uppercase">Disponible para todo el mundo</p>
-                    <div className="flex flex-col items-center">
-                         <div className="relative">
-                            <ShieldCheck className="w-32 h-32 text-green-500" />
-                            <Check className="absolute w-16 h-16 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ transform: 'translate(-50%, -60%)' }} />
-                        </div>
-                        <p className="mt-2 text-2xl font-bold text-white bg-green-600 px-4 py-2 -mt-8">COMPRA 100% SEGURA</p>
+                    <div className="relative flex flex-col items-center justify-center">
+                        <ShieldCheck className="w-32 h-32 text-green-500" />
+                        <Check className="absolute w-16 h-16 text-white" />
+                        <p className="mt-2 text-2xl font-bold text-white bg-green-600 px-4 py-2 -mt-8 z-10">COMPRA 100% SEGURA</p>
                     </div>
                     <p className="max-w-md mx-auto font-semibold">
                         REALIZA TU COMPRA CON TOTAL CONFIANZA, RAPIDEZ, SEGURIDAD Y SIN COMPLICACIONES CON NUESTRA PLATAFORMA DE PAGO PROTEGIDA MEDIANTE ENCRIPTACIÓN SSL Y RESPALDADA POR VISA. MASTERCARD, AMERICAN EXPRESS Y PAYPAL
