@@ -295,14 +295,14 @@ export default function LandingBanoPage() {
                         </div>
                     ))}
                 </div>
-                <div className="p-4 mt-6 bg-red-100 border-l-4 border-red-500">
+                <div className="p-4 mt-6 bg-green-100 border-l-4 border-green-500">
                      <div className="flex">
                         <div className="shrink-0">
-                            <ShieldAlert className="w-6 h-6 text-red-700"/>
+                            <ShieldAlert className="w-6 h-6 text-green-700"/>
                         </div>
                         <div className="ml-3">
-                            <p className="text-lg font-bold text-red-800"><b>Y SI ERES EMPRENDEDORA DE VERDAD...</b></p>
-                            <p className="mt-2 text-lg text-red-700">
+                            <p className="text-lg font-bold text-green-800"><b>Y SI ERES EMPRENDEDORA DE VERDAD...</b></p>
+                            <p className="mt-2 text-lg text-green-700">
                             <b>No basta con hacer algo bonito</b>.<br/>
                             <b>Tu producto tiene que funcionar, emocionar y dejar huella.</b><br/>
                             <b>Eso es lo que vas a lograr con PURA ESENCIA™.</b>
@@ -397,11 +397,14 @@ export default function LandingBanoPage() {
                         <span className="font-bold">DISCOVER</span>
                     </div>
                     <p className="text-xl font-bold uppercase">Disponible para todo el mundo</p>
-                    <div className="relative flex flex-col items-center justify-center">
-                        <ShieldCheck className="absolute w-32 h-32 text-green-500" />
-                        <Check className="absolute w-16 h-16 text-white" />
-                        <p className="absolute mt-2 text-2xl font-bold text-white bg-green-600 px-4 py-2 -bottom-4 z-10">COMPRA 100% SEGURA</p>
+                    <div className="relative flex flex-col items-center justify-center pt-8">
+                        <div className="relative flex items-center justify-center w-40 h-40">
+                            <ShieldCheck className="absolute w-full h-full text-green-500" />
+                            <Check className="absolute w-20 h-20 text-white" />
+                        </div>
+                        <p className="absolute text-2xl font-bold text-white bg-green-600 px-4 py-2 rounded-lg -bottom-4 z-10">COMPRA 100% SEGURA</p>
                     </div>
+
                     <p className="max-w-md mx-auto font-semibold pt-8">
                         REALIZA TU COMPRA CON TOTAL CONFIANZA, RAPIDEZ, SEGURIDAD Y SIN COMPLICACIONES CON NUESTRA PLATAFORMA DE PAGO PROTEGIDA MEDIANTE ENCRIPTACIÓN SSL Y RESPALDADA POR VISA. MASTERCARD, AMERICAN EXPRESS Y PAYPAL
                     </p>
