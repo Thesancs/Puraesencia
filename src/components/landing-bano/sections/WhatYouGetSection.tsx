@@ -1,3 +1,5 @@
+import { CheckSquare } from "lucide-react";
+
 const loQueObtienes = [
     "Curso completo Paso a Paso: Aprende a Crear 30 fórmulas de Sales de Baño Terapéuticas Únicas. Cada una con un Propósito Terapéutico Claro (Relajación, Sueño, Dolor, Energía, Enfoque, etc.).",
     "Guia Practica de Presentación y Empaque : Para que tus productos luzcan Profesionales desde el Primer Día.",
@@ -27,7 +29,7 @@ export function WhatYouGetSection() {
                 <div className="grid grid-cols-1 gap-4 mt-6 text-left">
                     {loQueObtienes.map((item, index) => (
                         <div key={index} className="flex items-start">
-                            <span className="mr-2 text-green-500">✅</span>
+                            <CheckSquare className="w-6 h-6 mr-2 text-green-500 shrink-0" />
                             <p className="text-base text-gray-700">{item}</p>
                         </div>
                     ))}
@@ -38,7 +40,7 @@ export function WhatYouGetSection() {
                 <div className="grid grid-cols-1 gap-4 mt-4 text-left">
                     {bonosGratis.map((item, index) => (
                         <div key={index} className="flex items-start">
-                            <span className="mr-2">✨</span>
+                             <CheckSquare className="w-6 h-6 mr-2 text-green-500 shrink-0" />
                             <p className="text-base text-gray-700">{item}</p>
                         </div>
                     ))}
