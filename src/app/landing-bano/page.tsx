@@ -98,6 +98,24 @@ const bonuses = [
     }
 ];
 
+const loQueObtienes = [
+    "Curso completo Paso a Paso: Aprende a Crear 30 fórmulas de Sales de Baño Terapéuticas Únicas. Cada una con un Propósito Terapéutico Claro (Relajación, Sueño, Dolor, Energía, Enfoque, etc.).",
+    "Guia Practica de Presentación y Empaque : Para que tus productos luzcan Profesionales desde el Primer Día.",
+    "Fórmulas Personalizadas con el Método «Esencia Activa™» : Aprende a combinar Aromas de forma Armónica para crear Productos únicos que cautiven a tus clientes y se Diferencien en el Mercado.",
+    "Estrategias para Para Fidelizar a tus Clientes: Con Muestras, Storytelling y Experiencia Sensorial.",
+    "Plan de Producción Sin Desperdicios: Optimiza tus tiempos y materiales con técnicas que te ayudarán a Producir más Rápido, evitando errores costosos.",
+    "Acceso de por vida y actualizaciones: Podrás consultar el contenido siempre que lo necesites, y recibirás cualquier actualización futura Sin Costo Adicional."
+];
+
+const bonosGratis = [
+    "BONO 1 : Lista de Proveedores Verificada de Ingredientes de Alta Calidad y Buen Precio.",
+    "BONO 2 : Plantillas de Etiquetas Profesionales Listas para Imprimir.",
+    "BONO 3 : Acompañamiento Exclusivo en Nuestra Plataforma Virtual.",
+    "BONO 4 : Guía Practica : Empaques Ecológicos que Enamoran , Etiquetas con Estilo y Detalles que hacen que Tu marca destaque",
+    "BONO 5 : Muestras que Venden: Tus Primeras Fórmulas para Ganar Clientes en Tiempo Record.",
+    "BONO 6 : Guía para Crear tu Primer Kit de Regalo Artesanal."
+];
+
 
 const faqs = [
     { q: "¿Necesito experiencia previa?", a: "No, en absoluto. El curso está diseñado para llevarte desde cero hasta crear tu primera colección de sales de baño. Te guiaremos en cada paso." },
@@ -473,6 +491,35 @@ export default function LandingBanoPage() {
                     data-ai-hint="product mockup"
                 />
             </div>
+        </section>
+
+        <section className="px-4 py-16 sm:py-24">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl font-headline">
+              ESTO ES LO QUE OBTIENES AL INSCRIBIRTE
+            </h2>
+            <div className="grid grid-cols-1 gap-10 mt-12 md:grid-cols-1">
+              <div className="space-y-4">
+                {loQueObtienes.map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <Check className="w-6 h-6 mt-1 mr-3 text-green-500 shrink-0" />
+                    <p className="text-lg text-gray-700">{item}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900 font-headline">
+                  🎁 Y además te llevas estos BONOS GRATIS:
+                </h3>
+                {bonosGratis.map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <Sparkles className="w-6 h-6 mt-1 mr-3 text-yellow-500 shrink-0" />
+                    <p className="text-lg text-gray-700">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Guarantee & Access Section */}
