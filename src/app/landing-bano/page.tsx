@@ -87,7 +87,7 @@ const bonuses = [
         title: "BONO 5: Muestras que Venden: Tus Primeras Fórmulas", 
         description: "Accede a 5 fórmulas simples, efectivas y de alta demanda, ideales para crear muestras pequeñas, conquistar tus primeras clientas y empezar a vender rápido.", 
         callout: "HOY GRATIS",
-        imageUrl: "https://placehold.co/300x200.png"
+        imageUrl: "/images/tus primeras.png"
     },
     { 
         title: "BONO 6: Guía para Crear tu Primer Kit de Regalo Artesanal", 
@@ -398,7 +398,7 @@ export default function LandingBanoPage() {
                     </div>
                     <p className="text-xl font-bold uppercase">Disponible para todo el mundo</p>
                     <div className="relative flex flex-col items-center justify-center">
-                        <ShieldCheck className="w-32 h-32 text-green-500" />
+                        <ShieldCheck className="absolute w-32 h-32 text-green-500" />
                         <Check className="absolute w-16 h-16 text-white" />
                         <p className="absolute mt-2 text-2xl font-bold text-white bg-green-600 px-4 py-2 -bottom-4 z-10">COMPRA 100% SEGURA</p>
                     </div>
