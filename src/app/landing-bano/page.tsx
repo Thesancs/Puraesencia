@@ -331,6 +331,27 @@ export default function LandingBanoPage() {
                 />
             </div>
         </section>
+        
+        <section className="px-4 py-8 sm:py-12 bg-[#F7F2E9]">
+            <div className="max-w-2xl mx-auto text-center">
+                <p className="text-sm font-semibold text-gray-700 uppercase">
+                    ¡ACCEDE HOY MISMO! CON EL PRECIO DE PRE LANZAMIENTO DESDE CUALQUIER PARTE DEL MUNDO, PAGANDO EN DOLARES O SU EQUIVALENTE EN TU MONEDA LOCAL
+                </p>
+                <p className="mt-6 text-lg font-bold">PRECIO REGULAR</p>
+                <p className="text-5xl font-bold text-gray-500 line-through">$49.90</p>
+                <p className="mt-4 text-2xl font-bold text-red-600">PRECIO RELÁMPAGO POR PRE LANZAMIENTO</p>
+                <p className="mt-2 text-8xl font-bold text-green-600">$9.90</p>
+                <p className="text-3xl font-semibold text-green-600">DÓLARES</p>
+                <p className="mt-4 text-xl font-bold text-red-600">UNICO PAGO</p>
+                <p className="text-xl font-bold text-red-600">SOLO PARA LAS PRIMERAS INSCRITAS</p>
+                <div className="flex justify-center mt-4">
+                    <ChevronDown className="w-12 h-12 text-blue-400 animate-bounce" />
+                </div>
+                <div className="mt-6">
+                    <CtaButton />
+                </div>
+            </div>
+        </section>
 
         {/* Bonus Section */}
         <section className="px-4 py-16 sm:py-24">
@@ -403,5 +424,3 @@ export default function LandingBanoPage() {
     </div>
   );
 }
-
-    

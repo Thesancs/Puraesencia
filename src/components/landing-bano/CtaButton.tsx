@@ -42,7 +42,7 @@ export default function CtaButton() {
         return "Error - Intenta de Nuevo";
       case "idle":
       default:
-        return "QUIERO ACCEDER AHORA";
+        return "REGÍSTRATE AHORA DANDO CLIC AQUÍ";
     }
   };
 
@@ -51,7 +51,7 @@ export default function CtaButton() {
       onClick={handleClick}
       disabled={status === "loading"}
       size="lg"
-      className="px-8 py-4 text-lg font-bold transition-transform transform rounded-lg shadow-lg hover:scale-105"
+      className="px-8 py-4 text-lg font-bold transition-transform transform bg-green-500 rounded-lg shadow-lg hover:bg-green-600 hover:scale-105"
     >
       {status === "loading" && <Loader2 className="w-5 h-5 mr-2 animate-spin" />}
       {buttonText()}
