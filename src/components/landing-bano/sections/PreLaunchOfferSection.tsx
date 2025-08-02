@@ -15,9 +15,11 @@ export function PreLaunchOfferSection() {
                 <p className="text-base text-gray-700 sm:text-lg">
                     Por eso podrás acceder al Curso Completo para Crear Sales de Baño Terapéuticas Únicas con el Método «PURA ESENCIA™” a un Super Precio de Pre Lanzamiento.
                 </p>
-                <div className="inline-flex items-center gap-2 p-4 font-bold text-red-600 bg-red-100 border border-red-200 rounded-lg">
-                    <AlertTriangle className="w-6 h-6" />
-                    <span className="text-sm sm:text-base">¡Pero apúrate porque este Increíble Precio es solo para las Primeras Inscritas y los cupos son Limitados!</span>
+                <div className="inline-block p-4 font-bold text-green-800 bg-green-100 border-l-4 border-green-500 rounded-lg">
+                    <div className="flex items-center gap-2">
+                        <AlertTriangle className="w-6 h-6 text-green-700" />
+                        <span className="text-sm sm:text-base">¡Pero apúrate porque este Increíle Precio es solo para las Primeras Inscritas y los cupos son Limitados!</span>
+                    </div>
                 </div>
                 <div className="relative w-full max-w-xl mx-auto mt-8 aspect-square">
                     <Image
