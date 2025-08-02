@@ -77,7 +77,7 @@ const bonuses = [
         title: "BONO 2: Plantillas de Etiquetas Profesionales", 
         description: "Haz que tus productos luzcan increíbles desde el primer día, sin saber diseño ni pagar a un profesional. Incluye plantillas editables listas para imprimir, personalizar y elevar el valor percibido de tu marca. Ideal para lanzar rápido, con una imagen limpia, moderna y profesional.", 
         callout: "HOY GRATIS",
-        imageUrl: "https://placehold.co/300x200.png"
+        imageUrl: "/images/plantillas de.png"
     },
     { 
         title: "BONO 3: Acompañamiento Exclusivo en Plataforma Privada", 
@@ -249,6 +249,33 @@ export default function LandingBanoPage() {
                     className="object-cover rounded-lg shadow-lg"
                     data-ai-hint="product lifestyle"
                 />
+            </div>
+        </section>
+
+        <section className="px-4 py-8 sm:py-12 bg-[#F0F8F0]">
+            <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-2xl font-bold tracking-tight text-gray-900 font-headline">
+                ESTO ES LO QUE OBTIENES AL INSCRIBIRTE
+                </h2>
+                <div className="grid grid-cols-1 gap-4 mt-6 text-left">
+                    {loQueObtienes.map((item, index) => (
+                        <div key={index} className="flex items-start">
+                            <span className="mr-2 text-green-500">✅</span>
+                            <p className="text-base text-gray-700">{item}</p>
+                        </div>
+                    ))}
+                </div>
+                 <h3 className="mt-8 text-2xl font-bold tracking-tight text-center text-gray-900 font-headline">
+                    🎁 Y además te llevas estos BONOS GRATIS:
+                </h3>
+                <div className="grid grid-cols-1 gap-4 mt-4 text-left">
+                    {bonosGratis.map((item, index) => (
+                        <div key={index} className="flex items-start">
+                            <span className="mr-2">✨</span>
+                            <p className="text-base text-gray-700">{item}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
 
@@ -564,8 +591,8 @@ export default function LandingBanoPage() {
                             </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="sm:inline-flex" />
-                        <CarouselNext className="sm:inline-flex" />
+                        <CarouselPrevious className="hidden sm:inline-flex" />
+                        <CarouselNext className="hidden sm:inline-flex" />
                     </Carousel>
                 </div>
             </div>
@@ -594,3 +621,5 @@ export default function LandingBanoPage() {
     </div>
   );
 }
+
+    
