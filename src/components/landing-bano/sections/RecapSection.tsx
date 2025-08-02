@@ -19,7 +19,7 @@ export function RecapSection() {
                 </p>
                 <div className="relative w-full max-w-xl mx-auto mt-8 aspect-square">
                     <Image
-                        src="https://placehold.co/800x800.png"
+                        src="/images/banner 2.png"
                         alt="Resumen de la oferta del curso"
                         fill
                         className="object-cover rounded-lg shadow-lg"
