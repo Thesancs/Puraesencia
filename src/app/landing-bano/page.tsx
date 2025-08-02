@@ -271,7 +271,7 @@ export default function LandingBanoPage() {
                         <div className="ml-3">
                             <p className="text-lg font-bold text-red-800"><b>Y SI ERES EMPRENDEDORA DE VERDAD...</b></p>
                             <p className="mt-2 text-lg text-red-700">
-                            Sabes que <b>no basta con hacer algo bonito</b>.<br/>
+                            <b>No basta con hacer algo bonito</b>.<br/>
                             <b>Tu producto tiene que funcionar, emocionar y dejar huella.</b><br/>
                             <b>Eso es lo que vas a lograr con PURA ESENCIA™.</b>
                             </p>
@@ -317,6 +317,18 @@ export default function LandingBanoPage() {
                 <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-800 font-semibold">
                     Pero Apurate porque este Increible Precio es solo para las ¡Primeras Inscritas y los cupos son Limitados!
                 </p>
+            </div>
+        </section>
+
+        <section className="flex justify-center px-4 py-16 sm:py-24">
+            <div className="relative w-full max-w-[800px] aspect-square">
+                <Image 
+                    src="https://placehold.co/800x800.png"
+                    alt="Placeholder para imagen de producto"
+                    fill
+                    className="object-cover rounded-lg shadow-lg"
+                    data-ai-hint="product mockup"
+                />
             </div>
         </section>
 
