@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 export function RecapSection() {
     console.log('[RecapSection] rendered');
@@ -16,6 +17,15 @@ export function RecapSection() {
                 <p className="text-xl font-bold text-green-700 sm:text-2xl">
                     Aumenta tus ventas con el método “PURA ESENCIA™”.
                 </p>
+                <div className="relative w-full max-w-xl mx-auto mt-8 aspect-square">
+                    <Image
+                        src="https://placehold.co/800x800.png"
+                        alt="Resumen de la oferta del curso"
+                        fill
+                        className="object-cover rounded-lg shadow-lg"
+                        data-ai-hint="course offer summary"
+                    />
+                </div>
             </div>
         </section>
     );
