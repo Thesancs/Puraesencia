@@ -13,6 +13,7 @@ import { CertificateSection } from "@/components/landing-bano/sections/Certifica
 import { GuaranteeSection } from "@/components/landing-bano/sections/GuaranteeSection";
 import { FaqSection } from "@/components/landing-bano/sections/FaqSection";
 import { PreLaunchOfferSection } from "@/components/landing-bano/sections/PreLaunchOfferSection";
+import { RecapSection } from "@/components/landing-bano/sections/RecapSection";
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -25,12 +26,13 @@ export default function LandingBanoPage() {
         <BenefitsSection />
         <VideoSection />
         <PersonalStorySection />
-        <WhyPuraEsenciaSection />
-        <WhatYouGetSection />
         <GallerySection />
         <PreLaunchOfferSection />
+        <WhyPuraEsenciaSection />
+        <WhatYouGetSection />
         <PricingSection />
         <BonusSection />
+        <RecapSection />
         <TestimonialsSection />
         <CertificateSection />
         <GuaranteeSection />
