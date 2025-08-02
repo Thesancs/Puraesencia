@@ -22,7 +22,7 @@ export function RecapSection() {
                         src="/images/banner 2.png"
                         alt="Resumen de la oferta del curso"
                         fill
-                        className="object-cover rounded-lg shadow-lg"
+                        className="object-cover rounded-lg"
                         data-ai-hint="course offer summary"
                     />
                 </div>
