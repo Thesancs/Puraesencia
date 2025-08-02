@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <footer className="bg-gray-800 text-white text-xs py-8 px-4">
+        <footer className="bg-[#F0F8F0] text-[#2C2C2C] text-xs py-8 px-4">
             <div className="max-w-5xl mx-auto text-center space-y-4">
                 <p>(c) 2025 – Pura Esencia | Todos los derechos reservados</p>
                 <p>
