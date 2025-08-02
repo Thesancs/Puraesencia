@@ -542,11 +542,11 @@ export default function LandingBanoPage() {
                 <div className="flex items-center justify-center mt-12">
                      <Carousel 
                         opts={{ loop: true, align: "start" }}
-                        className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+                        className="w-full max-w-4xl"
                      >
-                        <CarouselContent className="-ml-2 sm:-ml-4">
+                        <CarouselContent className="-ml-4">
                             {testimonials.map((testimonial, index) => (
-                            <CarouselItem key={index} className="pl-2 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 sm:pl-4">
+                            <CarouselItem key={index} className="pl-4 basis-11/12 sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
                                 <Card>
                                     <CardContent className="flex aspect-[2/3] items-center justify-center p-6">
@@ -564,8 +564,8 @@ export default function LandingBanoPage() {
                             </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="hidden sm:inline-flex" />
-                        <CarouselNext className="hidden sm:inline-flex" />
+                        <CarouselPrevious className="sm:inline-flex" />
+                        <CarouselNext className="sm:inline-flex" />
                     </Carousel>
                 </div>
             </div>
