@@ -46,7 +46,7 @@ export function PricingSection() {
                             data-ai-hint="payment methods"
                         />
                     </div>
-                     <div className="relative flex flex-col items-center justify-center pt-8">
+                     <div className="relative flex flex-col items-center justify-center pt-16">
                          <ShieldCheck className="absolute w-32 h-32 text-green-500 opacity-20 sm:w-40 sm:h-40" />
                          <Check className="absolute w-16 h-16 text-green-600 sm:w-20 sm:h-20" />
                      </div>
