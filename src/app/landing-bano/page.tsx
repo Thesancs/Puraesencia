@@ -33,6 +33,7 @@ export default function LandingBanoPage() {
         <BonusSection />
         <RecapSection />
         <WhatYouGetSection />
+        <PricingSection />
         <TestimonialsSection />
         <CertificateSection />
         <GuaranteeSection />
