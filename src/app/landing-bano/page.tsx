@@ -200,7 +200,7 @@ export default function LandingBanoPage() {
         <AlertTriangle className="h-4 w-4 mr-2" />
         <span className="text-xs sm:text-sm">ATENCIÓN: DESCUENTO RELÁMPAGO + 6 BONOS GRATIS PARA LAS PRIMERAS INSCRITAS</span>
       </div>
-      <main className="isolate bg-white">
+      <main className="isolate">
         {/* Hero Section */}
         <section className="relative flex justify-center px-4 pt-12 text-center sm:pt-20">
             <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
@@ -520,7 +520,7 @@ export default function LandingBanoPage() {
                 >
                     <CarouselContent className="-ml-2 md:-ml-4">
                         {testimonials.map((testimonial, index) => (
-                            <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3">
+                            <CarouselItem key={index} className="pl-4 basis-[90%] md:pl-6 sm:basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
                                     <Card>
                                         <CardContent className="relative flex items-center justify-center p-0 aspect-square">
@@ -586,7 +586,7 @@ export default function LandingBanoPage() {
                 </p>
                 <div className="relative inline-block mt-8">
                     <Image
-                        src="/images/garantia.png"
+                        src="/images/garantia-7-dias-480x564.webp"
                         alt="Sello de garantía de 7 días"
                         width={300}
                         height={300}
