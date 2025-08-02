@@ -200,7 +200,7 @@ export default function LandingBanoPage() {
         <AlertTriangle className="h-4 w-4 mr-2" />
         <span className="text-xs sm:text-sm">ATENCIÓN: DESCUENTO RELÁMPAGO + 6 BONOS GRATIS PARA LAS PRIMERAS INSCRITAS</span>
       </div>
-      <main className="isolate">
+      <main className="isolate bg-white">
         {/* Hero Section */}
         <section className="relative flex justify-center px-4 pt-12 text-center sm:pt-20">
             <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
