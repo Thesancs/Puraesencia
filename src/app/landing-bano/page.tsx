@@ -209,7 +209,7 @@ export default function LandingBanoPage() {
                 </h1>
                 <p className="max-w-2xl mx-auto text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
                 Te enseño cómo hacer mezclas que realmente ayudan, cómo ahorrar en ingredientes sin perder calidad y cómo hacer que cada sal que preparas sea tan buena que tus clientas van a querer repetir la compra sin pensarlo.                </p>
-                <div className="relative w-full max-w-xl mx-auto mt-6 aspect-[4/3]">
+                <div className="relative w-full max-w-xl mx-auto aspect-[4/3]">
                     <Image 
                         src="/images/foto 1 pagina.webp"
                         alt="Mujer creando sales de baño terapéuticas en su cocina"
@@ -505,6 +505,99 @@ export default function LandingBanoPage() {
             </div>
         </section>
 
+        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
+            <div className="max-w-4xl mx-auto">
+                <div className="text-center">
+                    <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl font-headline">ELLAS YA ESTÁN TRANSFORMANDO SU PASIÓN EN UN NEGOCIO RENTABLE...</h2>
+                    <p className="max-w-2xl mx-auto mt-4 text-base text-gray-600 sm:text-lg">Descubre lo que dicen nuestras alumnas:</p>
+                </div>
+                <Carousel 
+                    opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                    className="w-full max-w-xs mx-auto mt-12 sm:max-w-xl md:max-w-2xl lg:max-w-4xl"
+                >
+                    <CarouselContent className="-ml-2 md:-ml-4">
+                        {testimonials.map((testimonial, index) => (
+                            <CarouselItem key={index} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3">
+                                <div className="p-1">
+                                    <Card>
+                                        <CardContent className="relative flex items-center justify-center p-0 aspect-square">
+                                            <Image
+                                                src={testimonial.imageUrl}
+                                                alt={`Testimonio ${index + 1}`}
+                                                fill
+                                                className="object-contain rounded-lg"
+                                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw"
+                                                data-ai-hint={testimonial.aiHint}
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="hidden sm:flex" />
+                    <CarouselNext className="hidden sm:flex" />
+                </Carousel>
+            </div>
+        </section>
+
+        {/* Certificate Section */}
+        <section className="px-4 py-16 sm:py-24">
+            <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl font-headline">
+                    Valida tus Conocimientos y Habilidades
+                </h2>
+                <p className="max-w-2xl mx-auto mt-4 text-base text-gray-600 sm:text-lg">
+                    Una vez que concluyas el curso completo podrás descargar tu certificado personalizado con tu nombre, sin ningún costo extra.
+                </p>
+                <p className="max-w-2xl mx-auto mt-2 text-base text-gray-600 sm:text-lg">
+                    El certificado te convierte en una Profesional en Aromaterapia Organica y Ecologica, lo cual te otorga credibilidad y confianza en tu trabajo.
+                </p>
+                <div className="relative inline-block mt-8 border-4 border-green-600/50 rounded-lg shadow-lg">
+                    <Image
+                        src="/images/certificado.png"
+                        alt="Certificado de finalización del curso"
+                        width={1152}
+                        height={768}
+                        className="rounded-lg"
+                        data-ai-hint="course certificate"
+                    />
+                </div>
+            </div>
+        </section>
+
+        {/* Guarantee Section */}
+        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
+            <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl font-headline">
+                    TU COMPRA ES 100 % SEGURA
+                </h2>
+                <h3 className="mt-4 text-2xl font-semibold text-gray-800">
+                    Garantía Incondicional de Satisfacción:
+                </h3>
+                <p className="max-w-2xl mx-auto mt-4 text-base text-gray-600 sm:text-lg">
+                    Queremos que compres con total tranquilidad y confianza sabiendo que este curso es real, sin trucos ni promesas vacías, solo conocimientos genuinos y soporte real para tu negocio de Aromaterapia Organica y Ecologica.
+                </p>
+                <p className="max-w-2xl mx-auto mt-2 text-base text-gray-600 sm:text-lg">
+                    Por eso te ofrecemos una Garantía Completa de Satisfacción de 7 días. Si no estás completamente satisfecha por cualquier motivo, te reembolsaremos el 100% de tu inversión.
+                </p>
+                <div className="relative inline-block mt-8">
+                    <Image
+                        src="/images/garantia.png"
+                        alt="Sello de garantía de 7 días"
+                        width={300}
+                        height={300}
+                        className="rounded-lg"
+                        data-ai-hint="satisfaction guarantee badge"
+                    />
+                </div>
+            </div>
+        </section>
+
+        {/* Payment Section */}
         <section 
             className="relative px-4 py-16 bg-center bg-cover sm:py-24"
             style={{
@@ -569,7 +662,7 @@ export default function LandingBanoPage() {
                 </div>
                 <Accordion type="single" collapsible className="w-full mt-12 space-y-4">
                     {faqs.map((faq, index) => (
-                    <AccordionItem value={`item-${index}`} key={index} className="p-4 border rounded-lg shadow-sm">
+                    <AccordionItem value={`item-${index}`} key={index} className="p-4 border border-gray-200 rounded-lg shadow-sm">
                         <AccordionTrigger className="text-base font-semibold text-left sm:text-lg hover:no-underline">{faq.q}</AccordionTrigger>
                         <AccordionContent className="text-sm text-gray-700 sm:text-base">
                         {faq.a}
@@ -583,5 +676,3 @@ export default function LandingBanoPage() {
     </div>
   );
 }
-
-    
