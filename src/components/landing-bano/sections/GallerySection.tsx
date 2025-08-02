@@ -45,7 +45,7 @@ export function GallerySection() {
                     {galleryItems.map((item, index) => (
                         <div key={index} className="flex flex-col items-center space-y-4">
                             <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
-                            <div className="relative w-48 h-48 overflow-hidden rounded-full shadow-lg">
+                            <div className="relative w-48 h-48 overflow-hidden border-4 border-green-500 rounded-full shadow-lg">
                                 <Image
                                     src={item.imageUrl}
                                     alt={item.title}
