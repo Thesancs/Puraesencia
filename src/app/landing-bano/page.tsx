@@ -614,8 +614,8 @@ export default function LandingBanoPage() {
                     <Image
                         src="/images/certificado.png"
                         alt="Certificado de finalización del curso"
-                        width={800}
-                        height={566}
+                        width={1152}
+                        height={768}
                         className="object-contain w-full h-auto rounded-lg shadow-lg border-4 border-green-600/50"
                         data-ai-hint="course certificate"
                     />
