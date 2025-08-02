@@ -23,7 +23,7 @@ export function PricingSection() {
                 <p className="mt-6 text-base font-bold sm:text-lg">PRECIO REGULAR</p>
                 <p className="text-4xl font-bold text-gray-500 line-through sm:text-5xl">$49.90</p>
                 <p className="mt-4 text-xl font-bold text-red-600 sm:text-2xl">PRECIO RELÁMPAGO POR PRE LANZAMIENTO</p>
-                <p className="mt-2 text-7xl font-bold text-green-600 sm:text-8xl">$9.90</p>
+                <p className="mt-2 text-7xl font-bold text-green-600 sm:text-8xl [text-shadow:0_0_10px_#22c55e]">$9.90</p>
                 <p className="text-2xl font-semibold text-green-600 sm:text-3xl">DÓLARES</p>
                 <p className="mt-4 text-lg font-bold text-red-600 sm:text-xl">UNICO PAGO</p>
                 <p className="text-lg font-bold text-red-600 sm:text-xl">SOLO PARA LAS PRIMERAS INSCRITAS</p>
