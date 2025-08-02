@@ -21,7 +21,7 @@ const bonosGratis = [
 export function WhatYouGetSection() {
     console.log('[WhatYouGetSection] rendered');
     return (
-        <section className="px-4 py-8 sm:py-12 bg-[#F0F8F0]">
+        <section className="px-4 py-8 sm:py-12 bg-white">
             <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-2xl font-bold tracking-tight text-gray-900 font-headline">
                 ESTO ES LO QUE OBTIENES AL INSCRIBIRTE
