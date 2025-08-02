@@ -1,4 +1,5 @@
 import { AlertTriangle } from "lucide-react";
+import Image from "next/image";
 
 export function PreLaunchOfferSection() {
     console.log('[PreLaunchOfferSection] rendered');
@@ -17,6 +18,15 @@ export function PreLaunchOfferSection() {
                 <div className="inline-flex items-center gap-2 p-4 font-bold text-red-600 bg-red-100 border border-red-200 rounded-lg">
                     <AlertTriangle className="w-6 h-6" />
                     <span className="text-sm sm:text-base">¡Pero apúrate porque este Increíble Precio es solo para las Primeras Inscritas y los cupos son Limitados!</span>
+                </div>
+                <div className="relative w-full max-w-xl mx-auto mt-8 aspect-square">
+                    <Image
+                        src="https://placehold.co/800x800.png"
+                        alt="Oferta especial del curso"
+                        fill
+                        className="object-cover rounded-lg shadow-lg"
+                        data-ai-hint="course offer"
+                    />
                 </div>
             </div>
         </section>
