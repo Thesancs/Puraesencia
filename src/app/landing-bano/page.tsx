@@ -1,20 +1,18 @@
 
-import { AlertTriangle, Check, ChevronDown, ShieldCheck } from "lucide-react";
-import CtaButton from "@/components/landing-bano/CtaButton";
-import { CertificateSection } from "@/components/landing-bano/sections/CertificateSection";
-import { FaqSection } from "@/components/landing-bano/sections/FaqSection";
-import { GuaranteeSection } from "@/components/landing-bano/sections/GuaranteeSection";
-import { TestimonialsSection } from "@/components/landing-bano/sections/TestimonialsSection";
-import { BonusSection } from "@/components/landing-bano/sections/BonusSection";
-import { PricingSection } from "@/components/landing-bano/sections/PricingSection";
-import { GallerySection } from "@/components/landing-bano/sections/GallerySection";
-import { WhyPuraEsenciaSection } from "@/components/landing-bano/sections/WhyPuraEsenciaSection";
-import { PersonalStorySection } from "@/components/landing-bano/sections/PersonalStorySection";
-import { WhatYouGetSection } from "@/components/landing-bano/sections/WhatYouGetSection";
-import { VideoSection } from "@/components/landing-bano/sections/VideoSection";
-import { BenefitsSection } from "@/components/landing-bano/sections/BenefitsSection";
-import { HeroSection } from "@/components/landing-bano/sections/HeroSection";
 import { HeaderBanner } from "@/components/landing-bano/sections/HeaderBanner";
+import { HeroSection } from "@/components/landing-bano/sections/HeroSection";
+import { BenefitsSection } from "@/components/landing-bano/sections/BenefitsSection";
+import { VideoSection } from "@/components/landing-bano/sections/VideoSection";
+import { PersonalStorySection } from "@/components/landing-bano/sections/PersonalStorySection";
+import { WhyPuraEsenciaSection } from "@/components/landing-bano/sections/WhyPuraEsenciaSection";
+import { WhatYouGetSection } from "@/components/landing-bano/sections/WhatYouGetSection";
+import { GallerySection } from "@/components/landing-bano/sections/GallerySection";
+import { PricingSection } from "@/components/landing-bano/sections/PricingSection";
+import { BonusSection } from "@/components/landing-bano/sections/BonusSection";
+import { TestimonialsSection } from "@/components/landing-bano/sections/TestimonialsSection";
+import { CertificateSection } from "@/components/landing-bano/sections/CertificateSection";
+import { GuaranteeSection } from "@/components/landing-bano/sections/GuaranteeSection";
+import { FaqSection } from "@/components/landing-bano/sections/FaqSection";
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -28,8 +26,8 @@ export default function LandingBanoPage() {
         <VideoSection />
         <PersonalStorySection />
         <WhyPuraEsenciaSection />
-        <WhatYouGetSection />
         <GallerySection />
+        <WhatYouGetSection />
         <PricingSection />
         <BonusSection />
         <TestimonialsSection />
