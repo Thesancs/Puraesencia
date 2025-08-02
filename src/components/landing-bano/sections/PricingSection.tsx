@@ -1,5 +1,6 @@
 import { Check, ChevronDown, ShieldCheck } from "lucide-react";
 import CtaButton from "@/components/landing-bano/CtaButton";
+import Image from "next/image";
 
 export function PricingSection() {
     console.log('[PricingSection] rendered');
@@ -30,16 +31,15 @@ export function PricingSection() {
                 <div className="mt-8 space-y-6">
                     <p className="text-xs font-bold text-red-600 uppercase sm:text-sm">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
                     <p className="text-sm font-semibold text-green-700 uppercase sm:text-base">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
-                    <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
-                        <div className="flex items-center gap-2 p-2 bg-white rounded-md shadow">
-                            <ShieldCheck className="w-6 h-6 text-red-600 sm:w-8 sm:h-8" />
-                            <span className="text-sm font-bold text-red-600 sm:text-base">COMPRA 100% SEGURA</span>
-                        </div>
-                        <span className="text-xs font-bold sm:text-sm">VISA</span>
-                        <span className="text-xs font-bold sm:text-sm">MasterCard</span>
-                        <span className="text-xs font-bold sm:text-sm">AMERICAN EXPRESS</span>
-                        <span className="text-xs font-bold sm:text-sm">PayPal</span>
-                        <span className="text-xs font-bold sm:text-sm">DISCOVER</span>
+                    <div className="flex items-center justify-center mt-4">
+                        <Image
+                            src="https://placehold.co/768x153.png"
+                            alt="Métodos de pago aceptados"
+                            width={768}
+                            height={153}
+                            className="object-contain"
+                            data-ai-hint="payment methods"
+                        />
                     </div>
                     <p className="text-lg font-bold uppercase sm:text-xl">Disponible para todo el mundo</p>
                     <div className="relative flex flex-col items-center justify-center pt-8">
