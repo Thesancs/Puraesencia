@@ -189,7 +189,7 @@ export default function LandingBanoPage() {
         {/* Personal Story Section */}
         <section className="px-4 py-16 sm:py-24">
             <div className="max-w-3xl mx-auto text-left space-y-6">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-center text-amber-800" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
+                <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl font-headline text-center">
                 MÉTODO PURA ESENCIA™
                 </h2>
                 <p className="text-lg text-center font-bold">
@@ -386,7 +386,7 @@ export default function LandingBanoPage() {
         <section className="px-4 py-16 sm:py-24">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">Recibirás También Estos Bonos de Regalo</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">ADEMÁS SI ERES DE LAS PRIMERAS PERSONAS EN INSCRIBIRSE AL CURSO RECIBES ESTOS BONOS ADICIONALES TOTALMENTE GRATIS</h2>
                     <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">Acceso inmediato a estas herramientas para acelerar tu éxito.</p>
                 </div>
                 <div className="grid grid-cols-1 gap-6 mt-12 md:grid-cols-2">
