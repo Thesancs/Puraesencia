@@ -15,7 +15,7 @@ export function HeroSection() {
                         src="/images/foto 1 pagina.webp"
                         alt="Mujer creando sales de baño terapéuticas en su cocina"
                         fill
-                        className="object-cover rounded-lg shadow-lg border-4 border-green-600/50"
+                        className="object-cover rounded-lg shadow-lg border-4 border-green-200"
                         data-ai-hint="bath salts entrepreneur"
                     />
                 </div>
