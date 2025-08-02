@@ -383,7 +383,12 @@ export default function LandingBanoPage() {
             </div>
         </section>
         
-        <section className="px-4 py-8 sm:py-12 bg-[#F0F8F0]">
+        <section 
+            className="relative px-4 py-8 sm:py-12 bg-[#F0F8F0] bg-cover bg-center"
+            style={{
+                backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
+            }}
+            >
             <div className="max-w-2xl mx-auto text-center">
                 <p className="text-sm font-semibold text-gray-700 uppercase">
                     ¡ACCEDE HOY MISMO! CON EL PRECIO DE PRE LANZAMIENTO DESDE CUALQUIER PARTE DEL MUNDO, PAGANDO EN DOLARES O SU EQUIVALENTE EN TU MONEDA LOCAL
@@ -522,7 +527,12 @@ export default function LandingBanoPage() {
           </div>
         </section>
 
-        <section className="px-4 py-8 sm:py-12 bg-[#F0F8F0]">
+        <section 
+            className="relative px-4 py-8 sm:py-12 bg-[#F0F8F0] bg-cover bg-center"
+            style={{
+                backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23F0F8F0' fill-opacity='1' d='M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e")`
+            }}
+            >
             <div className="max-w-2xl mx-auto text-center">
                 <p className="text-sm font-semibold text-gray-700 uppercase">
                     ¡ACCEDE HOY MISMO! CON EL PRECIO DE PRE LANZAMIENTO DESDE CUALQUIER PARTE DEL MUNDO, PAGANDO EN DOLARES O SU EQUIVALENTE EN TU MONEDA LOCAL
