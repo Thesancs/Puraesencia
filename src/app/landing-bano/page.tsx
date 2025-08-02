@@ -93,32 +93,32 @@ const comoAplicar = [
 const galleryItems = [
     {
         title: "Recetas para el Alivio del Dolor Muscular y Articular",
-        imageUrl: "/images/fotogrid (1).webp",
+        imageUrl: "https://images.unsplash.com/photo-1554246247-1902ca58b7ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiYXRoJTIwc2FsdHMlMjBqYXJzfGVufDB8fHx8MTc1NDA5MzY1OXww&ixlib=rb-4.1.0&q=80&w=1080",
         aiHint: "bath salts jars"
     },
     {
         title: "Recetas para Reducción del Estrés y la Ansiedad",
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "https://images.unsplash.com/photo-1621528448003-02691b71cd4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsYXZlbmRlciUyMGNoYW1vbWlsZSUyMGJhdGglMjBzYWx0c3xlbnwwfHx8fDE3NTQwOTM2NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
         aiHint: "lavender chamomile bath salts"
     },
     {
         title: "Recetas para Dormir y Combatir el Insomnio",
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "https://images.unsplash.com/photo-1623059265421-2dc2a04f10f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMG1peGluZyUyMGluZ3JlZGllbnRzfGVufDB8fHx8MTc1NDA5MzY1OXww&ixlib=rb-4.1.0&q=80&w=1080",
         aiHint: "woman mixing ingredients"
     },
     {
         title: "Recetas para Hidratación y Cuidado de la Piel",
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "https://images.unsplash.com/photo-1656103743255-c63d6e564730?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxza2luY2FyZSUyMGZsYXRsYXl8ZW58MHx8fHwxNzU0MDkzNjU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
         aiHint: "skincare flatlay"
     },
     {
         title: "Recetas para Mejora de la Concentración y Claridad Mental",
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "https://images.unsplash.com/photo-1678945253323-f21bd7f13817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwcmVtZWR5JTIwYm90dGxlc3xlbnwwfHx8fDE3NTQwOTM2NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
         aiHint: "natural remedy bottles"
     },
     {
         title: "Recetas para Recuperación Post-Entrenamiento",
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "https://images.unsplash.com/photo-1620898701302-d4e8a9fd22e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGZvb3QlMjBiYXRofGVufDB8fHx8MTc1NDA5MzY1OXww&ixlib=rb-4.1.0&q=80&w=1080",
         aiHint: "woman foot bath"
     }
 ];
@@ -399,3 +399,5 @@ export default function LandingBanoPage() {
     </div>
   );
 }
+
+    
