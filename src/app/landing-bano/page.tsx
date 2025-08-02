@@ -463,6 +463,18 @@ export default function LandingBanoPage() {
             </div>
         </section>
 
+        <section className="flex justify-center px-4 py-16 sm:py-24">
+            <div className="relative w-full max-w-[800px] aspect-square">
+                <Image 
+                    src="https://placehold.co/800x800.png"
+                    alt="Placeholder para imagen de producto"
+                    fill
+                    className="object-cover rounded-lg shadow-lg"
+                    data-ai-hint="product mockup"
+                />
+            </div>
+        </section>
+
         {/* Guarantee & Access Section */}
         <section className="px-4 py-16 sm:py-24 bg-gray-900 text-white">
             <div className="max-w-5xl mx-auto">
