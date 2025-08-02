@@ -26,13 +26,13 @@ export default function LandingBanoPage() {
         <BenefitsSection />
         <VideoSection />
         <PersonalStorySection />
+        <WhyPuraEsenciaSection />
         <GallerySection />
         <PreLaunchOfferSection />
-        <WhyPuraEsenciaSection />
-        <WhatYouGetSection />
         <PricingSection />
         <BonusSection />
         <RecapSection />
+        <WhatYouGetSection />
         <TestimonialsSection />
         <CertificateSection />
         <GuaranteeSection />
