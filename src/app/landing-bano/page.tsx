@@ -59,13 +59,38 @@ const courseContent = [
 ];
 
 const bonuses = [
-    { emoji: "💬", title: "Comunidad VIP de Alumnas", description: "Conecta y aprende con otras emprendedoras." },
-    { emoji: "🏷️", title: "Pack de Etiquetas Editables", description: "Diseños listos para imprimir y usar." },
-    { emoji: "🚚", title: "Lista de Proveedores Secretos", description: "Ahorra tiempo y dinero con nuestros contactos." },
-    { emoji: "📊", title: "Calculadora de Costos y Precios", description: "Asegura tu rentabilidad desde el día uno." },
-    { emoji: "📸", title: "Masterclass de Fotografía con Celular", description: "Crea fotos que venden tus productos." },
-    { emoji: "🧘‍♀️", title: "Guía de Meditación y Rituales", description: "Potencia el valor de tus sales de baño." },
+    { 
+        title: "BONO 1: Lista de Proveedores Verificada", 
+        description: "Acceso directo a proveedores confiables que ofrecen ingredientes de alta calidad a buen precio. Olvídate de perder tiempo buscando o de arriesgarte con malas compras. Aquí encontrarás todo lo que necesitas: sales minerales puras, aceites esenciales certificados, envases ecológicos y más.", 
+        callout: "HOY GRATIS" 
+    },
+    { 
+        title: "BONO 2: Plantillas de Etiquetas Profesionales", 
+        description: "Haz que tus productos luzcan increíbles desde el primer día, sin saber diseño ni pagar a un profesional. Incluye plantillas editables listas para imprimir, personalizar y elevar el valor percibido de tu marca. Ideal para lanzar rápido, con una imagen limpia, moderna y profesional.", 
+        callout: "HOY GRATIS" 
+    },
+    { 
+        title: "BONO 3: Acompañamiento Exclusivo en Plataforma Privada", 
+        description: "No estarás sola. Tendrás acceso a soporte directo y personalizado paso a paso, para avanzar con confianza mientras creas tu línea.", 
+        callout: "HOY GRATIS" 
+    },
+    { 
+        title: "BONO 4: Guía Práctica: Empaques que Enamoran", 
+        description: "Aprende a crear empaques artesanales y profesionales sin gastar mucho. Te enseño materiales ecológicos, combinaciones de colores, formas y detalles que hacen que tu marca destaque y transmita calidad.", 
+        callout: "HOY GRATIS" 
+    },
+    { 
+        title: "BONO 5: Muestras que Venden: Tus Primeras Fórmulas", 
+        description: "Accede a 5 fórmulas simples, efectivas y de alta demanda, ideales para crear muestras pequeñas, conquistar tus primeras clientas y empezar a vender rápido.", 
+        callout: "HOY GRATIS" 
+    },
+    { 
+        title: "BONO 6: Guía para Crear tu Primer Kit de Regalo Artesanal", 
+        description: "Aprende a combinar, presentar y vender tus sales como regalos irresistibles para fechas especiales. Incluye estrategias para kits temáticos, empaques atractivos y precios que aumentan tu ticket promedio. Ideal para Día de la Madre, Navidad, ferias o lanzamientos.", 
+        callout: "HOY GRATIS" 
+    }
 ];
+
 
 const faqs = [
     { q: "¿Necesito experiencia previa?", a: "No, en absoluto. El curso está diseñado para llevarte desde cero hasta crear tu primera colección de sales de baño. Te guiaremos en cada paso." },
@@ -369,9 +394,9 @@ export default function LandingBanoPage() {
                     <div className="relative flex flex-col items-center justify-center">
                         <ShieldCheck className="w-32 h-32 text-green-500" />
                         <Check className="absolute w-16 h-16 text-white" />
-                        <p className="mt-2 text-2xl font-bold text-white bg-green-600 px-4 py-2 -mt-8 z-10">COMPRA 100% SEGURA</p>
+                        <p className="absolute mt-2 text-2xl font-bold text-white bg-green-600 px-4 py-2 -bottom-4 z-10">COMPRA 100% SEGURA</p>
                     </div>
-                    <p className="max-w-md mx-auto font-semibold">
+                    <p className="max-w-md mx-auto font-semibold pt-8">
                         REALIZA TU COMPRA CON TOTAL CONFIANZA, RAPIDEZ, SEGURIDAD Y SIN COMPLICACIONES CON NUESTRA PLATAFORMA DE PAGO PROTEGIDA MEDIANTE ENCRIPTACIÓN SSL Y RESPALDADA POR VISA. MASTERCARD, AMERICAN EXPRESS Y PAYPAL
                     </p>
                      <p className="font-bold uppercase text-red-600">IMPORTANTE:</p>
@@ -389,16 +414,30 @@ export default function LandingBanoPage() {
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">ADEMÁS SI ERES DE LAS PRIMERAS PERSONAS EN INSCRIBIRSE AL CURSO RECIBES ESTOS BONOS ADICIONALES TOTALMENTE GRATIS</h2>
                     <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">Acceso inmediato a estas herramientas para acelerar tu éxito.</p>
                 </div>
-                <div className="grid grid-cols-1 gap-6 mt-12 md:grid-cols-2">
-                    {bonuses.map((bonus, index) => (
-                        <div key={index} className="flex items-center p-4 bg-white border border-gray-200 rounded-2xl shadow-sm">
-                            <span className="text-3xl">{bonus.emoji}</span>
-                            <div className="ml-4">
-                                <p className="font-semibold">{bonus.title}</p>
-                                <p className="text-sm text-gray-600">{bonus.description}</p>
+                <div className="grid grid-cols-1 gap-12 mt-12 md:grid-cols-2">
+                    <div className="space-y-8">
+                        {bonuses.map((bonus, index) => (
+                            <div key={index} className="flex items-start p-4 bg-white border border-gray-200 rounded-2xl shadow-sm">
+                                <span className="text-3xl mr-4">🎁</span>
+                                <div className="flex-1">
+                                    <p className="font-bold text-lg text-primary">{bonus.title}</p>
+                                    <p className="mt-2 text-gray-700">{bonus.description}</p>
+                                    <p className="mt-3 font-bold text-red-600">{bonus.callout}</p>
+                                </div>
                             </div>
+                        ))}
+                    </div>
+                    <div className="flex items-center justify-center">
+                         <div className="relative w-full max-w-sm aspect-[3/4]">
+                            <Image
+                                src="https://placehold.co/400x500.png"
+                                alt="Ebook Mockup"
+                                fill
+                                className="object-cover rounded-lg shadow-2xl"
+                                data-ai-hint="ebook cover"
+                            />
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
         </section>
