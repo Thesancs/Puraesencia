@@ -508,7 +508,7 @@ export default function LandingBanoPage() {
                 ))}
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900 font-headline">
+                <h3 className="text-2xl font-bold text-center tracking-tight text-gray-900 font-headline">
                   🎁 Y además te llevas estos BONOS GRATIS:
                 </h3>
                 {bonosGratis.map((item, index) => (
