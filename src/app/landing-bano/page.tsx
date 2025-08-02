@@ -603,7 +603,7 @@ export default function LandingBanoPage() {
         <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
             <div className="max-w-5xl mx-auto">
                 <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl font-headline">
-                    Lo que dicen nuestras alumnas
+                    Cada vez más Emprendedores lo están Logrando
                 </h2>
                 <div className="flex items-center justify-center mt-12">
                      <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
