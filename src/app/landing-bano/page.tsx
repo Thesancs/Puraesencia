@@ -610,12 +610,13 @@ export default function LandingBanoPage() {
                 <p className="max-w-2xl mx-auto mt-2 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
                     El certificado te convierte en una Profesional en Aromaterapia Organica y Ecologica, lo cual te otorga credibilidad y confianza en tu trabajo.
                 </p>
-                <div className="relative w-full max-w-xl mx-auto mt-6 aspect-video">
+                <div className="relative w-full max-w-xl mx-auto mt-6">
                     <Image
                         src="/images/certificado.png"
                         alt="Certificado de finalización del curso"
-                        fill
-                        className="object-contain rounded-lg shadow-lg border-4 border-green-600/50"
+                        width={800}
+                        height={566}
+                        className="object-contain w-full h-auto rounded-lg shadow-lg border-4 border-green-600/50"
                         data-ai-hint="course certificate"
                     />
                 </div>
