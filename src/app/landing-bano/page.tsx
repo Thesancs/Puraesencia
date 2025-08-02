@@ -83,7 +83,7 @@ const bonuses = [
         title: "BONO 3: Acompañamiento Exclusivo en Plataforma Privada", 
         description: "No estarás sola. Tendrás acceso a soporte directo y personalizado paso a paso, para avanzar con confianza mientras creas tu línea.", 
         callout: "HOY GRATIS",
-        imageUrl: "https://placehold.co/300x200.png"
+        imageUrl: "/images/bono 3.png"
     },
     { 
         title: "BONO 4: Guía Práctica: Empaques que Enamoran", 
@@ -560,96 +560,6 @@ export default function LandingBanoPage() {
             </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
-            <div className="max-w-5xl mx-auto">
-                <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl font-headline">
-                    Cada vez más Emprendedores lo están Logrando
-                </h2>
-                <div className="flex items-center justify-center mt-12">
-                     <Carousel 
-                        opts={{ loop: true, align: "start" }}
-                        className="w-full max-w-4xl"
-                     >
-                        <CarouselContent className="-ml-4">
-                            {testimonials.map((testimonial, index) => (
-                            <CarouselItem key={index} className="pl-4 basis-11/12 sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
-                                <div className="p-1">
-                                <Card>
-                                    <CardContent className="flex aspect-[2/3] items-center justify-center p-6">
-                                        <Image 
-                                            src={testimonial.imageUrl} 
-                                            alt={`Testimonio ${index + 1}`} 
-                                            width={400}
-                                            height={600}
-                                            className="object-cover rounded-lg"
-                                            data-ai-hint={testimonial.aiHint}
-                                        />
-                                    </CardContent>
-                                </Card>
-                                </div>
-                            </CarouselItem>
-                            ))}
-                        </CarouselContent>
-                        <CarouselPrevious className="hidden sm:inline-flex" />
-                        <CarouselNext className="hidden sm:inline-flex" />
-                    </Carousel>
-                </div>
-            </div>
-        </section>
-
-        {/* Certificate Section */}
-        <section className="px-4 py-16 sm:py-24">
-            <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">
-                    Valida tus Conocimientos y Habilidades
-                </h2>
-                <p className="max-w-2xl mx-auto mt-4 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
-                    Una vez que concluyas el curso completo podrás descargar tu certificado personalizado con tu nombre, sin ningún costo extra.
-                </p>
-                <p className="max-w-2xl mx-auto mt-2 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
-                    El certificado te convierte en una Profesional en Aromaterapia Organica y Ecologica, lo cual te otorga credibilidad y confianza en tu trabajo.
-                </p>
-                <div className="relative w-full max-w-xl mx-auto mt-6">
-                    <Image
-                        src="/images/certificado.png"
-                        alt="Certificado de finalización del curso"
-                        width={1152}
-                        height={768}
-                        className="object-contain w-full h-auto rounded-lg shadow-lg border-4 border-green-600/50"
-                        data-ai-hint="course certificate"
-                    />
-                </div>
-            </div>
-        </section>
-
-        {/* Guarantee Section */}
-        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
-            <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-2xl font-bold tracking-tight text-gray-900 uppercase sm:text-3xl font-headline">
-                    TU COMPRA ES 100% SEGURA
-                </h2>
-                <h3 className="mt-4 text-xl font-semibold text-gray-800 sm:text-2xl">
-                    Garantía Incondicional de Satisfacción:
-                </h3>
-                <p className="max-w-2xl mx-auto mt-4 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
-                    Queremos que compres con total tranquilidad y confianza sabiendo que este curso es real, sin trucos ni promesas vacías, solo conocimientos genuinos y soporte real para tu negocio de Aromaterapia Organica y Ecologica.
-                </p>
-                 <p className="max-w-2xl mx-auto mt-2 text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
-                    Por eso te ofrecemos una Garantía Completa de Satisfacción de 7 días. Si no estás completamente satisfecha por cualquier motivo, te reembolsaremos el 100% de tu inversión.
-                </p>
-                <div className="relative w-full max-w-xs mx-auto mt-6 aspect-square">
-                    <Image
-                        src="https://placehold.co/400x400.png"
-                        alt="Sello de garantía de 7 días"
-                        fill
-                        className="object-contain"
-                        data-ai-hint="satisfaction guarantee seal"
-                    />
-                </div>
-            </div>
-        </section>
-
 
         {/* FAQ Section */}
         <section className="px-4 py-16 sm:py-24">
@@ -673,3 +583,5 @@ export default function LandingBanoPage() {
     </div>
   );
 }
+
+    
