@@ -33,10 +33,7 @@ export function PricingSection() {
                 <div className="mt-6">
                     <CtaButton />
                 </div>
-                <div className="mt-8 space-y-6">
-                    <p className="text-xs font-bold text-red-600 uppercase sm:text-sm">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
-                    <p className="text-sm font-semibold text-green-700 uppercase sm:text-base">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
-                    <div className="flex items-center justify-center mt-4">
+                <div className="mt-4">
                         <Image
                             src="/images/compra segura.png"
                             alt="Métodos de pago aceptados"
@@ -46,6 +43,9 @@ export function PricingSection() {
                             data-ai-hint="payment methods"
                         />
                     </div>
+                <div className="mt-8 space-y-6">
+                    <p className="text-xs font-bold text-red-600 uppercase sm:text-sm">IMPORTANTE: NUESTRO SISTEMA HACE EL CAMBIO A TU MONEDA LOCAL AUTOMÁticAMENTE A UNA TASA DE CAMBIO PREFERENCIAL ANTES DE TU REGISTRO</p>
+                    <p className="text-sm font-semibold text-green-700 uppercase sm:text-base">ACCESO VITALICIO A LA PLATAFORMA EDUCATIVA</p>
                      <div className="relative flex flex-col items-center justify-center pt-16">
                          <ShieldCheck className="absolute w-32 h-32 text-green-500 opacity-20 sm:w-40 sm:h-40" />
                          <Check className="absolute w-16 h-16 text-green-600 sm:w-20 sm:h-20" />
