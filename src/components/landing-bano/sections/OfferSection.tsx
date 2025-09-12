@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Gift, Clock } from 'lucide-react';
 import CtaButton from '@/components/landing-bano/CtaButton';
+import Image from 'next/image';
 
 export function OfferSection() {
     console.log('[OfferSection] rendered');
@@ -105,6 +106,16 @@ export function OfferSection() {
                     </div>
                      <div className="mt-6">
                         <CtaButton />
+                    </div>
+                    <div className="mt-4">
+                        <Image
+                            src="/images/compra segura.png"
+                            alt="Métodos de pago aceptados"
+                            width={768}
+                            height={153}
+                            className="object-contain"
+                            data-ai-hint="payment methods"
+                        />
                     </div>
                 </div>
             </div>
