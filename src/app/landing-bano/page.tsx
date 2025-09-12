@@ -14,6 +14,7 @@ import { FaqSection } from "@/components/landing-bano/sections/FaqSection";
 import { PreLaunchOfferSection } from "@/components/landing-bano/sections/PreLaunchOfferSection";
 import { RecapSection } from "@/components/landing-bano/sections/RecapSection";
 import { Footer } from "@/components/landing-bano/sections/Footer";
+import { OfferSection } from "@/components/landing-bano/sections/OfferSection";
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -32,7 +33,7 @@ export default function LandingBanoPage() {
         <PreLaunchOfferSection />
         <BonusSection />
         <RecapSection />
-        <PricingSection />
+        <OfferSection />
         <TestimonialsSection />
         <CertificateSection />
         <GuaranteeSection />
