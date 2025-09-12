@@ -5,7 +5,6 @@ import { VideoSection } from "@/components/landing-bano/sections/VideoSection";
 import { PersonalStorySection } from "@/components/landing-bano/sections/PersonalStorySection";
 import { WhyPuraEsenciaSection } from "@/components/landing-bano/sections/WhyPuraEsenciaSection";
 import { GallerySection } from "@/components/landing-bano/sections/GallerySection";
-import { PricingSection } from "@/components/landing-bano/sections/PricingSection";
 import { BonusSection } from "@/components/landing-bano/sections/BonusSection";
 import { TestimonialsSection } from "@/components/landing-bano/sections/TestimonialsSection";
 import { CertificateSection } from "@/components/landing-bano/sections/CertificateSection";
@@ -29,7 +28,7 @@ export default function LandingBanoPage() {
         <PersonalStorySection />
         <WhyPuraEsenciaSection />
         <GallerySection />
-        <PricingSection />
+        <OfferSection />
         <PreLaunchOfferSection />
         <BonusSection />
         <RecapSection />
@@ -37,7 +36,7 @@ export default function LandingBanoPage() {
         <TestimonialsSection />
         <CertificateSection />
         <GuaranteeSection />
-        <PricingSection />
+        <OfferSection />
         <FaqSection />
       </main>
       <Footer />
