@@ -1,3 +1,6 @@
+
+"use client";
+
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -7,6 +10,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import * as React from "react";
+
 
 const testimonials = [
   { imageUrl: "/images/testimonials/depoimento 1.png", aiHint: "testimonial screenshot" },
@@ -19,6 +25,10 @@ const testimonials = [
 
 export function TestimonialsSection() {
     console.log('[TestimonialsSection] rendered');
+    const plugin = React.useRef(
+        Autoplay({ delay: 2000, stopOnInteraction: false })
+    );
+
     return (
         <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
             <div className="max-w-4xl mx-auto">
@@ -27,11 +37,14 @@ export function TestimonialsSection() {
                     <p className="max-w-2xl mx-auto mt-4 text-base text-gray-600 sm:text-lg">Descubre lo que dicen nuestras alumnas:</p>
                 </div>
                 <Carousel 
+                    plugins={[plugin.current]}
                     opts={{
                         align: "start",
                         loop: true,
                     }}
                     className="w-full max-w-xs mx-auto mt-12 sm:max-w-xl md:max-w-2xl lg:max-w-4xl"
+                    onMouseEnter={plugin.current.stop}
+                    onMouseLeave={plugin.current.reset}
                 >
                     <CarouselContent className="-ml-2 md:-ml-4">
                         {testimonials.map((testimonial, index) => (
