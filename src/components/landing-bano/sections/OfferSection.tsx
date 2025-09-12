@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Gift, Clock } from 'lucide-react';
+import { Gift, Clock, Star } from 'lucide-react';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import Image from 'next/image';
 
@@ -54,7 +54,8 @@ export function OfferSection() {
                 <div className="text-center mb-6">
                     <h2 className="text-3xl font-bold">Sales de Baño Terapéuticas + 6 BONUS GRATIS</h2>
                     <div className="flex items-center justify-center mt-2">
-                        <span className="text-yellow-500">★★★★★</span>
+                        <span className="font-bold text-yellow-500">4.8</span>
+                        <Star className="w-5 h-5 ml-1 text-yellow-500 fill-yellow-500" />
                         <span className="ml-2 text-gray-600">(41)</span>
                     </div>
                     <div className="mt-2">
