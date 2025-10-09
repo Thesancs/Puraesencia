@@ -37,7 +37,7 @@ export function OfferSection() {
     const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo | null>(null);
     const [loadingCurrency, setLoadingCurrency] = useState(true);
     const essentialPriceUSD = 4.99;
-    const premiumPriceUSD = 9.90;
+    const premiumPriceUSD = 12.99;
 
     useEffect(() => {
         const fetchCurrency = async () => {
