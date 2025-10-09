@@ -6,7 +6,7 @@ import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 
-export default function CtaButton({ className }: { className?: string }) {
+export default function CtaButton({ className, text }: { className?: string, text?: string }) {
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const { toast } = useToast();
 
@@ -39,7 +39,7 @@ export default function CtaButton({ className }: { className?: string }) {
         return "Error - Intenta de Nuevo";
       case "idle":
       default:
-        return "REGÍSTRATE AHORA DANDO CLIC AQUÍ";
+        return text || "REGÍSTRATE AHORA DANDO CLIC AQUÍ";
     }
   };
 

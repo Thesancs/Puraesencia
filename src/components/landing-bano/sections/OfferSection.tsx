@@ -99,7 +99,7 @@ export function OfferSection() {
         <section id="oferta" className="bg-muted/30 py-16 px-4 sm:py-24">
             <div className="container max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                     <div className="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-sm font-semibold tracking-wider text-green-800 uppercase bg-green-200 rounded-full">
+                     <div className="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-sm font-semibold tracking-wider uppercase rounded-full text-primary bg-green-200">
                         <BadgePercent className="w-4 h-4 mr-2" />
                         Oferta Irresistible
                     </div>
@@ -129,7 +129,7 @@ export function OfferSection() {
                     {/* Essential Offer */}
                     <Card className="shadow-lg transition-all duration-300 hover:scale-105 h-full flex flex-col">
                         <CardHeader className="text-center">
-                            <CardTitle className="text-2xl font-bold">🔥 OFERTA ESSENCIAL</CardTitle>
+                            <CardTitle className="text-2xl font-bold">🔥 Plan Esencial</CardTitle>
                             <CardDescription>Pagas 1 y llevas 2</CardDescription>
                             <div className="flex items-center justify-center mt-4">
                                 {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
@@ -142,7 +142,6 @@ export function OfferSection() {
                             <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
                                 <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
                                 <ul className="mt-4 space-y-3 text-accent-foreground">
-                                    <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Cremas Faciales y Corporales</b></span></li>
                                     <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
                                 </ul>
                             </div>
@@ -154,7 +153,7 @@ export function OfferSection() {
                             </ul>
                         </CardContent>
                         <div className="p-6 mt-auto">
-                            <CtaButton />
+                            <CtaButton text="Quiero Plan Esencial" />
                         </div>
                     </Card>
 
@@ -166,7 +165,7 @@ export function OfferSection() {
                             </div>
                         </div>
                         <CardHeader className="text-center">
-                            <CardTitle className="text-2xl font-bold">💎 OFERTA PREMIUM</CardTitle>
+                            <CardTitle className="text-2xl font-bold">💎 Plan Plus</CardTitle>
                             <CardDescription>Pagas 1 y llevas 6</CardDescription>
                              <div className="flex items-center justify-center mt-4">
                                 {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
@@ -179,7 +178,6 @@ export function OfferSection() {
                             <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
                                 <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
                                 <ul className="mt-4 space-y-3 text-accent-foreground">
-                                    <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Cremas Faciales y Corporales</b></span></li>
                                     <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
                                 </ul>
                             </div>
@@ -191,7 +189,7 @@ export function OfferSection() {
                             </ul>
                         </CardContent>
                         <div className="p-6 mt-auto">
-                            <CtaButton />
+                            <CtaButton text="Quiero Plan Plus" />
                         </div>
                     </Card>
                 </div>
