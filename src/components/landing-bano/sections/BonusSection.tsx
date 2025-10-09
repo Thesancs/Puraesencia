@@ -19,7 +19,7 @@ const bonuses = [
         bonus: "BONO 3",
         title: "Acompañamiento Exclusivo",
         description: "No estarás sola. Tendrás acceso a soporte directo y personalizado paso a paso, para avanzar con confianza mientras creas tu línea.",
-        imageUrl: "/images/bono 3.png"
+        imageUrl: "/images/bonos/bono 3.png"
     },
     {
         bonus: "BONO 4",
