@@ -41,7 +41,7 @@ export function OfferSection() {
 
     const essentialPriceUSD = 4.99;
     const premiumPriceUSD = 12.99;
-     const plusPriceUSD = 7.90;
+    const plusPriceUSD = 7.90;
 
     useEffect(() => {
         const fetchCurrency = async () => {
@@ -190,7 +190,7 @@ export function OfferSection() {
                                 </div>
                             </div>
                             <CardHeader className="text-center">
-                                <CardTitle className="text-2xl font-bold">💎 Plan Plus</CardTitle>
+                                <CardTitle className="text-2xl font-bold">💎 Plan Premium</CardTitle>
                                 <CardDescription>Pagas 1 y llevas 6</CardDescription>
                                 <div className="flex items-center justify-center mt-4">
                                     {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
@@ -215,7 +215,7 @@ export function OfferSection() {
                             </CardContent>
                             <div className="p-6 mt-auto">
                                 <CtaButton 
-                                    text="Quiero Plan Plus"
+                                    text="Quiero Plan Premium"
                                     plan="premium"
                                     onClick={handleCtaClick}
                                 />
