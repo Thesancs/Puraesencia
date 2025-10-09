@@ -47,7 +47,7 @@ export function GallerySection() {
                         ¡Aquí te lo enseñamos todo!
                     </h2>
                 </div>
-                <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-2 gap-4 mt-12 sm:gap-8 lg:grid-cols-3">
                     {galleryItems.map((item, index) => (
                         <Card key={index} className="overflow-hidden text-center transition-transform duration-300 transform border-0 shadow-lg hover:scale-105">
                             <CardContent className="p-0">
@@ -60,8 +60,8 @@ export function GallerySection() {
                                         data-ai-hint={item.aiHint}
                                     />
                                 </div>
-                                <div className="p-6 bg-card">
-                                    <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                                <div className="p-4 bg-card sm:p-6">
+                                    <h3 className="text-sm font-bold text-foreground sm:text-lg">{item.title}</h3>
                                 </div>
                             </CardContent>
                         </Card>
