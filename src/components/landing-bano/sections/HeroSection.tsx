@@ -15,22 +15,6 @@ export function HeroSection() {
                         Mega Kit <b>+30 fórmulas exclusivas</b> EDICIÓN EMPRENDEDOR
                     </p>
                 </div>
-                <div className="max-w-md mx-auto mt-10">
-                    <Card className="overflow-hidden shadow-2xl">
-                        <CardContent className="p-0">
-                             <div className="relative w-full aspect-[4/5]">
-                                <Image 
-                                    src="/images/hero-image.png"
-                                    alt="Bolsa de sales de baño terapéuticas con etiqueta 'Edición Emprendedor'"
-                                    fill
-                                    className="object-cover"
-                                    data-ai-hint="bath salts product pouch"
-                                    priority
-                                />
-                            </div>
-                        </CardContent>
-                    </Card>
-                </div>
                  <div className="max-w-md mx-auto mt-10">
                     <CtaButton />
                 </div>
