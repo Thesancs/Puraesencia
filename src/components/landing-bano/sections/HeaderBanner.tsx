@@ -8,7 +8,7 @@ export function HeaderBanner() {
         <Alert className="text-center text-white border-0 rounded-none bg-primary">
             <AlertTriangle className="h-4 w-4 text-white" />
             <AlertDescription className="font-bold text-primary-foreground">
-                ATENCIÓN: DESCUENTO RELÁMPAGO + 6 BONOS GRATIS PARA LAS PRIMERAS INSCRITAS
+                50% OFF SOLO POR HOY — ACCESO INMEDIATO A LA GUÍA!✨
             </AlertDescription>
         </Alert>
     );
