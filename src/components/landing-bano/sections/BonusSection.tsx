@@ -31,7 +31,7 @@ const bonuses = [
         bonus: "BONO 5",
         title: "Muestras que Venden: Tus Primeras Fórmulas",
         description: "Accede a 5 fórmulas simples, efectivas y de alta demanda, ideales para crear muestras pequeñas, conquistar tus primeras clientas y empezar a vender rápido.",
-        imageUrl: "/images/tus primeras.png"
+        imageUrl: "/images/bonos/bono 5.png"
     },
     {
         bonus: "BONO 6",
