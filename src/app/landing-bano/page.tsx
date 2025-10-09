@@ -10,7 +10,6 @@ import { TestimonialsSection } from "@/components/landing-bano/sections/Testimon
 import { CertificateSection } from "@/components/landing-bano/sections/CertificateSection";
 import { GuaranteeSection } from "@/components/landing-bano/sections/GuaranteeSection";
 import { FaqSection } from "@/components/landing-bano/sections/FaqSection";
-import { RecapSection } from "@/components/landing-bano/sections/RecapSection";
 import { Footer } from "@/components/landing-bano/sections/Footer";
 import { OfferSection } from "@/components/landing-bano/sections/OfferSection";
 
@@ -29,7 +28,6 @@ export default function LandingBanoPage() {
         <GallerySection />
         <OfferSection />
         <BonusSection />
-        <RecapSection />
         <TestimonialsSection />
         <CertificateSection />
         <GuaranteeSection />
