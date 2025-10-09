@@ -9,22 +9,22 @@ export function HeroSection() {
             <div className="container mx-auto">
                 <div className="max-w-4xl mx-auto space-y-6">
                     <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl font-headline">
-                    Empieza desde cero y arma tu propia línea de <span className="text-primary">sales de baño terapéuticas</span> que nadie más tiene
+                        EN <span className="text-primary">24 HORAS</span> PODRÁS PREPARAR TUS PRIMERAS SALES TERAPEUTICAS QUE ALIVIAN EL DOLOR Y GENERAN <span className="text-primary">+USD$600 al mes!</span>
                     </h1>
                     <p className="max-w-2xl mx-auto text-lg leading-8 text-muted-foreground sm:text-xl">
-                    Te enseño cómo hacer mezclas que realmente ayudan, cómo ahorrar en ingredientes sin perder calidad y cómo hacer que cada sal que preparas sea tan buena que tus clientas van a querer repetir la compra sin pensarlo.
+                        Mega Kit <b>+30 fórmulas exclusivas</b> EDICIÓN EMPRENDEDOR
                     </p>
                 </div>
-                <div className="max-w-3xl mx-auto mt-10">
+                <div className="max-w-md mx-auto mt-10">
                     <Card className="overflow-hidden shadow-2xl">
                         <CardContent className="p-0">
-                             <div className="relative w-full aspect-video">
+                             <div className="relative w-full aspect-[4/5]">
                                 <Image 
-                                    src="/images/foto 1 pagina.webp"
-                                    alt="Mujer creando sales de baño terapéuticas en su cocina"
+                                    src="/images/hero-image.png"
+                                    alt="Bolsa de sales de baño terapéuticas con etiqueta 'Edición Emprendedor'"
                                     fill
                                     className="object-cover"
-                                    data-ai-hint="bath salts entrepreneur"
+                                    data-ai-hint="bath salts product pouch"
                                     priority
                                 />
                             </div>
