@@ -140,7 +140,7 @@ export function OfferSection() {
                         <CardContent className="flex-grow">
                             <p className="text-center text-muted-foreground mb-6">¡Tu oportunidad para emprender sin gastar mucho!</p>
                             <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
-                                <p className="font-bold text-center text-accent-foreground">Recibí GRATIS:</p>
+                                <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
                                 <ul className="mt-4 space-y-3 text-accent-foreground">
                                     <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Cremas Faciales y Corporales</b></span></li>
                                     <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
@@ -177,7 +177,7 @@ export function OfferSection() {
                         <CardContent className="flex-grow">
                             <p className="text-center text-muted-foreground mb-6">¡La experiencia completa para emprender como profesional!</p>
                             <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
-                                <p className="font-bold text-center text-accent-foreground">Recibí GRATIS:</p>
+                                <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
                                 <ul className="mt-4 space-y-3 text-accent-foreground">
                                     <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Cremas Faciales y Corporales</b></span></li>
                                     <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>

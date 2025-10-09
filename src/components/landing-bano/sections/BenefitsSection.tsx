@@ -21,7 +21,7 @@ export function BenefitsSection() {
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-              Lo que lograrás con el Kit de eBooks del Método ‘Pura Esencia™’
+              Lo que lograrás con el Método ‘Pura Esencia™’
               </h2>
             </div>
             <div className="grid grid-cols-1 gap-6 mt-12 md:grid-cols-2 lg:grid-cols-3">
