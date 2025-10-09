@@ -6,12 +6,29 @@ import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 
-export default function CtaButton({ className, text }: { className?: string, text?: string }) {
+type Plan = 'esencial' | 'plus' | 'premium';
+
+export default function CtaButton({ 
+  className, 
+  text, 
+  onClick,
+  plan
+}: { 
+  className?: string, 
+  text?: string,
+  onClick?: (plan: Plan) => void,
+  plan: Plan
+}) {
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const { toast } = useToast();
 
-  const handleClick = () => {
-    console.log("[LandingBano] CTA clicked");
+  const handleLocalClick = () => {
+    if (onClick) {
+      onClick(plan);
+      return;
+    }
+    
+    console.log(`[LandingBano] CTA clicked for plan: ${plan}`);
     setStatus("loading");
 
     setTimeout(() => {
@@ -45,7 +62,7 @@ export default function CtaButton({ className, text }: { className?: string, tex
 
   return (
     <Button
-      onClick={handleClick}
+      onClick={handleLocalClick}
       disabled={status === "loading"}
       size="lg"
       className={cn(

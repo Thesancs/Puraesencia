@@ -5,6 +5,7 @@ import CtaButton from '@/components/landing-bano/CtaButton';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import UpsellModal from '@/components/landing-bano/modals/UpsellModal';
 
 interface CurrencyInfo {
     symbol: string;
@@ -36,8 +37,11 @@ export function OfferSection() {
     
     const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo | null>(null);
     const [loadingCurrency, setLoadingCurrency] = useState(true);
+    const [isUpsellModalOpen, setIsUpsellModalOpen] = useState(false);
+
     const essentialPriceUSD = 4.99;
     const premiumPriceUSD = 12.99;
+     const plusPriceUSD = 7.90;
 
     useEffect(() => {
         const fetchCurrency = async () => {
@@ -94,122 +98,157 @@ export function OfferSection() {
     const displaySymbol = currencyInfo ? currencyInfo.symbol : '$';
     const displayCode = currencyInfo ? currencyInfo.code : 'USD';
 
+    const handleCtaClick = (plan: 'esencial' | 'plus' | 'premium') => {
+        if (plan === 'esencial') {
+            console.log('[OfferSection] Plan Esencial clicked, opening upsell modal.');
+            setIsUpsellModalOpen(true);
+        } else {
+            handlePurchase(plan);
+        }
+    };
+
+    const handlePurchase = (plan: 'esencial' | 'plus' | 'premium') => {
+        console.log(`[OfferSection] Proceeding to checkout for ${plan}`);
+        setIsUpsellModalOpen(false);
+        // Simulate redirecting to checkout
+        window.location.href = "https://pay.hotmart.com";
+    };
+
 
     return (
-        <section id="oferta" className="bg-muted/30 py-16 px-4 sm:py-24">
-            <div className="container max-w-6xl mx-auto">
-                <div className="text-center mb-12">
-                     <div className="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-sm font-semibold tracking-wider uppercase rounded-full text-primary bg-green-200">
-                        <BadgePercent className="w-4 h-4 mr-2" />
-                        Oferta Irresistible
-                    </div>
-                    <h2 className="text-3xl font-bold md:text-4xl text-primary">Elige el plan perfecto para ti</h2>
-                    <p className="text-lg mt-2 text-muted-foreground">¡Tu oportunidad para emprender!</p>
-                </div>
-
-                <div className="p-6 my-6 text-center text-white rounded-lg bg-primary max-w-md mx-auto">
-                    <div className="flex items-center justify-center">
-                        <Clock className="w-5 h-5 mr-2" />
-                        <p className='font-semibold'>La oferta termina en:</p>
-                    </div>
-                    <div className="flex justify-center items-center space-x-2 mt-4">
-                        <div className="p-3 text-center bg-white rounded-lg text-primary">
-                            <span className="text-4xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</span>
-                            <span className="block text-xs font-semibold">MINUTOS</span>
+        <>
+            <section id="oferta" className="bg-muted/30 py-16 px-4 sm:py-24">
+                <div className="container max-w-6xl mx-auto">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-sm font-semibold tracking-wider uppercase rounded-full text-primary bg-green-200">
+                            <BadgePercent className="w-4 h-4 mr-2" />
+                            Oferta Irresistible
                         </div>
-                        <span className="text-4xl font-bold">:</span>
-                        <div className="p-3 text-center bg-white rounded-lg text-primary">
-                            <span className="text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0')}</span>
-                            <span className="block text-xs font-semibold">SEGUNDOS</span>
-                        </div>
+                        <h2 className="text-3xl font-bold md:text-4xl text-primary">Elige el plan perfecto para ti</h2>
+                        <p className="text-lg mt-2 text-muted-foreground">¡Tu oportunidad para emprender!</p>
                     </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    {/* Essential Offer */}
-                    <Card className="shadow-lg transition-all duration-300 hover:scale-105 h-full flex flex-col">
-                        <CardHeader className="text-center">
-                            <CardTitle className="text-2xl font-bold">🔥 Plan Esencial</CardTitle>
-                            <CardDescription>Pagas 1 y llevas 2</CardDescription>
-                            <div className="flex items-center justify-center mt-4">
-                                {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
-                                    <span className="ml-4 text-4xl font-bold text-primary">{displaySymbol}{getDisplayPrice(essentialPriceUSD)} <span className="text-2xl">{displayCode}</span></span>
-                                )}
+                    <div className="p-6 my-6 text-center text-white rounded-lg bg-primary max-w-md mx-auto">
+                        <div className="flex items-center justify-center">
+                            <Clock className="w-5 h-5 mr-2" />
+                            <p className='font-semibold'>La oferta termina en:</p>
+                        </div>
+                        <div className="flex justify-center items-center space-x-2 mt-4">
+                            <div className="p-3 text-center bg-white rounded-lg text-primary">
+                                <span className="text-4xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                                <span className="block text-xs font-semibold">MINUTOS</span>
                             </div>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <p className="text-center text-muted-foreground mb-6">¡Tu oportunidad para emprender sin gastar mucho!</p>
-                            <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
-                                <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
-                                <ul className="mt-4 space-y-3 text-accent-foreground">
-                                    <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
+                            <span className="text-4xl font-bold">:</span>
+                            <div className="p-3 text-center bg-white rounded-lg text-primary">
+                                <span className="text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0')}</span>
+                                <span className="block text-xs font-semibold">SEGUNDOS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        {/* Essential Offer */}
+                        <Card className="shadow-lg transition-all duration-300 hover:scale-105 h-full flex flex-col">
+                            <CardHeader className="text-center">
+                                <CardTitle className="text-2xl font-bold">🔥 Plan Esencial</CardTitle>
+                                <CardDescription>Pagas 1 y llevas 2</CardDescription>
+                                <div className="flex items-center justify-center mt-4">
+                                    {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
+                                        <span className="ml-4 text-4xl font-bold text-primary">{displaySymbol}{getDisplayPrice(essentialPriceUSD)} <span className="text-2xl">{displayCode}</span></span>
+                                    )}
+                                </div>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                                <p className="text-center text-muted-foreground mb-6">¡Tu oportunidad para emprender sin gastar mucho!</p>
+                                <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
+                                    <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
+                                    <ul className="mt-4 space-y-3 text-accent-foreground">
+                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
+                                    </ul>
+                                </div>
+                                <h3 className="font-bold text-center text-accent-foreground mb-4">🎁 Bonos incluidos:</h3>
+                                <ul className="space-y-2 text-sm text-muted-foreground">
+                                    {essentialBonuses.map(bonus => (
+                                    <li key={bonus} className="flex items-center"><Check className="w-4 h-4 mr-2 text-green-500" /> {bonus.split(': ')[1]}</li>
+                                    ))}
                                 </ul>
+                            </CardContent>
+                            <div className="p-6 mt-auto">
+                                <CtaButton 
+                                    text="Quiero Plan Esencial"
+                                    plan="esencial"
+                                    onClick={handleCtaClick}
+                                />
                             </div>
-                            <h3 className="font-bold text-center text-accent-foreground mb-4">🎁 Bonos incluidos:</h3>
-                             <ul className="space-y-2 text-sm text-muted-foreground">
-                                {essentialBonuses.map(bonus => (
-                                  <li key={bonus} className="flex items-center"><Check className="w-4 h-4 mr-2 text-green-500" /> {bonus.split(': ')[1]}</li>
-                                ))}
-                            </ul>
-                        </CardContent>
-                        <div className="p-6 mt-auto">
-                            <CtaButton text="Quiero Plan Esencial" />
-                        </div>
-                    </Card>
+                        </Card>
 
-                    {/* Premium Offer */}
-                     <Card className="shadow-2xl transition-all duration-300 hover:scale-105 border-primary border-2 relative h-full flex flex-col">
-                        <div className="absolute top-0 right-0 -mt-4 -mr-2">
-                           <div className="bg-primary text-primary-foreground font-bold text-sm py-1 px-4 rounded-full shadow-lg transform rotate-[15deg]">
-                                ★ RECOMENDADO ★
+                        {/* Premium Offer */}
+                        <Card className="shadow-2xl transition-all duration-300 hover:scale-105 border-primary border-2 relative h-full flex flex-col">
+                            <div className="absolute top-0 right-0 -mt-4 -mr-2">
+                            <div className="bg-primary text-primary-foreground font-bold text-sm py-1 px-4 rounded-full shadow-lg transform rotate-[15deg]">
+                                    ★ RECOMENDADO ★
+                                </div>
                             </div>
-                        </div>
-                        <CardHeader className="text-center">
-                            <CardTitle className="text-2xl font-bold">💎 Plan Plus</CardTitle>
-                            <CardDescription>Pagas 1 y llevas 6</CardDescription>
-                             <div className="flex items-center justify-center mt-4">
-                                {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
-                                    <span className="ml-4 text-4xl font-bold text-primary">{displaySymbol}{getDisplayPrice(premiumPriceUSD)} <span className="text-2xl">{displayCode}</span></span>
-                                )}
-                            </div>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <p className="text-center text-muted-foreground mb-6">¡La experiencia completa para emprender como profesional!</p>
-                            <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
-                                <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
-                                <ul className="mt-4 space-y-3 text-accent-foreground">
-                                    <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
+                            <CardHeader className="text-center">
+                                <CardTitle className="text-2xl font-bold">💎 Plan Plus</CardTitle>
+                                <CardDescription>Pagas 1 y llevas 6</CardDescription>
+                                <div className="flex items-center justify-center mt-4">
+                                    {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
+                                        <span className="ml-4 text-4xl font-bold text-primary">{displaySymbol}{getDisplayPrice(premiumPriceUSD)} <span className="text-2xl">{displayCode}</span></span>
+                                    )}
+                                </div>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                                <p className="text-center text-muted-foreground mb-6">¡La experiencia completa para emprender como profesional!</p>
+                                <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
+                                    <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
+                                    <ul className="mt-4 space-y-3 text-accent-foreground">
+                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
+                                    </ul>
+                                </div>
+                                <h3 className="font-bold text-center text-accent-foreground mb-4">🎁 Bonos incluidos:</h3>
+                                <ul className="space-y-2 text-sm text-muted-foreground">
+                                    {premiumBonuses.map(bonus => (
+                                    <li key={bonus} className="flex items-center"><Check className="w-4 h-4 mr-2 text-green-500" /> {bonus.split(': ')[1]}</li>
+                                    ))}
                                 </ul>
+                            </CardContent>
+                            <div className="p-6 mt-auto">
+                                <CtaButton 
+                                    text="Quiero Plan Plus"
+                                    plan="premium"
+                                    onClick={handleCtaClick}
+                                />
                             </div>
-                             <h3 className="font-bold text-center text-accent-foreground mb-4">🎁 Bonos incluidos:</h3>
-                             <ul className="space-y-2 text-sm text-muted-foreground">
-                                {premiumBonuses.map(bonus => (
-                                  <li key={bonus} className="flex items-center"><Check className="w-4 h-4 mr-2 text-green-500" /> {bonus.split(': ')[1]}</li>
-                                ))}
-                            </ul>
-                        </CardContent>
-                        <div className="p-6 mt-auto">
-                            <CtaButton text="Quiero Plan Plus" />
+                        </Card>
+                    </div>
+                    <div className="flex flex-col items-center justify-center mt-12">
+                        <div className="relative w-full max-w-sm h-14">
+                            <Image
+                                src="/images/compra segura.png"
+                                alt="Métodos de pago aceptados"
+                                fill
+                                className="object-contain"
+                                data-ai-hint="payment methods"
+                            />
                         </div>
-                    </Card>
-                </div>
-                 <div className="flex flex-col items-center justify-center mt-12">
-                    <div className="relative w-full max-w-sm h-14">
-                        <Image
-                            src="/images/compra segura.png"
-                            alt="Métodos de pago aceptados"
-                            fill
-                            className="object-contain"
-                            data-ai-hint="payment methods"
-                        />
-                    </div>
-                    <div className="flex items-center justify-center mt-4">
-                         <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                         <span className="ml-2 font-bold text-yellow-600">4.8 de 5 estrellas</span>
-                         <span className="ml-2 text-sm text-muted-foreground">(+41 valoraciones)</span>
+                        <div className="flex items-center justify-center mt-4">
+                            <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                            <span className="ml-2 font-bold text-yellow-600">4.8 de 5 estrellas</span>
+                            <span className="ml-2 text-sm text-muted-foreground">(+41 valoraciones)</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <UpsellModal 
+                isOpen={isUpsellModalOpen}
+                onClose={() => setIsUpsellModalOpen(false)}
+                onPurchase={handlePurchase}
+                plusPrice={plusPriceUSD}
+                premiumPrice={premiumPriceUSD}
+                currencyInfo={currencyInfo}
+                loadingCurrency={loadingCurrency}
+            />
+        </>
     );
 }
