@@ -31,7 +31,7 @@ export function OfferSection() {
     const [isUpsellModalOpen, setIsUpsellModalOpen] = useState(false);
 
     const essentialPriceUSD = 4.99;
-    const premiumPriceUSD = 12.99;
+    const premiumPriceUSD = 9.90;
     const plusPriceUSD = 7.90;
 
     useEffect(() => {
