@@ -31,13 +31,13 @@ const bonuses = [
         bonus: "BONO 5",
         title: "Muestras que Venden: Tus Primeras Fórmulas",
         description: "Accede a 5 fórmulas simples, efectivas y de alta demanda, ideales para crear muestras pequeñas, conquistar tus primeras clientas y empezar a vender rápido.",
-        imageUrl: "/images/bonos/bono 5.png"
+        imageUrl: "/images/bonos/bono 6.png"
     },
     {
         bonus: "BONO 6",
         title: "Guía para Crear tu Primer Kit de Regalo",
         description: "Aprende a combinar, presentar y vender tus sales como regalos irresistibles para fechas especiales. Incluye estrategias para kits temáticos y empaques atractivos.",
-        imageUrl: "/images/bono 6.png"
+        imageUrl: "/images/bonos/bono 5.png"
     }
 ];
 
