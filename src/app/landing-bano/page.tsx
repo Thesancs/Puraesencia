@@ -19,9 +19,13 @@ export default function LandingBanoPage() {
 
   return (
     <div className="antialiased text-foreground bg-background font-body">
-      <HeaderBanner />
+      <div className="relative">
+        <HeaderBanner />
+        <main className="isolate">
+            <HeroSection />
+        </main>
+      </div>
       <main className="isolate">
-        <HeroSection />
         <IntroCardSection />
         <BenefitsSection />
         <VideoSection />
