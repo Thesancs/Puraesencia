@@ -113,7 +113,7 @@ export function OfferSection() {
                                     <p className="font-bold text-center text-accent-foreground">Recibirás:</p>
                                     <ul className="mt-4 space-y-3 text-accent-foreground">
                                         <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>La Guía Definitiva <b>"Metodo Pura Esencia"</b></span></li>
-                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño (GRATIS)</b></span></li>
+                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
                                     </ul>
                                 </div>
                                 <h3 className="font-bold text-center text-accent-foreground mb-4">🎁 Bonos incluidos:</h3>
@@ -153,7 +153,7 @@ export function OfferSection() {
                                     <p className="font-bold text-center text-accent-foreground">Recibirás:</p>
                                     <ul className="mt-4 space-y-3 text-accent-foreground">
                                          <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>La Guía Definitiva <b>"Metodo Pura Esencia"</b></span></li>
-                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño (GRATIS)</b></span></li>
+                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
                                     </ul>
                                 </div>
                                 <h3 className="font-bold text-center text-accent-foreground mb-4">🎁 Bonos incluidos:</h3>
