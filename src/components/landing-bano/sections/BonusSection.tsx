@@ -19,13 +19,13 @@ const bonuses = [
         bonus: "BONO 3",
         title: "Acompañamiento Exclusivo",
         description: "No estarás sola. Tendrás acceso a soporte directo y personalizado paso a paso, para avanzar con confianza mientras creas tu línea.",
-        imageUrl: "/images/bonos/bono 3.png"
+        imageUrl: "/images/bonos/bono 4.png"
     },
     {
         bonus: "BONO 4",
         title: "Guía Práctica: Empaques que Enamoran",
         description: "Aprende a crear empaques artesanales y profesionales sin gastar mucho. Te enseño materiales ecológicos, combinaciones y detalles que hacen que tu marca destaque.",
-        imageUrl: "/images/bonos/bono 4.png"
+        imageUrl: "/images/bonos/bono 3.png"
     },
     {
         bonus: "BONO 5",
