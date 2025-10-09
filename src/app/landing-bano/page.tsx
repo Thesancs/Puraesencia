@@ -12,6 +12,7 @@ import { GuaranteeSection } from "@/components/landing-bano/sections/GuaranteeSe
 import { FaqSection } from "@/components/landing-bano/sections/FaqSection";
 import { Footer } from "@/components/landing-bano/sections/Footer";
 import { OfferSection } from "@/components/landing-bano/sections/OfferSection";
+import { IntroCardSection } from "@/components/landing-bano/sections/IntroCardSection";
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -21,6 +22,7 @@ export default function LandingBanoPage() {
       <HeaderBanner />
       <main className="isolate">
         <HeroSection />
+        <IntroCardSection />
         <BenefitsSection />
         <VideoSection />
         <PersonalStorySection />

@@ -96,7 +96,7 @@ export function OfferSection() {
 
 
     return (
-        <section className="bg-muted/30 py-16 px-4 sm:py-24">
+        <section id="oferta" className="bg-muted/30 py-16 px-4 sm:py-24">
             <div className="container max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                      <div className="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-sm font-semibold tracking-wider text-green-800 uppercase bg-green-200 rounded-full">
