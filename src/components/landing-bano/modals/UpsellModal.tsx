@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const premiumBonuses = [
     "Lista de Proveedores Verificada",
@@ -22,20 +22,12 @@ const plusBonuses = [
     "Muestras que Venden"
 ];
 
-interface CurrencyInfo {
-    symbol: string;
-    code: string;
-    rate: number;
-}
-
 interface UpsellModalProps {
     isOpen: boolean;
     onClose: () => void;
     onPurchase: (plan: 'plus' | 'premium') => void;
     plusPrice: number;
     premiumPrice: number;
-    currencyInfo: CurrencyInfo | null;
-    loadingCurrency: boolean;
 }
 
 export default function UpsellModal({ 
@@ -43,9 +35,7 @@ export default function UpsellModal({
     onClose, 
     onPurchase, 
     plusPrice, 
-    premiumPrice,
-    currencyInfo,
-    loadingCurrency
+    premiumPrice
 }: UpsellModalProps) {
     const [modalStep, setModalStep] = useState<'upsell1' | 'upsell2'>('upsell1');
 
@@ -54,16 +44,13 @@ export default function UpsellModal({
         onClose();
     };
     
-    const getDisplayPrice = (basePrice: number) => currencyInfo ? (basePrice * currencyInfo.rate).toFixed(2) : basePrice.toFixed(2);
-    const displaySymbol = currencyInfo ? currencyInfo.symbol : '$';
-
     const renderUpsell1 = () => (
         <div className='text-center'>
             <DialogHeader>
                 <DialogTitle className="text-2xl font-bold text-center mb-2">🎁 ¡OFERTA ESPECIAL PARA TI!</DialogTitle>
                 <DialogDescription className="text-center text-lg">
                     ¿Quieres mejorar tu experiencia? <br />
-                    Por solo <span className="font-bold text-primary">{displaySymbol}{getDisplayPrice(premiumPrice)} USD</span> puedes obtener el <strong>Plan Premium</strong> con TODOS estos bonos:
+                    Por solo <span className="font-bold text-primary">${premiumPrice.toFixed(2)} USD</span> puedes obtener el <strong>Plan Premium</strong> con TODOS estos bonos:
                 </DialogDescription>
             </DialogHeader>
             <ul className="my-6 space-y-2 text-left">
@@ -91,7 +78,7 @@ export default function UpsellModal({
                  <DialogTitle className="text-2xl font-bold text-center mb-2 text-destructive">❌ CUPONES AGOTADOS PARA PLAN ESENCIAL</DialogTitle>
                  <DialogDescription className="text-center text-lg">
                     Pero... ¡tenemos algo mejor para ti! <br/>
-                    🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">{displaySymbol}{getDisplayPrice(plusPrice)} USD</span>
+                    🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">${plusPrice.toFixed(2)} USD</span>
                  </DialogDescription>
             </DialogHeader>
             <p className='mt-4 mb-2 font-semibold'>Incluye estos 5 bonos:</p>

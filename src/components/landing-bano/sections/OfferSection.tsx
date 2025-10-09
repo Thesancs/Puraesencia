@@ -1,17 +1,10 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Gift, Clock, Star, BadgePercent, Loader2, Check } from 'lucide-react';
+import { Gift, Clock, Star, BadgePercent, Check } from 'lucide-react';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
 import UpsellModal from '@/components/landing-bano/modals/UpsellModal';
-
-interface CurrencyInfo {
-    symbol: string;
-    code: string;
-    rate: number;
-}
 
 const essentialBonuses = [
     "BONO 1: Lista de Proveedores Verificada",
@@ -35,49 +28,11 @@ export function OfferSection() {
         seconds: 0
     });
     
-    const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo | null>(null);
-    const [loadingCurrency, setLoadingCurrency] = useState(true);
     const [isUpsellModalOpen, setIsUpsellModalOpen] = useState(false);
 
     const essentialPriceUSD = 4.99;
     const premiumPriceUSD = 12.99;
     const plusPriceUSD = 7.90;
-
-    useEffect(() => {
-        const fetchCurrency = async () => {
-            try {
-                const geoResponse = await fetch('https://ipapi.co/json/');
-                if (!geoResponse.ok) throw new Error('Could not fetch location');
-                const geoData = await geoResponse.json();
-                const currencyCode = geoData.currency;
-                const currencySymbol = geoData.currency_symbol;
-
-                if (currencyCode === 'USD') {
-                    setCurrencyInfo({ symbol: '$', code: 'USD', rate: 1 });
-                    setLoadingCurrency(false);
-                    return;
-                }
-
-                const rateResponse = await fetch(`https://api.exchangerate-api.com/v4/latest/USD`);
-                if (!rateResponse.ok) throw new Error('Could not fetch exchange rates');
-                const rateData = await rateResponse.json();
-                const rate = rateData.rates[currencyCode];
-
-                if (rate) {
-                    setCurrencyInfo({ symbol: currencySymbol, code: currencyCode, rate: rate });
-                } else {
-                     setCurrencyInfo({ symbol: '$', code: 'USD', rate: 1 });
-                }
-            } catch (error) {
-                console.error("Currency conversion error:", error);
-                 setCurrencyInfo({ symbol: '$', code: 'USD', rate: 1 });
-            } finally {
-                setLoadingCurrency(false);
-            }
-        };
-
-        fetchCurrency();
-    }, []);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -94,10 +49,6 @@ export function OfferSection() {
         return () => clearInterval(timer);
     }, []);
     
-    const getDisplayPrice = (basePrice: number) => currencyInfo ? (basePrice * currencyInfo.rate).toFixed(2) : basePrice.toFixed(2);
-    const displaySymbol = currencyInfo ? currencyInfo.symbol : '$';
-    const displayCode = currencyInfo ? currencyInfo.code : 'USD';
-
     const handleCtaClick = (plan: 'esencial' | 'plus' | 'premium') => {
         if (plan === 'esencial') {
             console.log('[OfferSection] Plan Esencial clicked, opening upsell modal.');
@@ -140,7 +91,7 @@ export function OfferSection() {
                             </div>
                             <span className="text-4xl font-bold">:</span>
                             <div className="p-3 text-center bg-white rounded-lg text-primary">
-                                <span className="text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0')}</span>
+                                <span className="text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0') }</span>
                                 <span className="block text-xs font-semibold">SEGUNDOS</span>
                             </div>
                         </div>
@@ -153,9 +104,7 @@ export function OfferSection() {
                                 <CardTitle className="text-2xl font-bold">🔥 Plan Esencial</CardTitle>
                                 <CardDescription>Pagas 1 y llevas 2</CardDescription>
                                 <div className="flex items-center justify-center mt-4">
-                                    {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
-                                        <span className="ml-4 text-4xl font-bold text-primary">{displaySymbol}{getDisplayPrice(essentialPriceUSD)} <span className="text-2xl">{displayCode}</span></span>
-                                    )}
+                                    <span className="ml-4 text-4xl font-bold text-primary">${essentialPriceUSD.toFixed(2)} <span className="text-2xl">USD</span></span>
                                 </div>
                             </CardHeader>
                             <CardContent className="flex-grow">
@@ -193,9 +142,7 @@ export function OfferSection() {
                                 <CardTitle className="text-2xl font-bold">💎 Plan Premium</CardTitle>
                                 <CardDescription>Pagas 1 y llevas 6</CardDescription>
                                 <div className="flex items-center justify-center mt-4">
-                                    {loadingCurrency ? <Loader2 className="w-8 h-8 animate-spin text-primary" /> : (
-                                        <span className="ml-4 text-4xl font-bold text-primary">{displaySymbol}{getDisplayPrice(premiumPriceUSD)} <span className="text-2xl">{displayCode}</span></span>
-                                    )}
+                                    <span className="ml-4 text-4xl font-bold text-primary">${premiumPriceUSD.toFixed(2)} <span className="text-2xl">USD</span></span>
                                 </div>
                             </CardHeader>
                             <CardContent className="flex-grow">
@@ -246,8 +193,6 @@ export function OfferSection() {
                 onPurchase={handlePurchase}
                 plusPrice={plusPriceUSD}
                 premiumPrice={premiumPriceUSD}
-                currencyInfo={currencyInfo}
-                loadingCurrency={loadingCurrency}
             />
         </>
     );
