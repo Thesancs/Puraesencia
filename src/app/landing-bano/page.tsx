@@ -10,9 +10,9 @@ import { TestimonialsSection } from "@/components/landing-bano/sections/Testimon
 import { CertificateSection } from "@/components/landing-bano/sections/CertificateSection";
 import { GuaranteeSection } from "@/components/landing-bano/sections/GuaranteeSection";
 import { FaqSection } from "@/components/landing-bano/sections/FaqSection";
-import { PreLaunchOfferSection } from "@/components/landing-bano/sections/PreLaunchOfferSection";
 import { RecapSection } from "@/components/landing-bano/sections/RecapSection";
 import { Footer } from "@/components/landing-bano/sections/Footer";
+import { OfferSection } from "@/components/landing-bano/sections/OfferSection";
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -27,7 +27,7 @@ export default function LandingBanoPage() {
         <PersonalStorySection />
         <WhyPuraEsenciaSection />
         <GallerySection />
-        <PreLaunchOfferSection />
+        <OfferSection />
         <BonusSection />
         <RecapSection />
         <TestimonialsSection />
