@@ -23,16 +23,15 @@ export default function LandingBanoPage() {
       <HeaderBanner />
       <main className="isolate">
         <HeroSection />
+        <OfferSection />
         <BenefitsSection />
         <VideoSection />
         <PersonalStorySection />
         <WhyPuraEsenciaSection />
         <GallerySection />
-        <OfferSection />
         <PreLaunchOfferSection />
         <BonusSection />
         <RecapSection />
-        <OfferSection />
         <TestimonialsSection />
         <CertificateSection />
         <GuaranteeSection />
@@ -43,3 +42,5 @@ export default function LandingBanoPage() {
     </div>
   );
 }
+
+    

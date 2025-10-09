@@ -1,10 +1,15 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Gift, Clock, Star, BadgePercent } from 'lucide-react';
+import { Gift, Clock, Star, BadgePercent, Loader2 } from 'lucide-react';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
+
+interface CurrencyInfo {
+    symbol: string;
+    code: string;
+    rate: number;
+}
 
 export function OfferSection() {
     console.log('[OfferSection] rendered');
@@ -13,31 +18,74 @@ export function OfferSection() {
         minutes: 10,
         seconds: 0
     });
+    
+    const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo | null>(null);
+    const [loadingCurrency, setLoadingCurrency] = useState(true);
+    const basePriceUSD = 9.90;
+    const originalPriceUSD = 49.90;
 
     useEffect(() => {
-        // Run only on client
-        const calculateTimeLeft = () => {
-            let year = new Date().getFullYear();
-            const difference = +new Date(`10/01/${year}`) - +new Date();
-            let newTimeLeft = { minutes: 0, seconds: 0 };
+        const fetchCurrency = async () => {
+            try {
+                // First, get user's country from their IP
+                const geoResponse = await fetch('https://ipapi.co/json/');
+                if (!geoResponse.ok) throw new Error('Could not fetch location');
+                const geoData = await geoResponse.json();
+                const countryCode = geoData.country_code;
+                const currencyCode = geoData.currency;
+                const currencySymbol = geoData.currency_symbol;
 
-            if (difference > 0) {
-                newTimeLeft = {
-                    minutes: Math.floor((difference / 1000 / 60) % 60),
-                    seconds: Math.floor((difference / 1000) % 60)
-                };
+                if (currencyCode === 'USD') {
+                    setCurrencyInfo({ symbol: '$', code: 'USD', rate: 1 });
+                    setLoadingCurrency(false);
+                    return;
+                }
+
+                // Second, get the exchange rate
+                const rateResponse = await fetch(`https://api.exchangerate-api.com/v4/latest/USD`);
+                if (!rateResponse.ok) throw new Error('Could not fetch exchange rates');
+                const rateData = await rateResponse.json();
+                const rate = rateData.rates[currencyCode];
+
+                if (rate) {
+                    setCurrencyInfo({ symbol: currencySymbol, code: currencyCode, rate: rate });
+                } else {
+                     setCurrencyInfo({ symbol: '$', code: 'USD', rate: 1 });
+                }
+            } catch (error) {
+                console.error("Currency conversion error:", error);
+                 setCurrencyInfo({ symbol: '$', code: 'USD', rate: 1 });
+            } finally {
+                setLoadingCurrency(false);
             }
-            return newTimeLeft;
         };
-        
-        setTimeLeft(calculateTimeLeft());
 
+        fetchCurrency();
+    }, []);
+
+    useEffect(() => {
+        // Timer effect
         const timer = setInterval(() => {
-            setTimeLeft(calculateTimeLeft());
+            // This is a dummy timer, it will always show a value around 10 minutes.
+            // For a real countdown, you'd need to sync with a server-side timestamp.
+            const now = new Date();
+            const minutesToEnd = 9 - (now.getMinutes() % 10);
+            const secondsToEnd = 59 - now.getSeconds();
+            
+            setTimeLeft({
+                minutes: minutesToEnd,
+                seconds: secondsToEnd,
+            });
         }, 1000);
 
         return () => clearInterval(timer);
     }, []);
+    
+    const displayPrice = currencyInfo ? (basePriceUSD * currencyInfo.rate).toFixed(2) : basePriceUSD.toFixed(2);
+    const displayOriginalPrice = currencyInfo ? (originalPriceUSD * currencyInfo.rate).toFixed(2) : originalPriceUSD.toFixed(2);
+    const displaySymbol = currencyInfo ? currencyInfo.symbol : '$';
+    const displayCode = currencyInfo ? currencyInfo.code : 'USD';
+
 
     return (
         <section className="bg-muted/30 py-16 px-4 sm:py-24">
@@ -51,8 +99,14 @@ export function OfferSection() {
                         <CardTitle className="text-3xl font-bold md:text-4xl">SOLO POR HOY, PAGAS 1 Y LLEVAS 6</CardTitle>
                         <CardDescription className="text-lg">¡Tu oportunidad para emprender!</CardDescription>
                          <div className="flex items-center justify-center mt-4">
-                            <span className="text-2xl font-bold text-gray-400 line-through">$49.90</span>
-                            <span className="ml-4 text-4xl font-bold text-primary">$9.90 USD</span>
+                            {loadingCurrency ? (
+                                <Loader2 className="w-8 h-8 animate-spin text-primary" />
+                            ) : (
+                                <>
+                                    <span className="text-2xl font-bold text-gray-400 line-through">{displaySymbol}{displayOriginalPrice}</span>
+                                    <span className="ml-4 text-4xl font-bold text-primary">{displaySymbol}{displayPrice} <span className="text-2xl">{displayCode}</span></span>
+                                </>
+                            )}
                         </div>
                     </CardHeader>
                     <CardContent>
@@ -116,3 +170,5 @@ export function OfferSection() {
         </section>
     );
 }
+
+    
