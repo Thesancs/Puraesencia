@@ -35,12 +35,9 @@ export default function LandingBanoPage() {
         <TestimonialsSection />
         <CertificateSection />
         <GuaranteeSection />
-        <OfferSection />
         <FaqSection />
       </main>
       <Footer />
     </div>
   );
 }
-
-    
