@@ -71,11 +71,11 @@ export function OfferSection() {
             <section id="oferta" className="bg-muted/30 py-16 px-4 sm:py-24">
                 <div className="container max-w-6xl mx-auto">
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-sm font-semibold tracking-wider uppercase rounded-full text-primary bg-green-200">
+                        <div className="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-sm font-semibold tracking-wider uppercase rounded-full text-primary-foreground bg-primary">
                             <BadgePercent className="w-4 h-4 mr-2" />
                             Oferta Irresistible
                         </div>
-                        <h2 className="text-3xl font-bold md:text-4xl text-primary">Elige el plan perfecto para ti</h2>
+                        <h2 className="text-3xl font-bold md:text-4xl text-primary font-headline">Elige el plan perfecto para ti</h2>
                         <p className="text-lg mt-2 text-muted-foreground">¡Tu oportunidad para emprender!</p>
                     </div>
 
@@ -110,9 +110,10 @@ export function OfferSection() {
                             <CardContent className="flex-grow">
                                 <p className="text-center text-muted-foreground mb-6">¡Tu oportunidad para emprender sin gastar mucho!</p>
                                 <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
-                                    <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
+                                    <p className="font-bold text-center text-accent-foreground">Recibirás:</p>
                                     <ul className="mt-4 space-y-3 text-accent-foreground">
-                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
+                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>La Guía Definitiva <b>"Metodo Pura Esencia"</b></span></li>
+                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño (GRATIS)</b></span></li>
                                     </ul>
                                 </div>
                                 <h3 className="font-bold text-center text-accent-foreground mb-4">🎁 Bonos incluidos:</h3>
@@ -127,6 +128,7 @@ export function OfferSection() {
                                     text="Quiero Plan Esencial"
                                     plan="esencial"
                                     onClick={handleCtaClick}
+                                    className="bg-primary hover:bg-primary/90"
                                 />
                             </div>
                         </Card>
@@ -148,9 +150,10 @@ export function OfferSection() {
                             <CardContent className="flex-grow">
                                 <p className="text-center text-muted-foreground mb-6">¡La experiencia completa para emprender como profesional!</p>
                                 <div className="p-4 rounded-lg bg-accent border-primary/20 mb-6">
-                                    <p className="font-bold text-center text-accent-foreground">Recibirás GRATIS:</p>
+                                    <p className="font-bold text-center text-accent-foreground">Recibirás:</p>
                                     <ul className="mt-4 space-y-3 text-accent-foreground">
-                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño</b></span></li>
+                                         <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>La Guía Definitiva <b>"Metodo Pura Esencia"</b></span></li>
+                                        <li className="flex items-start"><Gift className="w-5 h-5 mt-1 mr-3 text-primary shrink-0" /><span>Guía de <b>Bombas de Baño (GRATIS)</b></span></li>
                                     </ul>
                                 </div>
                                 <h3 className="font-bold text-center text-accent-foreground mb-4">🎁 Bonos incluidos:</h3>
