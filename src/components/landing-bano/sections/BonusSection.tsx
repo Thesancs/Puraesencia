@@ -7,7 +7,7 @@ const bonuses = [
         bonus: "BONO 1",
         title: "Lista de Proveedores Verificada",
         description: "Acceso directo a proveedores confiables que ofrecen ingredientes de alta calidad a buen precio. Olvídate de perder tiempo buscando o de arriesgarte con malas compras.",
-        imageUrl: "/images/provedores certificados.png"
+        imageUrl: "/images/bonos/bono 1.png"
     },
     {
         bonus: "BONO 2",
