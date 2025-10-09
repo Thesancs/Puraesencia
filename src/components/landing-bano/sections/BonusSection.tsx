@@ -13,7 +13,7 @@ const bonuses = [
         bonus: "BONO 2",
         title: "Diseño de Etiquetas para Personalizar",
         description: "Editá, imprimí y hacé que tu marca se vea profesional desde el primer día.",
-        imageUrl: "/images/plantillas de.png"
+        imageUrl: "/images/bonos/bono 2.png"
     },
     {
         bonus: "BONO 3",
