@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Gift } from "lucide-react";
 
 const bonuses = [
     {
@@ -42,30 +44,35 @@ const bonuses = [
 export function BonusSection() {
     console.log('[BonusSection] rendered');
     return (
-        <section className="px-4 py-16 sm:py-24 bg-gray-50/50">
-            <div className="max-w-5xl mx-auto">
-                <div className="text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-headline">ADEMÁS SI ERES DE LAS PRIMERAS PERSONAS EN INSCRIBIRSE AL CURSO RECIBES ESTOS BONOS ADICIONALES TOTALMENTE GRATIS</h2>
-                    <p className="max-w-2xl mx-auto mt-4 text-base text-gray-600 sm:text-lg">Acceso inmediato a estas herramientas para acelerar tu éxito.</p>
+        <section className="px-4 py-16 sm:py-24 bg-muted/30">
+            <div className="container mx-auto">
+                <div className="max-w-3xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">Además, si eres de las primeras en inscribirte, recibe estos bonos adicionales ¡GRATIS!</h2>
+                    <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">Acceso inmediato a estas herramientas para acelerar tu éxito.</p>
                 </div>
-                <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
                     {bonuses.map((bonus, index) => (
-                        <div key={index} className="overflow-hidden bg-[#EADCCB] rounded-2xl shadow-sm flex flex-col">
-                            <div className="relative w-full h-64">
-                                <Image
-                                    src={bonus.imageUrl}
-                                    alt={`Mockup para ${bonus.title}`}
-                                    fill
-                                    className="object-cover"
-                                    data-ai-hint="ebook cover"
-                                />
-                            </div>
-                            <div className="flex-1 p-6 text-left">
-                                <p className="text-sm font-semibold text-gray-600">{bonus.bonus}</p>
-                                <h3 className="mt-2 text-xl font-bold text-[#694e33]">{bonus.title.toUpperCase()}</h3>
-                                <p className="mt-2 text-base text-gray-700">{bonus.description}</p>
-                            </div>
-                        </div>
+                        <Card key={index} className="overflow-hidden transition-transform duration-300 ease-in-out transform bg-card hover:-translate-y-2 hover:shadow-2xl">
+                             <CardHeader className="p-0">
+                                <div className="relative w-full h-64">
+                                    <Image
+                                        src={bonus.imageUrl}
+                                        alt={`Mockup para ${bonus.title}`}
+                                        fill
+                                        className="object-cover"
+                                        data-ai-hint="ebook cover"
+                                    />
+                                </div>
+                            </CardHeader>
+                            <CardContent className="p-6 text-left">
+                                <p className="flex items-center text-sm font-semibold text-primary">
+                                    <Gift className="w-4 h-4 mr-2" />
+                                    {bonus.bonus}
+                                </p>
+                                <CardTitle className="mt-2 text-xl font-bold text-foreground">{bonus.title.toUpperCase()}</CardTitle>
+                                <p className="mt-2 text-base text-muted-foreground">{bonus.description}</p>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
             </div>

@@ -4,8 +4,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { cn } from "@/lib/utils";
 
-export default function CtaButton() {
+export default function CtaButton({ className }: { className?: string }) {
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const { toast } = useToast();
 
@@ -13,22 +14,18 @@ export default function CtaButton() {
     console.log("[LandingBano] CTA clicked");
     setStatus("loading");
 
-    // Simulate network request
     setTimeout(() => {
-      // Simulate a random success/error outcome
-      if (Math.random() > 0.9) { // 10% chance of error
-          setStatus("error");
-          toast({
-              title: "Error de Pago",
-              description: "No se pudo procesar tu pago. Por favor, intenta de nuevo.",
-              variant: "destructive",
-          });
-          setTimeout(() => setStatus("idle"), 3000);
+      if (Math.random() > 0.9) { 
+        setStatus("error");
+        toast({
+          title: "Error de Pago",
+          description: "No se pudo procesar tu pago. Por favor, intenta de nuevo.",
+          variant: "destructive",
+        });
+        setTimeout(() => setStatus("idle"), 3000);
       } else {
-        // On success, you would typically redirect
-        // For now, just log it and reset the button.
         console.log("[LandingBano] Purchase successful (simulated)");
-        window.location.href = "https://pay.hotmart.com"; // Example redirect
+        window.location.href = "https://pay.hotmart.com";
         setStatus("idle");
       }
     }, 2000);
@@ -51,9 +48,15 @@ export default function CtaButton() {
       onClick={handleClick}
       disabled={status === "loading"}
       size="lg"
-      className="px-4 sm:px-8 py-4 text-base sm:text-lg font-bold transition-transform transform bg-green-500 rounded-lg shadow-lg hover:bg-green-600 hover:scale-105"
+      className={cn(
+        "w-full h-auto py-4 text-lg font-bold text-center text-white transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl bg-green-500 hover:bg-green-600 hover:scale-105 animate-pulse",
+        className,
+        {
+            "bg-red-600 hover:bg-red-700": status === "error",
+        }
+      )}
     >
-      {status === "loading" && <Loader2 className="w-5 h-5 mr-2 animate-spin" />}
+      {status === "loading" && <Loader2 className="w-6 h-6 mr-3 animate-spin" />}
       {buttonText()}
     </Button>
   );

@@ -1,7 +1,7 @@
 export function Footer() {
     return (
-        <footer className="bg-[#F0F8F0] text-[#2C2C2C] text-xs py-8 px-4">
-            <div className="max-w-5xl mx-auto text-center space-y-4">
+        <footer className="py-8 text-xs bg-muted/50 text-muted-foreground">
+            <div className="container mx-auto space-y-4 text-center">
                 <p>(c) 2025 – Pura Esencia | Todos los derechos reservados</p>
                 <p>
                     Política de META: DESCARGO DE RESPONSABILIDAD IMPORTANTES: Este sitio no es parte del sitio web de Facebook o Meta, Inc. Además, este sitio no está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de META, Inc.

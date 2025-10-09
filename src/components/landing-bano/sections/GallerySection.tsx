@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Sparkles } from "lucide-react";
+
 
 const galleryItems = [
     {
@@ -37,24 +40,31 @@ export function GallerySection() {
     console.log('[GallerySection] rendered');
     return (
         <section className="px-4 py-16 sm:py-24">
-            <div className="max-w-5xl mx-auto text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl font-headline">
-                    ¡AQUÍ TE LO ENSEÑAMOS TODO!
-                </h2>
-                <div className="grid grid-cols-1 gap-12 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="container mx-auto text-center">
+                <div className="max-w-3xl mx-auto">
+                    <Sparkles className="w-12 h-12 mx-auto text-primary" />
+                    <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
+                        ¡Aquí te lo enseñamos todo!
+                    </h2>
+                </div>
+                <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
                     {galleryItems.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center space-y-4">
-                            <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
-                            <div className="relative w-48 h-48 overflow-hidden border-4 border-green-500 rounded-full shadow-lg">
-                                <Image
-                                    src={item.imageUrl}
-                                    alt={item.title}
-                                    fill
-                                    className="object-cover"
-                                    data-ai-hint={item.aiHint}
-                                />
-                            </div>
-                        </div>
+                        <Card key={index} className="overflow-hidden text-center transition-transform duration-300 transform border-0 shadow-lg hover:scale-105">
+                            <CardContent className="p-0">
+                                <div className="relative w-full aspect-square">
+                                    <Image
+                                        src={item.imageUrl}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover"
+                                        data-ai-hint={item.aiHint}
+                                    />
+                                </div>
+                                <div className="p-6 bg-card">
+                                    <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                                </div>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
             </div>

@@ -1,11 +1,15 @@
 import { AlertTriangle } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+
 
 export function HeaderBanner() {
     console.log('[HeaderBanner] rendered');
     return (
-        <div className="bg-green-600 text-white p-2 text-center text-sm font-bold flex items-center justify-center">
-            <AlertTriangle className="h-4 w-4 mr-2" />
-            <span className="text-xs sm:text-sm">ATENCIÓN: DESCUENTO RELÁMPAGO + 6 BONOS GRATIS PARA LAS PRIMERAS INSCRITAS</span>
-        </div>
+        <Alert className="text-center text-white border-0 rounded-none bg-primary">
+            <AlertTriangle className="h-4 w-4 text-white" />
+            <AlertDescription className="font-bold text-primary-foreground">
+                ATENCIÓN: DESCUENTO RELÁMPAGO + 6 BONOS GRATIS PARA LAS PRIMERAS INSCRITAS
+            </AlertDescription>
+        </Alert>
     );
 }

@@ -19,9 +19,9 @@ export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
 
   return (
-    <div className="bg-[#F0F8F0] text-[#2C2C2C] font-body">
+    <div className="antialiased text-foreground bg-background font-body">
       <HeaderBanner />
-      <main className="isolate bg-white">
+      <main className="isolate">
         <HeroSection />
         <BenefitsSection />
         <VideoSection />
