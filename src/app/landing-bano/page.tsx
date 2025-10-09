@@ -12,6 +12,7 @@ import { FaqSection } from "@/components/landing-bano/sections/FaqSection";
 import { Footer } from "@/components/landing-bano/sections/Footer";
 import { OfferSection } from "@/components/landing-bano/sections/OfferSection";
 import { IntroCardSection } from "@/components/landing-bano/sections/IntroCardSection";
+import { GuideBenefitsSection } from "@/components/landing-bano/sections/GuideBenefitsSection";
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -25,6 +26,7 @@ export default function LandingBanoPage() {
         <BenefitsSection />
         <VideoSection />
         <WhyPuraEsenciaSection />
+        <GuideBenefitsSection />
         <GallerySection />
         <OfferSection />
         <BonusSection />
