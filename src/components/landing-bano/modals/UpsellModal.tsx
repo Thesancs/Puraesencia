@@ -66,7 +66,7 @@ export default function UpsellModal({
                     🔓 Sí, quiero el Plan Premium
                 </Button>
                 <Button onClick={() => setModalStep('upsell2')} size="lg" variant="ghost" className="w-full py-3 h-auto">
-                    ➡️ No, continuar con Plan Esencial
+                    ➡️ No, gracias
                 </Button>
             </div>
         </div>
@@ -75,10 +75,10 @@ export default function UpsellModal({
     const renderUpsell2 = () => (
         <div className='text-center'>
             <DialogHeader>
-                 <DialogTitle className="text-2xl font-bold text-center mb-2 text-destructive">❌ CUPONES AGOTADOS PARA PLAN ESENCIAL</DialogTitle>
+                 <DialogTitle className="text-2xl font-bold text-center mb-2">✋ ¡Espera! Tenemos algo para ti...</DialogTitle>
                  <DialogDescription className="text-center text-lg">
-                    Pero... ¡tenemos algo mejor para ti! <br/>
-                    🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">${plusPrice.toFixed(2)} USD</span>
+                    No te vayas con las manos vacías. <br/>
+                    Mejora al 🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">${plusPrice.toFixed(2)} USD</span>
                  </DialogDescription>
             </DialogHeader>
             <p className='mt-4 mb-2 font-semibold'>Incluye estos 5 bonos:</p>
@@ -92,10 +92,10 @@ export default function UpsellModal({
                     console.log('[UpsellModal] Plan Plus accepted');
                     onPurchase('plus');
                 }} size="lg" className="w-full py-3 h-auto">
-                    ✅ Aceptar esta oferta
+                    ✅ Sí, quiero el Plan Plus
                 </Button>
                 <Button onClick={() => setModalStep('upsell1')} size="lg" variant="outline" className="w-full py-3 h-auto">
-                    🔙 Volver a oferta anterior
+                    🔙 Volver a la oferta anterior
                 </Button>
             </div>
         </div>
