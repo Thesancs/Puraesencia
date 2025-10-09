@@ -49,10 +49,10 @@ export default function CtaButton({ className }: { className?: string }) {
       disabled={status === "loading"}
       size="lg"
       className={cn(
-        "w-full h-auto py-4 text-lg font-bold text-center text-white transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl bg-green-500 hover:bg-green-600 hover:scale-105 animate-pulse",
+        "w-full h-auto py-4 text-lg font-bold text-center text-primary-foreground transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl bg-primary hover:bg-primary/90 hover:scale-105 animate-pulse",
         className,
         {
-            "bg-red-600 hover:bg-red-700": status === "error",
+            "bg-destructive hover:bg-destructive/90": status === "error",
         }
       )}
     >
