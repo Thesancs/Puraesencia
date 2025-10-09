@@ -25,7 +25,7 @@ const bonuses = [
         bonus: "BONO 4",
         title: "Guía Práctica: Empaques que Enamoran",
         description: "Aprende a crear empaques artesanales y profesionales sin gastar mucho. Te enseño materiales ecológicos, combinaciones y detalles que hacen que tu marca destaque.",
-        imageUrl: "/images/empaques que enamoran bono.png"
+        imageUrl: "/images/bonos/bono 4.png"
     },
     {
         bonus: "BONO 5",
