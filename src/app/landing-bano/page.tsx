@@ -2,7 +2,6 @@ import { HeaderBanner } from "@/components/landing-bano/sections/HeaderBanner";
 import { HeroSection } from "@/components/landing-bano/sections/HeroSection";
 import { BenefitsSection } from "@/components/landing-bano/sections/BenefitsSection";
 import { VideoSection } from "@/components/landing-bano/sections/VideoSection";
-import { WhyPuraEsenciaSection } from "@/components/landing-bano/sections/WhyPuraEsenciaSection";
 import { GallerySection } from "@/components/landing-bano/sections/GallerySection";
 import { BonusSection } from "@/components/landing-bano/sections/BonusSection";
 import { TestimonialsSection } from "@/components/landing-bano/sections/TestimonialsSection";
@@ -29,7 +28,6 @@ export default function LandingBanoPage() {
         <IntroCardSection />
         <BenefitsSection />
         <VideoSection />
-        <WhyPuraEsenciaSection />
         <GuideBenefitsSection />
         <GallerySection />
         <OfferSection />
