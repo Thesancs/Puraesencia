@@ -64,9 +64,9 @@ export function OfferSection() {
         // Simulate redirecting to checkout
         let checkoutUrl = "https://pay.hotmart.com"; // Default for 'esencial' if no upsell is taken
         if (plan === 'plus') {
-            checkoutUrl = "https://pay.hotmart.com/L102361489O?off=5m74kmtt";
-        } else if (plan === 'premium-downsell') {
             checkoutUrl = "https://pay.hotmart.com/L102361489O?off=fw29apzl";
+        } else if (plan === 'premium-downsell') {
+            checkoutUrl = "https://pay.hotmart.com/L102361489O?off=5m74kmtt";
         }
         window.location.href = checkoutUrl;
     };
