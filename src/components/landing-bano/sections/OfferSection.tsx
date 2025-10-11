@@ -54,15 +54,21 @@ export function OfferSection() {
             console.log('[OfferSection] Plan Esencial clicked, opening upsell modal.');
             setIsUpsellModalOpen(true);
         } else {
-            handlePurchase(plan);
+             // This case is now handled by the anchor tag around the CtaButton
         }
     };
 
-    const handlePurchase = (plan: 'esencial' | 'plus' | 'premium') => {
+    const handlePurchase = (plan: 'esencial' | 'plus' | 'premium' | 'premium-downsell') => {
         console.log(`[OfferSection] Proceeding to checkout for ${plan}`);
         setIsUpsellModalOpen(false);
         // Simulate redirecting to checkout
-        window.location.href = "https://pay.hotmart.com";
+        let checkoutUrl = "https://pay.hotmart.com"; // Default for 'esencial' if no upsell is taken
+        if (plan === 'plus') {
+            checkoutUrl = "https://pay.hotmart.com"; // Replace with actual plus plan link if different
+        } else if (plan === 'premium-downsell') {
+            checkoutUrl = "https://pay.hotmart.com/L102361489O?off=fw29apzl";
+        }
+        window.location.href = checkoutUrl;
     };
 
 
@@ -70,7 +76,7 @@ export function OfferSection() {
         <>
             <section id="oferta" className="bg-muted/30 py-16 px-4 sm:py-24">
                 <div className="container max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
+                    <div className="text-center mb-8">
                         <div className="inline-flex items-center justify-center px-4 py-1 mx-auto mb-4 text-sm font-semibold tracking-wider uppercase rounded-full text-primary-foreground bg-primary">
                             <BadgePercent className="w-4 h-4 mr-2" />
                             Oferta Irresistible
@@ -80,7 +86,7 @@ export function OfferSection() {
                     </div>
 
                     
-                    <div className="flex items-center justify-center mb-8">
+                    <div className="flex items-center justify-center mb-12">
                         <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                         <span className="ml-2 font-bold text-yellow-600">4.8 de 5 estrellas</span>
                         <span className="ml-2 text-sm text-muted-foreground">(+41 valoraciones)</span>

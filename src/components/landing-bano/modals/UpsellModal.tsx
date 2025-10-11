@@ -25,7 +25,7 @@ const plusBonuses = [
 interface UpsellModalProps {
     isOpen: boolean;
     onClose: () => void;
-    onPurchase: (plan: 'plus' | 'premium') => void;
+    onPurchase: (plan: 'plus' | 'premium' | 'premium-downsell') => void;
     plusPrice: number;
     premiumPrice: number;
 }
@@ -60,8 +60,8 @@ export default function UpsellModal({
             </ul>
             <div className="flex flex-col gap-4">
                 <Button onClick={() => {
-                    console.log('[UpsellModal] Plan Premium accepted');
-                    onPurchase('premium');
+                    console.log('[UpsellModal] Plan Premium (downsell) accepted');
+                    onPurchase('premium-downsell');
                 }} size="lg" className="w-full py-3 h-auto">
                     🔓 Sí, quiero el Plan Premium
                 </Button>
