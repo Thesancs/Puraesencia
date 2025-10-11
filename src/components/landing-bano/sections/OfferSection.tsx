@@ -79,23 +79,6 @@ export function OfferSection() {
                         <p className="text-lg mt-2 text-muted-foreground">¡Tu oportunidad para emprender!</p>
                     </div>
 
-                    <div className="p-6 my-6 text-center text-white rounded-lg bg-primary max-w-md mx-auto">
-                        <div className="flex items-center justify-center">
-                            <Clock className="w-5 h-5 mr-2" />
-                            <p className='font-semibold'>La oferta termina en:</p>
-                        </div>
-                        <div className="flex justify-center items-center space-x-2 mt-4">
-                            <div className="p-3 text-center bg-white rounded-lg text-primary">
-                                <span className="text-4xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</span>
-                                <span className="block text-xs font-semibold">MINUTOS</span>
-                            </div>
-                            <span className="text-4xl font-bold">:</span>
-                            <div className="p-3 text-center bg-white rounded-lg text-primary">
-                                <span className="text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0') }</span>
-                                <span className="block text-xs font-semibold">SEGUNDOS</span>
-                            </div>
-                        </div>
-                    </div>
                     
                     <div className="flex items-center justify-center mb-8">
                         <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
@@ -170,13 +153,31 @@ export function OfferSection() {
                                 </ul>
                             </CardContent>
                             <div className="p-6 mt-auto">
-                                <CtaButton 
-                                    text="Quiero Plan Premium"
-                                    plan="premium"
-                                    onClick={handleCtaClick}
-                                />
+                                <a href="https://pay.hotmart.com/L102361489O?off=2sh9bxat" target="_blank" rel="noopener noreferrer">
+                                    <CtaButton 
+                                        text="Quiero Plan Premium"
+                                        plan="premium"
+                                    />
+                                </a>
                             </div>
                         </Card>
+                    </div>
+                    <div className="p-6 my-6 text-center text-white rounded-lg bg-primary max-w-md mx-auto">
+                        <div className="flex items-center justify-center">
+                            <Clock className="w-5 h-5 mr-2" />
+                            <p className='font-semibold'>La oferta termina en:</p>
+                        </div>
+                        <div className="flex justify-center items-center space-x-2 mt-4">
+                            <div className="p-3 text-center bg-white rounded-lg text-primary">
+                                <span className="text-4xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                                <span className="block text-xs font-semibold">MINUTOS</span>
+                            </div>
+                            <span className="text-4xl font-bold">:</span>
+                            <div className="p-3 text-center bg-white rounded-lg text-primary">
+                                <span className="text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0') }</span>
+                                <span className="block text-xs font-semibold">SEGUNDOS</span>
+                            </div>
+                        </div>
                     </div>
                     <div className="flex flex-col items-center justify-center mt-12">
                         <div className="relative w-full max-w-sm h-14">

@@ -42,7 +42,10 @@ export default function CtaButton({
         setTimeout(() => setStatus("idle"), 3000);
       } else {
         console.log("[LandingBano] Purchase successful (simulated)");
-        window.location.href = "https://pay.hotmart.com";
+        if (plan !== 'premium') {
+            window.location.href = "https://pay.hotmart.com";
+        }
+        // For premium, the parent anchor tag handles the navigation
         setStatus("idle");
       }
     }, 2000);
