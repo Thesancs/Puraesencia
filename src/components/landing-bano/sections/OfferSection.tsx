@@ -96,6 +96,12 @@ export function OfferSection() {
                             </div>
                         </div>
                     </div>
+                    
+                    <div className="flex items-center justify-center mb-8">
+                        <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                        <span className="ml-2 font-bold text-yellow-600">4.8 de 5 estrellas</span>
+                        <span className="ml-2 text-sm text-muted-foreground">(+41 valoraciones)</span>
+                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         {/* Essential Offer */}
@@ -181,11 +187,6 @@ export function OfferSection() {
                                 className="object-contain"
                                 data-ai-hint="payment methods"
                             />
-                        </div>
-                        <div className="flex items-center justify-center mt-4">
-                            <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                            <span className="ml-2 font-bold text-yellow-600">4.8 de 5 estrellas</span>
-                            <span className="ml-2 text-sm text-muted-foreground">(+41 valoraciones)</span>
                         </div>
                     </div>
                 </div>
