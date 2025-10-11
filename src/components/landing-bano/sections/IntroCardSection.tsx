@@ -18,7 +18,7 @@ export function IntroCardSection() {
                              <a href="#oferta">
                                 <Button
                                     size="lg"
-                                    className="h-auto px-10 py-4 font-bold transition-transform duration-300 ease-in-out transform rounded-lg shadow-xl hover:scale-105"
+                                    className="h-auto px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-bold transition-transform duration-300 ease-in-out transform rounded-lg shadow-xl hover:scale-105"
                                 >
                                     QUIERO EMPEZAR AHORA
                                 </Button>
