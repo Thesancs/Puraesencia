@@ -53,7 +53,7 @@ export default function OfertaEspecialPage() {
                                 src="/images/allproducts.svg"
                                 alt="Oferta Plan Premium"
                                 fill
-                                className="object-cover"
+                                className="object-contain"
                                 data-ai-hint="premium plan offer"
                             />
                         </div>
