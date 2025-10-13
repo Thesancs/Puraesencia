@@ -18,9 +18,9 @@ const plusBonuses = [
 
 function DownsellHeaderBanner() {
     return (
-        <div className="p-2 bg-primary">
-            <Alert className="text-center bg-primary text-white border-0">
-                <AlertTriangle className="h-4 w-4 text-red-500 animate-pulse" />
+        <div className="p-2 bg-primary/80 backdrop-blur-sm sticky top-0 z-50">
+            <Alert className="text-center bg-transparent text-white border-0">
+                <AlertTriangle className="h-4 w-4 text-red-500" />
                 <AlertDescription className="font-bold uppercase text-red-500 [text-shadow:0_0_10px_#ef4444] animate-pulse">
                     ¡Las plazas para la Oferta Esencial se han agotado!
                 </AlertDescription>
@@ -58,7 +58,7 @@ export default function OfertaDownsellPage() {
                             ))}
                         </ul>
                         <div className="flex flex-col gap-4">
-                            <Button onClick={() => handlePurchase("https://pay.hotmart.com/L102361489O?off=fw29apzl")} size="lg" className="w-full py-3 h-auto">
+                            <Button onClick={() => handlePurchase("https://pay.hotmart.com/L102361489O?off=5m74kmtt")} size="lg" className="w-full py-3 h-auto">
                                 ✅ Sí, quiero el Plan Plus
                             </Button>
                             <Button onClick={() => router.push('/oferta-especial')} size="lg" variant="outline" className="w-full py-3 h-auto">
