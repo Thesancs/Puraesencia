@@ -4,7 +4,7 @@ import { Gift, Clock, Star, BadgePercent, Check } from 'lucide-react';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import UpsellModal from '@/components/landing-bano/modals/UpsellModal';
+import { useRouter } from 'next/navigation';
 
 const essentialBonuses = [
     "BONO 1: Lista de Proveedores Verificada",
@@ -22,17 +22,15 @@ const premiumBonuses = [
 
 export function OfferSection() {
     console.log('[OfferSection] rendered');
+    const router = useRouter();
 
     const [timeLeft, setTimeLeft] = useState({
         minutes: 10,
         seconds: 0
     });
     
-    const [isUpsellModalOpen, setIsUpsellModalOpen] = useState(false);
-
     const essentialPriceUSD = 4.99;
     const premiumPriceUSD = 12.90;
-    const plusPriceUSD = 7.90;
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -51,24 +49,12 @@ export function OfferSection() {
     
     const handleCtaClick = (plan: 'esencial' | 'plus' | 'premium') => {
         if (plan === 'esencial') {
-            console.log('[OfferSection] Plan Esencial clicked, opening upsell modal.');
-            setIsUpsellModalOpen(true);
-        } else {
-             // This case is now handled by the anchor tag around the CtaButton
+            console.log('[OfferSection] Plan Esencial clicked, redirecting to oferta-especial.');
+            router.push('/oferta-especial');
+        } else if (plan === 'premium') {
+             // This case is handled by the anchor tag around the CtaButton
+             window.location.href = "https://pay.hotmart.com/L102361489O?off=2sh9bxat";
         }
-    };
-
-    const handlePurchase = (plan: 'esencial' | 'plus' | 'premium' | 'premium-downsell') => {
-        console.log(`[OfferSection] Proceeding to checkout for ${plan}`);
-        setIsUpsellModalOpen(false);
-        // Simulate redirecting to checkout
-        let checkoutUrl = "https://pay.hotmart.com"; // Default for 'esencial' if no upsell is taken
-        if (plan === 'plus') {
-            checkoutUrl = "https://pay.hotmart.com/L102361489O?off=fw29apzl";
-        } else if (plan === 'premium-downsell') {
-            checkoutUrl = "https://pay.hotmart.com/L102361489O?off=5m74kmtt";
-        }
-        window.location.href = checkoutUrl;
     };
 
 
@@ -159,12 +145,11 @@ export function OfferSection() {
                                 </ul>
                             </CardContent>
                             <div className="p-6 mt-auto">
-                                <a href="https://pay.hotmart.com/L102361489O?off=2sh9bxat" target="_blank" rel="noopener noreferrer">
-                                    <CtaButton 
-                                        text="Quiero Plan Premium"
-                                        plan="premium"
-                                    />
-                                </a>
+                                <CtaButton 
+                                    text="Quiero Plan Premium"
+                                    plan="premium"
+                                    onClick={handleCtaClick}
+                                />
                             </div>
                         </Card>
                     </div>
@@ -198,13 +183,6 @@ export function OfferSection() {
                     </div>
                 </div>
             </section>
-            <UpsellModal 
-                isOpen={isUpsellModalOpen}
-                onClose={() => setIsUpsellModalOpen(false)}
-                onPurchase={handlePurchase}
-                plusPrice={plusPriceUSD}
-                premiumPrice={9.90}
-            />
         </>
     );
 }
