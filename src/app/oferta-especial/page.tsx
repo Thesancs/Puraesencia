@@ -52,9 +52,8 @@ export default function OfertaEspecialPage() {
     };
 
     const renderUpsell = () => (
-        <Card className="w-full max-w-md mx-auto">
+        <Card className="w-full max-w-md mx-auto bg-card/70 backdrop-blur-sm border-white/20 shadow-lg">
             <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-bold text-center mb-2">🎁 ¡OFERTA ESPECIAL PARA TI!</CardTitle>
                 <CardDescription className="text-center text-lg">
                     ¿Quieres mejorar tu experiencia? <br />
                     Por solo <span className="font-bold text-primary">${premiumPrice.toFixed(2)} USD</span> puedes obtener el <strong>Plan Premium</strong> con TODOS estos bonos:
@@ -67,7 +66,7 @@ export default function OfertaEspecialPage() {
                     ))}
                 </ul>
                 <div className="flex flex-col gap-4">
-                    <Button onClick={() => handlePurchase("https://pay.hotmart.com/L102361489O?off=5m74kmtt")} size="lg" className="w-full py-3 h-auto">
+                    <Button onClick={() => handlePurchase("https://pay.hotmart.com/L102361489O?off=fw29apzl")} size="lg" className="w-full py-3 h-auto">
                         🔓 Sí, quiero el Plan Premium
                     </Button>
                     <Button onClick={() => setStep('downsell')} size="lg" variant="ghost" className="w-full py-3 h-auto">
@@ -79,7 +78,7 @@ export default function OfertaEspecialPage() {
     );
 
     const renderDownsell = () => (
-        <Card className="w-full max-w-md mx-auto">
+        <Card className="w-full max-w-md mx-auto bg-card/70 backdrop-blur-sm border-white/20 shadow-lg">
             <CardHeader className='text-center'>
                  <CardTitle className="text-2xl font-bold text-center mb-2">✋ ¡Espera! Tenemos algo para ti...</CardTitle>
                  <CardDescription className="text-center text-lg">
@@ -95,7 +94,7 @@ export default function OfertaEspecialPage() {
                     ))}
                 </ul>
                 <div className="flex flex-col gap-4">
-                    <Button onClick={() => handlePurchase("https://pay.hotmart.com/L102361489O?off=fw29apzl")} size="lg" className="w-full py-3 h-auto">
+                    <Button onClick={() => handlePurchase("https://pay.hotmart.com/L102361489O?off=5m74kmtt")} size="lg" className="w-full py-3 h-auto">
                         ✅ Sí, quiero el Plan Plus
                     </Button>
                     <Button onClick={() => setStep('upsell')} size="lg" variant="outline" className="w-full py-3 h-auto">
