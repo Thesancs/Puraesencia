@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Check } from 'lucide-react';
+import { Check, AlertTriangle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { HeaderBanner } from '@/components/landing-bano/sections/HeaderBanner';
 import { Footer } from '@/components/landing-bano/sections/Footer';
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 
 const premiumBonuses = [
@@ -25,6 +25,20 @@ const plusBonuses = [
     "Empaques que Enamoran",
     "Muestras que Venden"
 ];
+
+function OfertaHeaderBanner() {
+    return (
+        <div className="p-2 bg-primary">
+            <Alert className="text-center bg-primary text-white border-0">
+                <AlertTriangle className="h-4 w-4 text-red-500 animate-pulse" />
+                <AlertDescription className="font-bold text-white [text-shadow:0_0_10px_#ffffff] animate-pulse">
+                    ¡OFERTA ESPECIAL PARA TI!
+                </AlertDescription>
+            </Alert>
+        </div>
+    );
+}
+
 
 export default function OfertaEspecialPage() {
     const [step, setStep] = useState<'upsell' | 'downsell'>('upsell');
@@ -97,7 +111,7 @@ export default function OfertaEspecialPage() {
 
     return (
         <div className="min-h-screen flex flex-col bg-background">
-            <HeaderBanner />
+            <OfertaHeaderBanner />
             <main className="flex-grow flex items-center justify-center p-4">
                 {step === 'upsell' ? renderUpsell() : renderDownsell()}
             </main>
