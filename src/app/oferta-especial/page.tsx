@@ -50,7 +50,7 @@ export default function OfertaEspecialPage() {
                     <CardHeader className="text-center p-4">
                         <div className="relative w-full aspect-[4/3] mb-4 rounded-lg overflow-hidden">
                             <Image 
-                                src="/images/bonos/bono-premium.png"
+                                src="/images/allproducts.svg"
                                 alt="Oferta Plan Premium"
                                 fill
                                 className="object-cover"
