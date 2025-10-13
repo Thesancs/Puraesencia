@@ -7,6 +7,7 @@ import { Check, AlertTriangle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Footer } from '@/components/landing-bano/sections/Footer';
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import Image from 'next/image';
 
 const plusBonuses = [
     "Lista de Proveedores Verificada",
@@ -44,7 +45,15 @@ export default function OfertaDownsellPage() {
             <main className="flex-grow flex items-center justify-center p-4">
                 <Card className="w-full max-w-md mx-auto bg-card/70 backdrop-blur-sm border-white/20 shadow-lg">
                     <CardHeader className='text-center'>
-                         <CardTitle className="text-2xl font-bold text-center mb-2">✋ ¡Espera! Tenemos algo para ti...</CardTitle>
+                         <div className="relative w-full aspect-[4/3] mb-4 rounded-lg overflow-hidden">
+                            <Image 
+                                src="/images/allproducts.svg"
+                                alt="Oferta Plan Plus"
+                                fill
+                                className="object-contain"
+                                data-ai-hint="plus plan offer"
+                            />
+                        </div>
                          <CardDescription className="text-center text-lg">
                             No te vayas con las manos vacías. <br/>
                             Mejora al 🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">${plusPrice.toFixed(2)} USD</span>
