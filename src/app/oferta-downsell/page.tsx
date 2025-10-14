@@ -67,7 +67,7 @@ export default function OfertaDownsellPage() {
                             <CtaButton
                                 text="✅ Sí, quiero el Plan Plus"
                                 mobileText="Si, Quiero Plan Plus"
-                                planUrl="https://pay.hotmart.com/L102361489O?off=5m74kmtt&checkoutMode=2"
+                                planUrl="https://pay.hotmart.com/L102361489O?off=fw29apzl&checkoutMode=10"
                             />
                             <Button onClick={() => router.push('/oferta-especial')} size="lg" variant="outline" className="w-full py-3 h-auto">
                                 🔙 Volver a la oferta anterior
