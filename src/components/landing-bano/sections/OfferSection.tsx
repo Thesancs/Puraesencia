@@ -96,7 +96,7 @@ export function OfferSection() {
                             <div className="p-6 mt-auto">
                                 <CtaButton 
                                     text="Quiero Plan Esencial"
-                                    planUrl="https://pay.hotmart.com/L102361489O?checkoutMode=2&off=fw29apzl"
+                                    planUrl="/oferta-especial"
                                     className="bg-primary hover:bg-primary/90"
                                 />
                             </div>
