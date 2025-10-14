@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardDescription, CardContent } from '@/components/ui/card';
 import { Check, AlertTriangle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Footer } from '@/components/landing-bano/sections/Footer';
