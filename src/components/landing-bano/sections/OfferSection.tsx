@@ -4,7 +4,6 @@ import { Gift, Clock, Star, BadgePercent, Check } from 'lucide-react';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { useRouter } from 'next/navigation';
 
 const essentialBonuses = [
     "BONO 1: Lista de Proveedores Verificada",
@@ -22,7 +21,6 @@ const premiumBonuses = [
 
 export function OfferSection() {
     console.log('[OfferSection] rendered');
-    const router = useRouter();
 
     const [timeLeft, setTimeLeft] = useState({
         minutes: 10,
@@ -47,11 +45,6 @@ export function OfferSection() {
         return () => clearInterval(timer);
     }, []);
 
-    const handleEssentialClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        router.push('/oferta-especial');
-    };
-
     return (
         <>
             <section id="oferta" className="bg-muted/30 py-16 px-4 sm:py-24">
@@ -66,13 +59,13 @@ export function OfferSection() {
                     </div>
 
                     
-                    <div className="flex items-center justify-center mb-12">
+                    <div className="flex items-center justify-center mb-8">
                         <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                         <span className="ml-2 font-bold text-yellow-600">4.8 de 5 estrellas</span>
                         <span className="ml-2 text-sm text-muted-foreground">(+41 valoraciones)</span>
                     </div>
-
-                    <div className="p-6 my-6 text-center text-white rounded-lg bg-primary max-w-md mx-auto">
+                    
+                    <div className="p-6 mb-12 text-center text-white rounded-lg bg-primary max-w-md mx-auto">
                         <div className="flex items-center justify-center">
                             <Clock className="w-5 h-5 mr-2" />
                             <p className='font-semibold'>La oferta termina en:</p>
@@ -122,6 +115,15 @@ export function OfferSection() {
                                     mobileText="Plan Esencial"
                                     planUrl="/oferta-especial"
                                 />
+                                <div className="relative w-full max-w-sm h-14 mx-auto mt-4">
+                                    <Image
+                                        src="/images/compra segura.png"
+                                        alt="Métodos de pago aceptados"
+                                        fill
+                                        className="object-contain"
+                                        data-ai-hint="payment methods"
+                                    />
+                                </div>
                             </div>
                         </Card>
 
@@ -161,20 +163,17 @@ export function OfferSection() {
                                     mobileText="Plan Premium"
                                     planUrl="https://pay.hotmart.com/L102361489O?off=2sh9bxat&checkoutMode=10"
                                 />
+                                <div className="relative w-full max-w-sm h-14 mx-auto mt-4">
+                                    <Image
+                                        src="/images/compra segura.png"
+                                        alt="Métodos de pago aceptados"
+                                        fill
+                                        className="object-contain"
+                                        data-ai-hint="payment methods"
+                                    />
+                                </div>
                             </div>
                         </Card>
-                    </div>
-                    
-                    <div className="flex flex-col items-center justify-center mt-12">
-                        <div className="relative w-full max-w-sm h-14">
-                            <Image
-                                src="/images/compra segura.png"
-                                alt="Métodos de pago aceptados"
-                                fill
-                                className="object-contain"
-                                data-ai-hint="payment methods"
-                            />
-                        </div>
                     </div>
                 </div>
             </section>
