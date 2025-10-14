@@ -159,7 +159,7 @@ export function OfferSection() {
                                 <CtaButton 
                                     text="Quiero Plan Premium"
                                     mobileText="Plan Premium"
-                                    planUrl="https://pay.hotmart.com/L102361489O?checkoutMode=2&off=2sh9bxat"
+                                    planUrl="https://pay.hotmart.com/L102361489O?off=2sh9bxat&checkoutMode=10"
                                 />
                             </div>
                         </Card>
