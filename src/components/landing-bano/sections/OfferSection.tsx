@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { Gift, Clock, Star, BadgePercent, Check } from 'lucide-react';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import Image from 'next/image';
