@@ -11,64 +11,23 @@ type Plan = 'esencial' | 'plus' | 'premium';
 export default function CtaButton({ 
   className, 
   text, 
-  onClick,
-  plan
+  planUrl
 }: { 
   className?: string, 
   text?: string,
-  onClick?: (plan: Plan) => void,
-  plan: Plan
+  planUrl: string
 }) {
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const { toast } = useToast();
 
-  const handleLocalClick = () => {
-    if (onClick) {
-      onClick(plan);
-      return;
-    }
-    
-    console.log(`[LandingBano] CTA clicked for plan: ${plan}`);
-    setStatus("loading");
-
-    setTimeout(() => {
-      if (Math.random() > 0.9) { 
-        setStatus("error");
-        toast({
-          title: "Error de Pago",
-          description: "No se pudo procesar tu pago. Por favor, intenta de nuevo.",
-          variant: "destructive",
-        });
-        setTimeout(() => setStatus("idle"), 3000);
-      } else {
-        console.log("[LandingBano] Purchase successful (simulated)");
-        if (plan !== 'premium') {
-            window.location.href = "https://pay.hotmart.com";
-        }
-        // For premium, the parent anchor tag handles the navigation
-        setStatus("idle");
-      }
-    }, 2000);
-  };
-
-  const buttonText = () => {
-    switch (status) {
-      case "loading":
-        return "Procesando...";
-      case "error":
-        return "Error - Intenta de Nuevo";
-      case "idle":
-      default:
-        return text || "REGÍSTRATE AHORA DANDO CLIC AQUÍ";
-    }
-  };
+  const buttonText = text || "REGÍSTRATE AHORA DANDO CLIC AQUÍ";
 
   return (
-    <Button
-      onClick={handleLocalClick}
-      disabled={status === "loading"}
-      size="lg"
+    <a 
+      href={planUrl}
       className={cn(
+        "hotmart-fb hotmart__button-checkout",
+        "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
         "w-full h-auto py-4 text-lg font-bold text-center text-primary-foreground transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl bg-primary hover:bg-primary/90 hover:scale-105 animate-pulse",
         className,
         {
@@ -77,7 +36,7 @@ export default function CtaButton({
       )}
     >
       {status === "loading" && <Loader2 className="w-6 h-6 mr-3 animate-spin" />}
-      {buttonText()}
-    </Button>
+      {buttonText}
+    </a>
   );
 }

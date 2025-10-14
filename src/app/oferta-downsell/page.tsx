@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import { Footer } from '@/components/landing-bano/sections/Footer';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Image from 'next/image';
+import CtaButton from '@/components/landing-bano/CtaButton';
 
 const plusBonuses = [
     "Lista de Proveedores Verificada",
@@ -21,7 +22,7 @@ function DownsellHeaderBanner() {
     return (
         <div className="p-2 bg-primary/80 backdrop-blur-sm sticky top-0 z-50">
             <Alert className="text-center bg-transparent text-white border-0">
-                <AlertTriangle className="h-4 w-4 text-red-500" />
+                <AlertTriangle className="h-4 w-4 text-red-500 animate-pulse" />
                 <AlertDescription className="font-bold uppercase text-red-500 [text-shadow:0_0_10px_#ef4444] animate-pulse">
                     ¡Las plazas para la Oferta Esencial se han agotado!
                 </AlertDescription>
@@ -34,10 +35,6 @@ export default function OfertaDownsellPage() {
     const router = useRouter();
 
     const plusPrice = 7.90;
-
-    const handlePurchase = (planUrl: string) => {
-        window.location.href = planUrl;
-    };
 
     return (
         <div className="min-h-screen flex flex-col bg-background">
@@ -67,9 +64,10 @@ export default function OfertaDownsellPage() {
                             ))}
                         </ul>
                         <div className="flex flex-col gap-4">
-                            <Button onClick={() => handlePurchase("https://pay.hotmart.com/L102361489O?off=5m74kmtt")} size="lg" className="w-full py-3 h-auto">
-                                ✅ Sí, quiero el Plan Plus
-                            </Button>
+                            <CtaButton
+                                text="✅ Sí, quiero el Plan Plus"
+                                planUrl="https://pay.hotmart.com/L102361489O?off=5m74kmtt&checkoutMode=2"
+                            />
                             <Button onClick={() => router.push('/oferta-especial')} size="lg" variant="outline" className="w-full py-3 h-auto">
                                 🔙 Volver a la oferta anterior
                             </Button>

@@ -46,17 +46,6 @@ export function OfferSection() {
 
         return () => clearInterval(timer);
     }, []);
-    
-    const handleCtaClick = (plan: 'esencial' | 'plus' | 'premium') => {
-        if (plan === 'esencial') {
-            console.log('[OfferSection] Plan Esencial clicked, redirecting to oferta-especial.');
-            router.push('/oferta-especial');
-        } else if (plan === 'premium') {
-             // This case is handled by the anchor tag around the CtaButton
-             window.location.href = "https://pay.hotmart.com/L102361489O?off=2sh9bxat";
-        }
-    };
-
 
     return (
         <>
@@ -107,8 +96,7 @@ export function OfferSection() {
                             <div className="p-6 mt-auto">
                                 <CtaButton 
                                     text="Quiero Plan Esencial"
-                                    plan="esencial"
-                                    onClick={handleCtaClick}
+                                    planUrl="https://pay.hotmart.com/L102361489O?checkoutMode=2&off=fw29apzl"
                                     className="bg-primary hover:bg-primary/90"
                                 />
                             </div>
@@ -147,8 +135,7 @@ export function OfferSection() {
                             <div className="p-6 mt-auto">
                                 <CtaButton 
                                     text="Quiero Plan Premium"
-                                    plan="premium"
-                                    onClick={handleCtaClick}
+                                    planUrl="https://pay.hotmart.com/L102361489O?checkoutMode=2&off=2sh9bxat"
                                 />
                             </div>
                         </Card>

@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import { Footer } from '@/components/landing-bano/sections/Footer';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Image from 'next/image';
+import CtaButton from '@/components/landing-bano/CtaButton';
 
 
 const premiumBonuses = [
@@ -38,10 +39,6 @@ export default function OfertaEspecialPage() {
 
     const premiumPrice = 9.90;
 
-    const handlePurchase = (planUrl: string) => {
-        window.location.href = planUrl;
-    };
-
     return (
         <div className="min-h-screen flex flex-col bg-background">
             <OfertaHeaderBanner />
@@ -69,9 +66,10 @@ export default function OfertaEspecialPage() {
                             ))}
                         </ul>
                         <div className="flex flex-col gap-4">
-                            <Button onClick={() => handlePurchase("https://pay.hotmart.com/L102361489O?off=fw29apzl")} size="lg" className="w-full py-3 h-auto">
-                                🔓 Sí, quiero el Plan Premium
-                            </Button>
+                            <CtaButton
+                                text="🔓 Sí, quiero el Plan Premium"
+                                planUrl="https://pay.hotmart.com/L102361489O?off=fw29apzl&checkoutMode=2"
+                            />
                             <Button onClick={() => router.push('/oferta-downsell')} size="lg" variant="ghost" className="w-full py-3 h-auto">
                                 ➡️ No, gracias
                             </Button>
