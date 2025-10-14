@@ -20,7 +20,7 @@ export default function CtaButton({
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   
   const buttonText = text || "REGÍSTRATE AHORA DANDO CLIC AQUÍ";
-  const isHotmartLink = planUrl.startsWith('https://');
+  const isHotmartLink = planUrl.startsWith('https');
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!isHotmartLink) {
@@ -29,7 +29,8 @@ export default function CtaButton({
     }
   };
 
-  const commonClasses = cn(
+  const buttonClasses = cn(
+    "hotmart-fb hotmart__button-checkout",
     "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
     "w-full h-auto py-4 text-lg font-bold text-center text-primary-foreground transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl bg-primary hover:bg-primary/90 hover:scale-105 animate-pulse",
     className,
@@ -37,14 +38,12 @@ export default function CtaButton({
       "bg-destructive hover:bg-destructive/90": status === "error",
     }
   );
-  
-  const hotmartClasses = isHotmartLink ? "hotmart-fb hotmart__button-checkout" : "";
 
   return (
     <a 
       href={planUrl}
       onClick={handleClick}
-      className={cn(hotmartClasses, commonClasses)}
+      className={buttonClasses}
     >
       {status === "loading" && <Loader2 className="w-6 h-6 mr-3 animate-spin" />}
       {buttonText}
