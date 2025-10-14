@@ -47,6 +47,11 @@ export function OfferSection() {
         return () => clearInterval(timer);
     }, []);
 
+    const handleEssentialClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        router.push('/oferta-especial');
+    };
+
     return (
         <>
             <section id="oferta" className="bg-muted/30 py-16 px-4 sm:py-24">
@@ -94,11 +99,10 @@ export function OfferSection() {
                                 </ul>
                             </CardContent>
                             <div className="p-6 mt-auto">
-                                <CtaButton 
-                                    text="Quiero Plan Esencial"
-                                    planUrl="/oferta-especial"
-                                    className="bg-primary hover:bg-primary/90"
-                                />
+                                <a href="/oferta-especial" onClick={handleEssentialClick} className="hotmart-fb hotmart__button-checkout inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 w-full h-auto px-4 py-3 text-center text-primary-foreground transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl bg-primary hover:bg-primary/90 hover:scale-105 animate-pulse sm:py-4 text-sm font-bold">
+                                     <span className="md:hidden">Plan Esencial</span>
+                                     <span className="hidden md:inline">Quiero Plan Esencial</span>
+                                </a>
                             </div>
                         </Card>
 
@@ -135,6 +139,7 @@ export function OfferSection() {
                             <div className="p-6 mt-auto">
                                 <CtaButton 
                                     text="Quiero Plan Premium"
+                                    mobileText="Plan Premium"
                                     planUrl="https://pay.hotmart.com/L102361489O?checkoutMode=2&off=2sh9bxat"
                                 />
                             </div>
