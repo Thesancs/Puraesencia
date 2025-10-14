@@ -22,8 +22,9 @@ export default function CtaButton({
   const buttonText = text || "REGÍSTRATE AHORA DANDO CLIC AQUÍ";
   const isHotmartLink = planUrl.startsWith('https://');
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!isHotmartLink) {
+      e.preventDefault();
       router.push(planUrl);
     }
   };
@@ -36,27 +37,17 @@ export default function CtaButton({
       "bg-destructive hover:bg-destructive/90": status === "error",
     }
   );
-
-  if (isHotmartLink) {
-    return (
-      <a 
-        href={planUrl}
-        className={cn("hotmart-fb hotmart__button-checkout", commonClasses)}
-      >
-        {status === "loading" && <Loader2 className="w-6 h-6 mr-3 animate-spin" />}
-        {buttonText}
-      </a>
-    );
-  }
+  
+  const hotmartClasses = isHotmartLink ? "hotmart-fb hotmart__button-checkout" : "";
 
   return (
-    <Button
+    <a 
+      href={planUrl}
       onClick={handleClick}
-      size="lg"
-      className={commonClasses}
+      className={cn(hotmartClasses, commonClasses)}
     >
       {status === "loading" && <Loader2 className="w-6 h-6 mr-3 animate-spin" />}
       {buttonText}
-    </Button>
+    </a>
   );
 }
