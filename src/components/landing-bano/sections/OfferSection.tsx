@@ -72,6 +72,24 @@ export function OfferSection() {
                         <span className="ml-2 text-sm text-muted-foreground">(+41 valoraciones)</span>
                     </div>
 
+                    <div className="p-6 my-6 text-center text-white rounded-lg bg-primary max-w-md mx-auto">
+                        <div className="flex items-center justify-center">
+                            <Clock className="w-5 h-5 mr-2" />
+                            <p className='font-semibold'>La oferta termina en:</p>
+                        </div>
+                        <div className="flex justify-center items-center space-x-2 mt-4">
+                            <div className="p-3 text-center bg-white rounded-lg text-primary">
+                                <span className="text-4xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                                <span className="block text-xs font-semibold">MINUTOS</span>
+                            </div>
+                            <span className="text-4xl font-bold">:</span>
+                            <div className="p-3 text-center bg-white rounded-lg text-primary">
+                                <span className="text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0') }</span>
+                                <span className="block text-xs font-semibold">SEGUNDOS</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         {/* Essential Offer */}
                         <Card className="shadow-lg transition-all duration-300 hover:scale-105 h-full flex flex-col">
@@ -99,10 +117,11 @@ export function OfferSection() {
                                 </ul>
                             </CardContent>
                             <div className="p-6 mt-auto">
-                                <a href="/oferta-especial" onClick={handleEssentialClick} className="hotmart-fb hotmart__button-checkout inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 w-full h-auto px-4 py-3 text-center text-primary-foreground transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl bg-primary hover:bg-primary/90 hover:scale-105 animate-pulse sm:py-4 text-sm font-bold">
-                                     <span className="md:hidden">Plan Esencial</span>
-                                     <span className="hidden md:inline">Quiero Plan Esencial</span>
-                                </a>
+                                <CtaButton 
+                                    text="Quiero Plan Esencial"
+                                    mobileText="Plan Esencial"
+                                    planUrl="/oferta-especial"
+                                />
                             </div>
                         </Card>
 
@@ -145,23 +164,7 @@ export function OfferSection() {
                             </div>
                         </Card>
                     </div>
-                    <div className="p-6 my-6 text-center text-white rounded-lg bg-primary max-w-md mx-auto">
-                        <div className="flex items-center justify-center">
-                            <Clock className="w-5 h-5 mr-2" />
-                            <p className='font-semibold'>La oferta termina en:</p>
-                        </div>
-                        <div className="flex justify-center items-center space-x-2 mt-4">
-                            <div className="p-3 text-center bg-white rounded-lg text-primary">
-                                <span className="text-4xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</span>
-                                <span className="block text-xs font-semibold">MINUTOS</span>
-                            </div>
-                            <span className="text-4xl font-bold">:</span>
-                            <div className="p-3 text-center bg-white rounded-lg text-primary">
-                                <span className="text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0') }</span>
-                                <span className="block text-xs font-semibold">SEGUNDOS</span>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div className="flex flex-col items-center justify-center mt-12">
                         <div className="relative w-full max-w-sm h-14">
                             <Image
