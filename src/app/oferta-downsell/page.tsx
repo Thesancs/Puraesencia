@@ -68,9 +68,12 @@ export default function OfertaDownsellPage() {
                                 mobileText="Si, Quiero Plan Plus"
                                 planUrl="https://pay.hotmart.com/L102361489O?off=fw29apzl&checkoutMode=10"
                             />
-                            <Button onClick={() => router.push('/oferta-especial')} size="lg" variant="outline" className="w-full py-3 h-auto">
-                                🔙 Volver a la oferta anterior
-                            </Button>
+                            <CtaButton
+                                text="Quiero Plan Esencial"
+                                mobileText="Quiero Plan Esencial"
+                                planUrl="https://pay.hotmart.com/L102361489O?off=aply70hl&checkoutMode=10"
+                                className="bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                            />
                              <Button onClick={() => router.push('/')} size="lg" variant="ghost" className="w-full py-3 h-auto mt-4">
                                 No, gracias, volver a la página principal
                             </Button>
