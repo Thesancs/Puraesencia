@@ -8,6 +8,8 @@ import { Footer } from '@/components/landing-bano/sections/Footer';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Image from 'next/image';
 import CtaButton from '@/components/landing-bano/CtaButton';
+import { useCurrency } from '@/hooks/useCurrency';
+
 
 const premiumBonuses = [
     "Lista de Proveedores Verificada",
@@ -33,6 +35,7 @@ function OfertaHeaderBanner() {
 
 export default function OfertaEspecialPage() {
     const router = useRouter();
+    const { getPrice, currencySymbol } = useCurrency();
     const premiumPrice = 9.90;
 
     return (
@@ -52,7 +55,7 @@ export default function OfertaEspecialPage() {
                         </div>
                         <CardDescription className="text-center text-lg">
                             ¿Quieres mejorar tu experiencia? <br />
-                            Por solo <span className="font-bold text-primary">${premiumPrice.toFixed(2)} USD</span> puedes obtener el <strong>Plan Premium</strong> con TODOS estos bonos:
+                            Por solo <span className="font-bold text-primary">${getPrice(premiumPrice).toLocaleString()} {currencySymbol}</span> puedes obtener el <strong>Plan Premium</strong> con TODOS estos bonos:
                         </CardDescription>
                     </CardHeader>
                     <CardContent>

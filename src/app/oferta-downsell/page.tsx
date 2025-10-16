@@ -8,6 +8,8 @@ import { Footer } from '@/components/landing-bano/sections/Footer';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Image from 'next/image';
 import CtaButton from '@/components/landing-bano/CtaButton';
+import { useCurrency } from '@/hooks/useCurrency';
+
 
 const plusBonuses = [
     "Lista de Proveedores Verificada",
@@ -32,6 +34,7 @@ function DownsellHeaderBanner() {
 
 export default function OfertaDownsellPage() {
     const router = useRouter();
+    const { getPrice, currencySymbol } = useCurrency();
 
     const plusPrice = 7.90;
 
@@ -52,7 +55,7 @@ export default function OfertaDownsellPage() {
                         </div>
                          <CardDescription className="text-center text-lg">
                             No te vayas con las manos vacías. <br/>
-                            Mejora al 🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">${plusPrice.toFixed(2)} USD</span>
+                            Mejora al 🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">${getPrice(plusPrice).toLocaleString()} {currencySymbol}</span>
                          </CardDescription>
                     </CardHeader>
                     <CardContent>

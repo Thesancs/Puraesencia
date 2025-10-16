@@ -5,6 +5,8 @@ import { Gift, Clock, Star, BadgePercent, Check } from 'lucide-react';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { useCurrency } from '@/hooks/useCurrency';
+
 
 const essentialBonuses = [
     "BONO 1: Lista de Proveedores Verificada",
@@ -22,6 +24,8 @@ const premiumBonuses = [
 
 export function OfferSection() {
     console.log('[OfferSection] rendered');
+    const router = useRouter();
+    const { getPrice, currencySymbol } = useCurrency();
 
     const [timeLeft, setTimeLeft] = useState({
         minutes: 10,
@@ -91,7 +95,7 @@ export function OfferSection() {
                                 <CardTitle className="text-2xl font-bold">🔥 Plan Esencial</CardTitle>
                                 <CardDescription>Pagas 1 y llevas 2</CardDescription>
                                 <div className="flex items-center justify-center mt-4">
-                                    <span className="ml-4 text-4xl font-bold text-primary">${essentialPriceUSD.toFixed(2)} <span className="text-2xl">USD</span></span>
+                                    <span className="ml-4 text-4xl font-bold text-primary">${getPrice(essentialPriceUSD).toLocaleString()} <span className="text-2xl">{currencySymbol}</span></span>
                                 </div>
                             </CardHeader>
                             <CardContent className="flex-grow">
@@ -114,7 +118,7 @@ export function OfferSection() {
                                 <CtaButton 
                                     text="Quiero Plan Esencial"
                                     mobileText="Plan Esencial"
-                                    planUrl="/oferta-especial"
+                                    planUrl="https://pay.hotmart.com/L102361489O?off=aply70hl&checkoutMode=10"
                                 />
                                 <div className="relative w-full max-w-sm h-14 mx-auto mt-4">
                                     <Image
@@ -139,7 +143,7 @@ export function OfferSection() {
                                 <CardTitle className="text-2xl font-bold">💎 Plan Premium</CardTitle>
                                 <CardDescription>Pagas 1 y llevas 6</CardDescription>
                                 <div className="flex items-center justify-center mt-4">
-                                    <span className="ml-4 text-4xl font-bold text-primary">${premiumPriceUSD.toFixed(2)} <span className="text-2xl">USD</span></span>
+                                    <span className="ml-4 text-4xl font-bold text-primary">${getPrice(premiumPriceUSD).toLocaleString()} <span className="text-2xl">{currencySymbol}</span></span>
                                 </div>
                             </CardHeader>
                             <CardContent className="flex-grow">
