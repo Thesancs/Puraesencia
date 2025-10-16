@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardDescription, CardContent } from '@/components/ui/card';
@@ -10,7 +10,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import Image from 'next/image';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import { useCurrency } from '@/hooks/useCurrency';
-
+import CurrencyWrapper from '@/components/landing-bano/CurrencyWrapper';
 
 const premiumBonuses = [
     "Lista de Proveedores Verificada",
@@ -34,7 +34,7 @@ function OfertaHeaderBanner() {
     );
 }
 
-export default function OfertaEspecialPage() {
+function OfertaEspecialPageContent() {
     const router = useRouter();
     const { getPrice, currencySymbol } = useCurrency();
     const [isClient, setIsClient] = useState(false);
@@ -87,4 +87,12 @@ export default function OfertaEspecialPage() {
             <Footer />
         </div>
     );
+}
+
+export default function OfertaEspecialPage() {
+    return (
+        <CurrencyWrapper>
+            <OfertaEspecialPageContent />
+        </CurrencyWrapper>
+    )
 }

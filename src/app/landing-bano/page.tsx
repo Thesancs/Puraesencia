@@ -12,6 +12,8 @@ import { Footer } from "@/components/landing-bano/sections/Footer";
 import { OfferSection } from "@/components/landing-bano/sections/OfferSection";
 import { IntroCardSection } from "@/components/landing-bano/sections/IntroCardSection";
 import { GuideBenefitsSection } from "@/components/landing-bano/sections/GuideBenefitsSection";
+import { Suspense } from "react";
+import CurrencyWrapper from "@/components/landing-bano/CurrencyWrapper";
 
 export default function LandingBanoPage() {
     console.log('[LandingBano] Page rendered');
@@ -28,7 +30,9 @@ export default function LandingBanoPage() {
         <VideoSection />
         <GuideBenefitsSection />
         <GallerySection />
-        <OfferSection />
+        <CurrencyWrapper>
+          <OfferSection />
+        </CurrencyWrapper>
         <BonusSection />
         <TestimonialsSection />
         <CertificateSection />

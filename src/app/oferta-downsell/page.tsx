@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardDescription, CardContent } from '@/components/ui/card';
 import { Check, AlertTriangle } from 'lucide-react';
@@ -10,7 +10,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import Image from 'next/image';
 import CtaButton from '@/components/landing-bano/CtaButton';
 import { useCurrency } from '@/hooks/useCurrency';
-
+import CurrencyWrapper from '@/components/landing-bano/CurrencyWrapper';
 
 const plusBonuses = [
     "Lista de Proveedores Verificada",
@@ -33,7 +33,7 @@ function DownsellHeaderBanner() {
     );
 }
 
-export default function OfertaDownsellPage() {
+function DownsellPageContent() {
     const router = useRouter();
     const { getPrice, currencySymbol } = useCurrency();
     const [isClient, setIsClient] = useState(false);
@@ -93,4 +93,12 @@ export default function OfertaDownsellPage() {
             <Footer />
         </div>
     );
+}
+
+export default function OfertaDownsellPage() {
+    return (
+        <CurrencyWrapper>
+            <DownsellPageContent />
+        </CurrencyWrapper>
+    )
 }
