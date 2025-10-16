@@ -26,6 +26,11 @@ export function OfferSection() {
     console.log('[OfferSection] rendered');
     const router = useRouter();
     const { getPrice, currencySymbol } = useCurrency();
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     const [timeLeft, setTimeLeft] = useState({
         minutes: 10,
@@ -95,7 +100,7 @@ export function OfferSection() {
                                 <CardTitle className="text-2xl font-bold">🔥 Plan Esencial</CardTitle>
                                 <CardDescription>Pagas 1 y llevas 2</CardDescription>
                                 <div className="flex items-center justify-center mt-4">
-                                    <span className="ml-4 text-4xl font-bold text-primary">${getPrice(essentialPriceUSD).toLocaleString()} <span className="text-2xl">{currencySymbol}</span></span>
+                                    <span className="ml-4 text-4xl font-bold text-primary">${isClient ? getPrice(essentialPriceUSD).toLocaleString() : '...'} <span className="text-2xl">{isClient ? currencySymbol : ''}</span></span>
                                 </div>
                             </CardHeader>
                             <CardContent className="flex-grow">
@@ -143,7 +148,7 @@ export function OfferSection() {
                                 <CardTitle className="text-2xl font-bold">💎 Plan Premium</CardTitle>
                                 <CardDescription>Pagas 1 y llevas 6</CardDescription>
                                 <div className="flex items-center justify-center mt-4">
-                                    <span className="ml-4 text-4xl font-bold text-primary">${getPrice(premiumPriceUSD).toLocaleString()} <span className="text-2xl">{currencySymbol}</span></span>
+                                    <span className="ml-4 text-4xl font-bold text-primary">${isClient ? getPrice(premiumPriceUSD).toLocaleString() : '...'} <span className="text-2xl">{isClient ? currencySymbol : ''}</span></span>
                                 </div>
                             </CardHeader>
                             <CardContent className="flex-grow">

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardDescription, CardContent } from '@/components/ui/card';
@@ -36,6 +37,12 @@ function OfertaHeaderBanner() {
 export default function OfertaEspecialPage() {
     const router = useRouter();
     const { getPrice, currencySymbol } = useCurrency();
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
     const premiumPrice = 9.90;
 
     return (
@@ -55,7 +62,7 @@ export default function OfertaEspecialPage() {
                         </div>
                         <CardDescription className="text-center text-lg">
                             ¿Quieres mejorar tu experiencia? <br />
-                            Por solo <span className="font-bold text-primary">${getPrice(premiumPrice).toLocaleString()} {currencySymbol}</span> puedes obtener el <strong>Plan Premium</strong> con TODOS estos bonos:
+                            Por solo <span className="font-bold text-primary">${isClient ? getPrice(premiumPrice).toLocaleString() : '...'} {isClient ? currencySymbol : ''}</span> puedes obtener el <strong>Plan Premium</strong> con TODOS estos bonos:
                         </CardDescription>
                     </CardHeader>
                     <CardContent>

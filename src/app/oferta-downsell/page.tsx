@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardDescription, CardContent } from '@/components/ui/card';
 import { Check, AlertTriangle } from 'lucide-react';
@@ -35,6 +36,11 @@ function DownsellHeaderBanner() {
 export default function OfertaDownsellPage() {
     const router = useRouter();
     const { getPrice, currencySymbol } = useCurrency();
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     const plusPrice = 7.90;
 
@@ -55,7 +61,7 @@ export default function OfertaDownsellPage() {
                         </div>
                          <CardDescription className="text-center text-lg">
                             No te vayas con las manos vacías. <br/>
-                            Mejora al 🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">${getPrice(plusPrice).toLocaleString()} {currencySymbol}</span>
+                            Mejora al 🔥 <span className='font-bold'>Plan Plus</span> por solo <span className="font-bold text-primary">${isClient ? getPrice(plusPrice).toLocaleString() : '...'} {isClient ? currencySymbol : ''}</span>
                          </CardDescription>
                     </CardHeader>
                     <CardContent>
