@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 const exchangeRates: Record<string, { rate: number; symbol: string }> = {
     CO: { rate: 3900, symbol: 'COP' }, // Colombia
@@ -27,15 +28,17 @@ async function getCountry(): Promise<string> {
 
 export function useCurrency() {
     const [currency, setCurrency] = useState<{ rate: number; symbol: string }>(defaultCurrency);
+    const searchParams = useSearchParams();
+    const countryOverride = searchParams.get('country');
 
     useEffect(() => {
         let isMounted = true;
         
         async function fetchAndSetCurrency() {
             try {
-                const country = await getCountry();
+                const countryCode = countryOverride || await getCountry();
                 if (isMounted) {
-                    const countryCurrency = exchangeRates[country] || defaultCurrency;
+                    const countryCurrency = exchangeRates[countryCode.toUpperCase()] || defaultCurrency;
                     setCurrency(countryCurrency);
                 }
             } catch (error) {
@@ -50,7 +53,7 @@ export function useCurrency() {
         return () => {
             isMounted = false;
         };
-    }, []);
+    }, [countryOverride]);
 
     const getPrice = (usdPrice: number) => {
         const value = usdPrice * currency.rate;
