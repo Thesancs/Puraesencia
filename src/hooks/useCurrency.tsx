@@ -10,6 +10,8 @@ const exchangeRates: Record<string, { rate: number; symbol: string }> = {
     CL: { rate: 930, symbol: 'CLP' },  // Chile
     UY: { rate: 39, symbol: 'UYU' },    // Uruguay
     PY: { rate: 7500, symbol: 'PYG' }, // Paraguay
+    BO: { rate: 6.9, symbol: 'BOB' },   // Bolivia
+    EC: { rate: 1, symbol: 'USD' },     // Ecuador
 };
 
 const defaultCurrency = { rate: 1, symbol: 'USD' };
